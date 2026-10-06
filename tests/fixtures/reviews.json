@@ -1,0 +1,110 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": 23560574,
+    "first_name": "redacted",
+    "rate_to_doctor": true,
+    "comment_to_doctor": {
+     "id": 124053759,
+     "value": "خیلی زود وقت گرفتم اصلا معطل نشدم و دکتر خیلی خوش اخلاق و با حوصله و دقت معاینه کرد و کامل توضیح میداد \nدر کل تجربه ی خوبی بود",
+     "question_id": 6
+    },
+    "reply": null,
+    "waiting_time_office": "0-15 دقیقه",
+    "tag": "نوبت گرفته از دکترتو",
+    "created_at": "2026-10-05T11:41:18.000000Z",
+    "type": "نوبت دهی مطب",
+    "form_id": 1,
+    "reason_sickness": "انجام مطالعات الکتروفیزیولوژیک قلب",
+    "consultation_type": "نوبت مطب از دکترتو",
+    "rate": 5,
+    "rates": {
+     "نحوه برخورد پزشک": 5,
+     "توضیح پزشک در هنگام ویزیت": 5,
+     "مهارت پزشک در تشخیص و درمان": 5,
+     "فرآیند پذیرش و رفتار منشی": 5,
+     "شرایط محیطی": 5
+    },
+    "labels": [
+     "برخورد مناسب پزشک",
+     "توضیح مناسب پزشک",
+     "تشخیص مناسب پزشک"
+    ],
+    "shamsi_created_at": "1405/07/13"
+   },
+   {
+    "id": 23267574,
+    "first_name": "redacted",
+    "rate_to_doctor": true,
+    "comment_to_doctor": {
+     "id": 122435464,
+     "value": "عالی",
+     "question_id": 6
+    },
+    "reply": null,
+    "waiting_time_office": null,
+    "tag": "نوبت گرفته از دکترتو",
+    "created_at": "2026-09-27T13:40:47.000000Z",
+    "type": "نوبت دهی مطب",
+    "form_id": 1,
+    "reason_sickness": "انجام مطالعات الکتروفیزیولوژیک قلب",
+    "consultation_type": "نوبت مطب از دکترتو",
+    "rate": 5,
+    "rates": {
+     "نحوه برخورد پزشک": 5,
+     "توضیح پزشک در هنگام ویزیت": 5,
+     "مهارت پزشک در تشخیص و درمان": 5,
+     "فرآیند پذیرش و رفتار منشی": 5,
+     "شرایط محیطی": 5
+    },
+    "labels": [
+     "برخورد مناسب پزشک",
+     "توضیح مناسب پزشک",
+     "تشخیص مناسب پزشک"
+    ],
+    "shamsi_created_at": "1405/07/05"
+   },
+   {
+    "id": 23224284,
+    "first_name": "redacted",
+    "rate_to_doctor": false,
+    "comment_to_doctor": {
+     "id": 122195674,
+     "value": "عدم رضایت",
+     "question_id": 6
+    },
+    "reply": null,
+    "waiting_time_office": "بیش از 90 دقیقه",
+    "tag": "نوبت گرفته از دکترتو",
+    "created_at": "2026-09-26T13:42:59.000000Z",
+    "type": "نوبت دهی مطب",
+    "form_id": 1,
+    "reason_sickness": "انجام مطالعات الکتروفیزیولوژیک قلب",
+    "consultation_type": "نوبت مطب از دکترتو",
+    "rate": 1,
+    "rates": {
+     "نحوه برخورد پزشک": 4,
+     "توضیح پزشک در هنگام ویزیت": 2,
+     "مهارت پزشک در تشخیص و درمان": 2,
+     "فرآیند پذیرش و رفتار منشی": 2,
+     "شرایط محیطی": 5
+    },
+    "labels": [
+     "برخورد مناسب پزشک",
+     "تناسب هزینه ویزیت"
+    ],
+    "shamsi_created_at": "1405/07/04"
+   }
+  ],
+  "from": 1,
+  "last_page": 136,
+  "next_page_url": "http://api.doctoreto.com/api/web/patient/v1/doctors/xqbEWZ/reaction?page=2",
+  "per_page": 3,
+  "to": 3,
+  "total": 408
+ },
+ "message": "",
+ "errors": null
+}

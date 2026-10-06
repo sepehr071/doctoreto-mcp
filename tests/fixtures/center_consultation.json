@@ -1,0 +1,252 @@
+{
+ "items": [
+  {
+   "id": 201221,
+   "title": "پذیرش آنلاین",
+   "type": {
+    "name": "مشاوره پذیرش آنلاین آزمایشگاه",
+    "value": 10
+   },
+   "call_duration": null,
+   "price": {
+    "price": 0,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "total_price": {
+    "price": 0,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "show_price": 0,
+   "status": 1,
+   "description_title": "پذیرش آنلاین",
+   "description": "<p style=\"text-align:start;\"><span style=\"color: rgb(226,80,65);background-color: rgba(0,0,0,0);font-size: 14px;\"><strong>در صورت مراجعه زودتر یا دیرتر از زمان انتخاب‌شده، نوبت شما محفوظ است و نمونه‌گیری انجام می‌شود</strong></span></p>",
+   "is_description_required": false,
+   "pause": 0,
+   "capacity": 0,
+   "clarification": null,
+   "advanced": 0,
+   "place": {
+    "id": "YNrrOb",
+    "type": 2,
+    "name": "آزمایشگاه راز شیراز",
+    "status": 1,
+    "slug": "raz-shiraz-lap",
+    "address": "شیراز ، خیابان معدل غربی، حدفاصل ملاصدرا و باغشاه ، مجتمع پزشکی راز",
+    "description": "<p>آزمایشگاه تخصصی و فوق تخصصی راز، یکی از پیشرفته ترین و مجهزترین مراکز تشخیص کشور، تحت نظر اساتید عالی رتبه دانشگاه علوم پزشکی شیراز و متخصصین علوم آزمایشگاهی، با بهره مندی از کارکنان متخصص و تجهیزات نوین مشغول به فعالیت می‌باشد.</p>\r\n<p><span style=\"color: rgb(65,168,95);\"><strong>نمونه گیری در م",
+    "is_open_24_hours": 0,
+    "phone": "0719*******,0930*******,0991*******",
+    "avatar": "avatar/place/2024/10/FhuPRBjcvWvGffYbaGUlUgbmKuEjiZqyL6SyhcDy.jpg",
+    "location": {
+     "lat": "29.62733100",
+     "lon": "52.52208435"
+    },
+    "full_address": "شیراز ، خیابان معدل غربی، حدفاصل ملاصدرا و باغشاه ، مجتمع پزشکی راز",
+    "city": {
+     "id": 1553,
+     "province_id": 40,
+     "name": "شیراز",
+     "slug": "shiraz",
+     "latitude": "29.60948827",
+     "longitude": "52.51757837",
+     "priority": 99,
+     "is_center": 1
+    },
+    "neighborhoods": [
+     {
+      "id": 1590,
+      "city_id": 1553,
+      "name": "ملاصدرا",
+      "slug": "mollasadra-shiraz",
+      "latitude": "0.00000000",
+      "longitude": "0.00000000"
+     }
+    ],
+    "specialities": [
+     {
+      "id": 97,
+      "name": "پاتولوژی",
+      "slug": "pathologist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص پاتولوژی"
+     },
+     {
+      "id": 94,
+      "name": "ژنتیک",
+      "slug": "medical-geneticist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص ژنتیک"
+     }
+    ],
+    "rate": {
+     "count": 359,
+     "recommend": 353,
+     "percent": 99
+    }
+   },
+   "doctor_place_id": null,
+   "insurances": [],
+   "start_show": 0,
+   "end_show": 720,
+   "specialities": [],
+   "show_remind": 1,
+   "pay_type": {
+    "name": "پرداخت آنلاین",
+    "value": 1
+   },
+   "days": [
+    {
+     "title": "امروز",
+     "date": "2026-10-06",
+     "shamsi_date": "14 مهر"
+    },
+    {
+     "title": "فردا",
+     "date": "2026-10-07",
+     "shamsi_date": "15 مهر"
+    }
+   ],
+   "service_tags": [],
+   "on_calls": [],
+   "next_free_time": {
+    "datetime": "2026-10-06 06:30:00",
+    "shamsi_date": "امروز",
+    "shamsi_time": "06:30",
+    "open_at": null,
+    "is_next_free_time": true
+   },
+   "is_triage": false,
+   "initial_message": null
+  },
+  {
+   "id": 202009,
+   "title": "پکیج آزمایش",
+   "type": {
+    "name": "مشاوره حضوری دکترِتو کلینیک",
+    "value": 4
+   },
+   "call_duration": null,
+   "price": {
+    "price": 0,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "total_price": {
+    "price": 0,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "show_price": 0,
+   "status": 1,
+   "description_title": null,
+   "description": null,
+   "is_description_required": false,
+   "pause": 0,
+   "capacity": 0,
+   "clarification": null,
+   "advanced": null,
+   "place": {
+    "id": "YNrrOb",
+    "type": 2,
+    "name": "آزمایشگاه راز شیراز",
+    "status": 1,
+    "slug": "raz-shiraz-lap",
+    "address": "شیراز ، خیابان معدل غربی، حدفاصل ملاصدرا و باغشاه ، مجتمع پزشکی راز",
+    "description": "<p>آزمایشگاه تخصصی و فوق تخصصی راز، یکی از پیشرفته ترین و مجهزترین مراکز تشخیص کشور، تحت نظر اساتید عالی رتبه دانشگاه علوم پزشکی شیراز و متخصصین علوم آزمایشگاهی، با بهره مندی از کارکنان متخصص و تجهیزات نوین مشغول به فعالیت می‌باشد.</p>\r\n<p><span style=\"color: rgb(65,168,95);\"><strong>نمونه گیری در م",
+    "is_open_24_hours": 0,
+    "phone": "0719*******,0930*******,0991*******",
+    "avatar": "avatar/place/2024/10/FhuPRBjcvWvGffYbaGUlUgbmKuEjiZqyL6SyhcDy.jpg",
+    "location": {
+     "lat": "29.62733100",
+     "lon": "52.52208435"
+    },
+    "full_address": "شیراز ، خیابان معدل غربی، حدفاصل ملاصدرا و باغشاه ، مجتمع پزشکی راز",
+    "city": {
+     "id": 1553,
+     "province_id": 40,
+     "name": "شیراز",
+     "slug": "shiraz",
+     "latitude": "29.60948827",
+     "longitude": "52.51757837",
+     "priority": 99,
+     "is_center": 1
+    },
+    "neighborhoods": [
+     {
+      "id": 1590,
+      "city_id": 1553,
+      "name": "ملاصدرا",
+      "slug": "mollasadra-shiraz",
+      "latitude": "0.00000000",
+      "longitude": "0.00000000"
+     }
+    ],
+    "specialities": [
+     {
+      "id": 97,
+      "name": "پاتولوژی",
+      "slug": "pathologist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص پاتولوژی"
+     },
+     {
+      "id": 94,
+      "name": "ژنتیک",
+      "slug": "medical-geneticist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص ژنتیک"
+     }
+    ],
+    "rate": {
+     "count": 359,
+     "recommend": 353,
+     "percent": 99
+    }
+   },
+   "doctor_place_id": null,
+   "insurances": [],
+   "start_show": 0,
+   "end_show": 720,
+   "specialities": [],
+   "show_remind": 1,
+   "pay_type": {
+    "name": "پرداخت آنلاین",
+    "value": 1
+   },
+   "days": [
+    {
+     "title": "امروز",
+     "date": "2026-10-06",
+     "shamsi_date": "14 مهر"
+    },
+    {
+     "title": "فردا",
+     "date": "2026-10-07",
+     "shamsi_date": "15 مهر"
+    }
+   ],
+   "service_tags": [],
+   "on_calls": [],
+   "next_free_time": {
+    "datetime": "2026-10-10 15:00:00",
+    "shamsi_date": "شنبه 18 مهر",
+    "shamsi_time": "15:00",
+    "open_at": null,
+    "is_next_free_time": true
+   },
+   "is_triage": false,
+   "initial_message": null
+  }
+ ],
+ "message": "",
+ "errors": null
+}

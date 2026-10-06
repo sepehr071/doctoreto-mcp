@@ -1,0 +1,24 @@
+{
+ "items": [
+  {
+   "id": 2200,
+   "name": "تهران",
+   "slug": "tehran",
+   "count": 1041
+  },
+  {
+   "id": 1718,
+   "name": "مشهد",
+   "slug": "mashhad",
+   "count": 162
+  },
+  {
+   "id": 1776,
+   "name": "اصفهان",
+   "slug": "esfahan",
+   "count": 136
+  }
+ ],
+ "message": "",
+ "errors": null
+}

@@ -1,0 +1,370 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": "nqjvOq",
+    "result_type": 0,
+    "slug": "dr-jalal-hosseini",
+    "full_name": "دکتر جلال حسینی",
+    "city": null,
+    "title": "متخصص گوش و حلق و بینی",
+    "avatar_url": "s3://drto/avatar/doctor/2021/11/YLjLjR1ziGyZw74rBMszDYrgGzwWPKLmQpHxZVp4.jpg",
+    "specialities": [
+     {
+      "id": 88,
+      "slug": "ent",
+      "name": "گوش و حلق و بینی",
+      "parent_id": 1,
+      "type": 2,
+      "type_name": "تخصص",
+      "full_name": "تخصص گوش و حلق و بینی",
+      "title": "متخصص گوش و حلق و بینی",
+      "nested_children": [
+       {
+        "id": 91,
+        "slug": "skull-base-surgeon",
+        "name": "جراحی قاعده جمجمه",
+        "parent_id": 88,
+        "type": 4,
+        "type_name": "فلوشیپ",
+        "full_name": "فلوشیپ جراحی قاعده جمجمه",
+        "nested_children": []
+       },
+       {
+        "id": 92,
+        "slug": "otologist",
+        "name": "اتولوژی و نورواتولوژی",
+        "parent_id": 88,
+        "type": 4,
+        "type_name": "فلوشیپ",
+        "full_name": "فلوشیپ اتولوژی و نورواتولوژی",
+        "nested_children": []
+       }
+      ]
+     }
+    ],
+    "consultations": [
+     {
+      "id": 492728,
+      "title": null,
+      "type": {
+       "name": "نوبت دهی مطب",
+       "value": 0
+      },
+      "call_duration": null,
+      "price": {
+       "price": 0,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "offline_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "pre_payment_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "status": 1,
+      "description": null,
+      "is_description_required": false,
+      "place": {
+       "id": 22523,
+       "type": 3,
+       "name": "بیمارستان کوثر شیراز",
+       "status": 1,
+       "slug": "kosar-hospital",
+       "address": "شیراز، خیابان قصرالدشت، بعد از زیر گذر شاهد، خیابان میرزای شیرازی شرقی، بیمارستان کوثر شیراز",
+       "description": "<p style=\"text-align:justify;\"><span style=\"color: rgb(33,37,41);background-color: rgb(255,255,255);font-size: 15px;font-family: IRANSans, Tahoma, Arial, sans-serif;\">بیمارستان کوثر شیراز وابسته به مو",
+       "is_open_24_hours": 0,
+       "phone": "0713*******",
+       "avatar": "avatar/place/2024/8/RLtTsAooAllWi2e4DLTwqXzRpHzhsZ4vhUni9QJd.jpg",
+       "location": {
+        "lat": "29.67034929",
+        "lon": "52.47387445"
+       },
+       "full_address": "شیراز، خیابان قصرالدشت، بعد از زیر گذر شاهد، خیابان میرزای شیرازی شرقی، بیمارستان کوثر شیراز",
+       "city": {
+        "id": 1553,
+        "province_id": 40,
+        "name": "شیراز",
+        "slug": "shiraz",
+        "latitude": "29.60948827",
+        "longitude": "52.51757837",
+        "priority": 99,
+        "is_center": 1,
+        "province": {
+         "id": 40,
+         "country_id": 205,
+         "name": "فارس",
+         "slug": "fars",
+         "latitude": "29.67301741",
+         "longitude": "52.15506285"
+        }
+       },
+       "neighborhoods": [
+        {
+         "id": 1582,
+         "city_id": 1553,
+         "name": "قصرالدشت",
+         "slug": "ghasredasht",
+         "latitude": "29.62034787",
+         "longitude": "52.52856237"
+        }
+       ],
+       "specialities": [
+        {
+         "id": 65,
+         "name": "زنان و زایمان",
+         "slug": "ob-gyn",
+         "type": 2,
+         "parent_id": 1,
+         "type_name": "تخصص",
+         "full_name": "تخصص زنان و زایمان"
+        },
+        {
+         "id": 10,
+         "name": "چشم پزشکی",
+         "slug": "ophthalmologist",
+         "type": 2,
+         "parent_id": 1,
+         "type_name": "تخصص",
+         "full_name": "تخصص چشم پزشکی"
+        }
+       ],
+       "rate": {
+        "count": 339,
+        "recommend": 304,
+        "percent": 90
+       }
+      },
+      "doctor_place_id": 288693,
+      "insurances": [],
+      "start_show": 4,
+      "end_show": 720,
+      "commission_percent": "0.00",
+      "show_remind": 1,
+      "pay_type": {
+       "name": "پرداخت در محل",
+       "value": 0
+      },
+      "on_calls": [],
+      "is_triage": false,
+      "initial_message": null,
+      "priority": null,
+      "service_tags": []
+     }
+    ],
+    "free_next_consultation_time": null,
+    "ads": false,
+    "has_badge": false,
+    "rate": {
+     "count": 568,
+     "recommend": 549,
+     "percent": 97
+    },
+    "is_insurance": true,
+    "is_minimum_delay": false,
+    "count_done_orders": 9295,
+    "card_buttons": {
+     "presence": true,
+     "online": false
+    },
+    "is_endorsable": true,
+    "endorsement_count": {
+     "total": 3,
+     "with_recommendation_letter": 0
+    }
+   },
+   {
+    "id": "kMOVbG",
+    "result_type": 0,
+    "slug": "dr-rohollah-mansori",
+    "full_name": "دکتر روح اله منصوری",
+    "city": null,
+    "title": "فلوشیپ آنژیوپلاستی",
+    "avatar_url": "s3://drto/avatar/doctor/2021/11/KVuDssZLPEKOI9c588N7zjKWNVlf0eaQ9BorAoe3.jpg",
+    "specialities": [
+     {
+      "id": 73,
+      "slug": "interventional-cardiologist",
+      "name": "اینترونشنال کاردیولوژی",
+      "parent_id": 72,
+      "type": 4,
+      "type_name": "فلوشیپ",
+      "full_name": "فلوشیپ اینترونشنال کاردیولوژی",
+      "title": "فلوشیپ اینترونشنال کاردیولوژی",
+      "nested_children": []
+     },
+     {
+      "id": 72,
+      "slug": "cardiologist",
+      "name": "قلب و عروق",
+      "parent_id": 1,
+      "type": 2,
+      "type_name": "تخصص",
+      "full_name": "تخصص قلب و عروق",
+      "title": "متخصص قلب و عروق",
+      "nested_children": [
+       {
+        "id": 73,
+        "slug": "interventional-cardiologist",
+        "name": "اینترونشنال کاردیولوژی",
+        "parent_id": 72,
+        "type": 4,
+        "type_name": "فلوشیپ",
+        "full_name": "فلوشیپ اینترونشنال کاردیولوژی",
+        "nested_children": []
+       }
+      ]
+     }
+    ],
+    "consultations": [
+     {
+      "id": 491658,
+      "title": null,
+      "type": {
+       "name": "نوبت دهی مطب",
+       "value": 0
+      },
+      "call_duration": null,
+      "price": {
+       "price": 0,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "offline_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "pre_payment_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "status": 1,
+      "description": null,
+      "is_description_required": false,
+      "place": {
+       "id": 22523,
+       "type": 3,
+       "name": "بیمارستان کوثر شیراز",
+       "status": 1,
+       "slug": "kosar-hospital",
+       "address": "شیراز، خیابان قصرالدشت، بعد از زیر گذر شاهد، خیابان میرزای شیرازی شرقی، بیمارستان کوثر شیراز",
+       "description": "<p style=\"text-align:justify;\"><span style=\"color: rgb(33,37,41);background-color: rgb(255,255,255);font-size: 15px;font-family: IRANSans, Tahoma, Arial, sans-serif;\">بیمارستان کوثر شیراز وابسته به مو",
+       "is_open_24_hours": 0,
+       "phone": "0713*******",
+       "avatar": "avatar/place/2024/8/RLtTsAooAllWi2e4DLTwqXzRpHzhsZ4vhUni9QJd.jpg",
+       "location": {
+        "lat": "29.67034929",
+        "lon": "52.47387445"
+       },
+       "full_address": "شیراز، خیابان قصرالدشت، بعد از زیر گذر شاهد، خیابان میرزای شیرازی شرقی، بیمارستان کوثر شیراز",
+       "city": {
+        "id": 1553,
+        "province_id": 40,
+        "name": "شیراز",
+        "slug": "shiraz",
+        "latitude": "29.60948827",
+        "longitude": "52.51757837",
+        "priority": 99,
+        "is_center": 1,
+        "province": {
+         "id": 40,
+         "country_id": 205,
+         "name": "فارس",
+         "slug": "fars",
+         "latitude": "29.67301741",
+         "longitude": "52.15506285"
+        }
+       },
+       "neighborhoods": [
+        {
+         "id": 1582,
+         "city_id": 1553,
+         "name": "قصرالدشت",
+         "slug": "ghasredasht",
+         "latitude": "29.62034787",
+         "longitude": "52.52856237"
+        }
+       ],
+       "specialities": [
+        {
+         "id": 65,
+         "name": "زنان و زایمان",
+         "slug": "ob-gyn",
+         "type": 2,
+         "parent_id": 1,
+         "type_name": "تخصص",
+         "full_name": "تخصص زنان و زایمان"
+        },
+        {
+         "id": 10,
+         "name": "چشم پزشکی",
+         "slug": "ophthalmologist",
+         "type": 2,
+         "parent_id": 1,
+         "type_name": "تخصص",
+         "full_name": "تخصص چشم پزشکی"
+        }
+       ],
+       "rate": {
+        "count": 339,
+        "recommend": 304,
+        "percent": 90
+       }
+      },
+      "doctor_place_id": 288303,
+      "insurances": [],
+      "start_show": 4,
+      "end_show": 720,
+      "commission_percent": "0.00",
+      "show_remind": 1,
+      "pay_type": {
+       "name": "پرداخت در محل",
+       "value": 0
+      },
+      "on_calls": [],
+      "is_triage": false,
+      "initial_message": null,
+      "priority": null,
+      "service_tags": []
+     }
+    ],
+    "free_next_consultation_time": null,
+    "ads": false,
+    "has_badge": false,
+    "rate": {
+     "count": 542,
+     "recommend": 541,
+     "percent": 100
+    },
+    "is_insurance": false,
+    "is_minimum_delay": true,
+    "count_done_orders": 7341,
+    "card_buttons": {
+     "presence": true,
+     "online": false
+    },
+    "is_endorsable": true,
+    "endorsement_count": {
+     "total": 0,
+     "with_recommendation_letter": 0
+    }
+   }
+  ],
+  "from": 1,
+  "last_page": 15,
+  "next_page_url": "http://api.doctoreto.com/api/web/patient/v1/doctors/places/AmWeOZ?page=2",
+  "per_page": 3,
+  "to": 3,
+  "total": 43
+ },
+ "message": "",
+ "errors": null
+}

@@ -1,0 +1,90 @@
+{
+ "items": [
+  {
+   "id": 2200,
+   "province_id": 55,
+   "name": "تهران",
+   "slug": "tehran",
+   "latitude": "35.71634907",
+   "longitude": "51.39087920",
+   "is_center": 1,
+   "priority": 100,
+   "province": {
+    "id": 55,
+    "name": "تهران",
+    "slug": "tehran",
+    "latitude": "35.20839701",
+    "longitude": "51.67508996"
+   },
+   "place_count": 0,
+   "tag_count": 0,
+   "doctor_count": 0,
+   "offer_count": 0
+  },
+  {
+   "id": 1553,
+   "province_id": 40,
+   "name": "شیراز",
+   "slug": "shiraz",
+   "latitude": "29.60948827",
+   "longitude": "52.51757837",
+   "is_center": 1,
+   "priority": 99,
+   "province": {
+    "id": 40,
+    "name": "فارس",
+    "slug": "fars",
+    "latitude": "29.67301741",
+    "longitude": "52.15506285"
+   },
+   "place_count": 0,
+   "tag_count": 0,
+   "doctor_count": 0,
+   "offer_count": 0
+  },
+  {
+   "id": 1776,
+   "province_id": 42,
+   "name": "اصفهان",
+   "slug": "esfahan",
+   "latitude": "32.66584766",
+   "longitude": "51.65766158",
+   "is_center": 1,
+   "priority": 98,
+   "province": {
+    "id": 42,
+    "name": "اصفهان",
+    "slug": "esfahan",
+    "latitude": "32.87958717",
+    "longitude": "52.18505859"
+   },
+   "place_count": 0,
+   "tag_count": 0,
+   "doctor_count": 0,
+   "offer_count": 0
+  },
+  {
+   "id": 1718,
+   "province_id": 41,
+   "name": "مشهد",
+   "slug": "mashhad",
+   "latitude": "36.29855131",
+   "longitude": "59.58373453",
+   "is_center": 1,
+   "priority": 97,
+   "province": {
+    "id": 41,
+    "name": "خراسان رضوی",
+    "slug": "khorasan-razavi",
+    "latitude": "35.63944107",
+    "longitude": "59.12841797"
+   },
+   "place_count": 0,
+   "tag_count": 0,
+   "doctor_count": 0,
+   "offer_count": 0
+  }
+ ],
+ "message": "",
+ "errors": null
+}

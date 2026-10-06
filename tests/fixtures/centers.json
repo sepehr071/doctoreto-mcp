@@ -1,0 +1,322 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": "Yrrrqo",
+    "type": 2,
+    "name": "آزمایشگاه قلهک تهران",
+    "status": 1,
+    "slug": "gholhak-tehran-lab",
+    "result_type": 0,
+    "has_laboratory_consultation": true,
+    "laboratory_has_active_consultations": true,
+    "free_buffet": false,
+    "has_sampling_at_place": true,
+    "is_prescription_file_allowed": true,
+    "avatar_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/avatar/place/2025/3/yYTKVY4USeNpNpJlhZXBrWEqO2NKJ0TYDuCatlbm.jpg",
+    "ads": null,
+    "advertisement": {
+     "priority": 0,
+     "flag": 0,
+     "city": {
+      "id": 0,
+      "province_id": 0,
+      "name": "",
+      "slug": "",
+      "latitude": "",
+      "longitude": "",
+      "priority": 0,
+      "is_center": 0
+     },
+     "speciality": {
+      "id": 0,
+      "name": "",
+      "slug": "",
+      "type": 0,
+      "parent_id": 0,
+      "type_name": "",
+      "full_name": ""
+     },
+     "tag": {
+      "id": 0,
+      "name": "",
+      "slug": ""
+     },
+     "place_type": 0
+    },
+    "address": "تهران-خیابان شریعتی، خیابان کدوئی، جنب مترو قلهک، آزمایشگاه قلهک",
+    "description": "<p>در آزمایشگاه ما، قلب تپنده‌ی سلامت شماست. ما در تلاشیم تا با ارائه خدمات آزمایشگاهی پیشرفته و تخصصی، به بیماران، علی‌الخصوص بیماران صعب‌العلاج، لبخندی دوباره هدیه دهیم. تیم ما متشکل از متخصصین مجرب",
+    "ownership_type": 2,
+    "is_open_24_hours": 0,
+    "phone": "0212*******",
+    "location": {
+     "lat": 35.77269104,
+     "lon": 51.43764504
+    },
+    "full_address": "تهران-خیابان شریعتی، خیابان کدوئی، جنب مترو قلهک، آزمایشگاه قلهک",
+    "city": {
+     "id": 2200,
+     "province_id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.71634907",
+     "longitude": "51.39087920",
+     "priority": 100,
+     "is_center": 1
+    },
+    "consultations": [
+     {
+      "id": 231566,
+      "title": "پذیرش آنلاین",
+      "type": {
+       "name": "مشاوره پذیرش آنلاین آزمایشگاه",
+       "value": 10
+      }
+     },
+     {
+      "id": 377238,
+      "title": "پکیج ازمایش",
+      "type": {
+       "name": "مشاوره دکترِتو کلینیک",
+       "value": 4
+      }
+     }
+    ],
+    "neighborhoods": [
+     {
+      "id": 279,
+      "city_id": 2200,
+      "name": "قلهک",
+      "slug": "qolhak",
+      "latitude": "35.77366749",
+      "longitude": "51.44437120"
+     },
+     {
+      "id": 193,
+      "city_id": 2200,
+      "name": "خیابان شریعتی",
+      "slug": "shariati",
+      "latitude": "35.62807551",
+      "longitude": "51.37892263"
+     }
+    ],
+    "insurances": [
+     {
+      "id": 15,
+      "name": "بیمه بانک ملت",
+      "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2025/2/ZuWMvVRP2pzpE2qJZHjGPc1ze8bZ0Aq0OD4vsKiv.jpg"
+     },
+     {
+      "id": 35,
+      "name": "بیمه بانک ملی",
+      "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2025/1/oOji1x3dIdSNlI2FU8Nho7woeuXcJb2ITmsapZZ2.jpg"
+     }
+    ],
+    "specialities": [],
+    "tags": [
+     {
+      "id": 2131,
+      "name": "چکاپ کامل",
+      "slug": "full-check-up"
+     }
+    ],
+    "rate": {
+     "count": 212,
+     "recommend": 196,
+     "percent": 93
+    },
+    "place_attributes": [
+     {
+      "name": "clean_hygienic_environment",
+      "title": "محیط تمیز و بهداشتی"
+     },
+     {
+      "name": "organized_reception",
+      "title": "پذیرش منظم"
+     }
+    ],
+    "presence_waiting_time": {
+     "average": null,
+     "range": null
+    },
+    "success_orders_count": 5355,
+    "doctor_count": 0,
+    "has_free_consultation_time": false,
+    "has_active_consultations": false,
+    "has_active_offers": false,
+    "offer_tags": [
+     {
+      "id": 2131,
+      "name": "چکاپ کامل",
+      "slug": "full-check-up"
+     }
+    ],
+    "children": [],
+    "max_discount": 0
+   },
+   {
+    "id": "AEddNp",
+    "type": 2,
+    "name": "آزمایشگاه عماد تهران",
+    "status": 1,
+    "slug": "emad-tehran-lab",
+    "result_type": 0,
+    "has_laboratory_consultation": true,
+    "laboratory_has_active_consultations": true,
+    "free_buffet": false,
+    "has_sampling_at_place": true,
+    "is_prescription_file_allowed": true,
+    "avatar_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/avatar/place/2024/10/BqBcyIeVyQkDgfdpZ1oHEhkFKQ1IKlyocjC3IitD.jpg",
+    "ads": null,
+    "advertisement": {
+     "priority": 0,
+     "flag": 0,
+     "city": {
+      "id": 0,
+      "province_id": 0,
+      "name": "",
+      "slug": "",
+      "latitude": "",
+      "longitude": "",
+      "priority": 0,
+      "is_center": 0
+     },
+     "speciality": {
+      "id": 0,
+      "name": "",
+      "slug": "",
+      "type": 0,
+      "parent_id": 0,
+      "type_name": "",
+      "full_name": ""
+     },
+     "tag": {
+      "id": 0,
+      "name": "",
+      "slug": ""
+     },
+     "place_type": 0
+    },
+    "address": "تهران - خیابان مطهری، خیابان فجر،کوچه مدائن پلاک 23",
+    "description": "<p>آزمایشگاه پاتوبیولوژی عماد در مرکز تهران و واقع در خیابان شهید مطهری خیابان فجر می باشد. این آزمایشگاه از خرداد ماه سال ۱۳۸۸ در این محل شروع به فعالیت حرفه ای نموده و با بهره گیری از نیروی انسانی ت",
+    "ownership_type": 2,
+    "is_open_24_hours": 0,
+    "phone": "02152742",
+    "location": {
+     "lat": 35.72286636,
+     "lon": 51.42315959
+    },
+    "full_address": "تهران - خیابان مطهری، خیابان فجر،کوچه مدائن پلاک 23",
+    "city": {
+     "id": 2200,
+     "province_id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.71634907",
+     "longitude": "51.39087920",
+     "priority": 100,
+     "is_center": 1
+    },
+    "consultations": [
+     {
+      "id": 314572,
+      "title": "آزمایشگاه آنلاین",
+      "type": {
+       "name": "مشاوره پذیرش آنلاین آزمایشگاه",
+       "value": 10
+      }
+     }
+    ],
+    "neighborhoods": [
+     {
+      "id": 314,
+      "city_id": 2200,
+      "name": "خیابان مطهری",
+      "slug": "motahari",
+      "latitude": "35.64893753",
+      "longitude": "51.44263948"
+     }
+    ],
+    "insurances": [
+     {
+      "id": 27,
+      "name": "بیمه تکمیلی معلم",
+      "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2023/6/EQrc3VFSJRjsPHBRzjUX8x0hMfbtchpPitOOEPFs.jpg"
+     },
+     {
+      "id": 2,
+      "name": "بیمه تامین اجتماعی",
+      "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2026/5/BdnWXXO0tBac9VNgZYKvcyabu3qvhk0gqE2Bg2AZ.jpg"
+     }
+    ],
+    "specialities": [
+     {
+      "id": 97,
+      "name": "پاتولوژی",
+      "slug": "pathologist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص پاتولوژی"
+     },
+     {
+      "id": 94,
+      "name": "ژنتیک",
+      "slug": "medical-geneticist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص ژنتیک"
+     }
+    ],
+    "tags": [
+     {
+      "id": 2131,
+      "name": "چکاپ کامل",
+      "slug": "full-check-up"
+     },
+     {
+      "id": 2610,
+      "name": "تست عدم اعتیاد",
+      "slug": "addiction-test"
+     }
+    ],
+    "rate": {
+     "count": 91,
+     "recommend": 90,
+     "percent": 99
+    },
+    "place_attributes": [
+     {
+      "name": "free_buffet",
+      "title": "بوفه رایگان"
+     },
+     {
+      "name": "clean_hygienic_environment",
+      "title": "محیط تمیز و بهداشتی"
+     }
+    ],
+    "presence_waiting_time": {
+     "average": null,
+     "range": null
+    },
+    "success_orders_count": 1811,
+    "doctor_count": 0,
+    "has_free_consultation_time": false,
+    "has_active_consultations": false,
+    "has_active_offers": false,
+    "offer_tags": [],
+    "children": [],
+    "max_discount": 0
+   }
+  ],
+  "per_page": 20,
+  "last_page": 40,
+  "total": 791,
+  "from": 1,
+  "to": 20
+ },
+ "message": "",
+ "errors": null
+}

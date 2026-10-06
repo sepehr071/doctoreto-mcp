@@ -1,0 +1,222 @@
+{
+ "items": {
+  "id": "YNrrOb",
+  "type": 2,
+  "result_type": 1,
+  "has_laboratory_consultation": true,
+  "free_buffet": false,
+  "has_sampling_at_place": true,
+  "name": "آزمایشگاه راز شیراز",
+  "status": 1,
+  "slug": "raz-shiraz-lap",
+  "avatar_url": "s3://drto/avatar/place/2024/10/FhuPRBjcvWvGffYbaGUlUgbmKuEjiZqyL6SyhcDy.jpg",
+  "ads": null,
+  "address": "شیراز ، خیابان معدل غربی، حدفاصل ملاصدرا و باغشاه ، مجتمع پزشکی راز",
+  "description": "<p>آزمایشگاه تخصصی و فوق تخصصی راز، یکی از پیشرفته ترین و مجهزترین مراکز تشخیص کشور، تحت نظر اساتید عالی رتبه دانشگاه علوم پزشکی شیراز و متخصصین علوم آزمایشگاهی، با بهره مندی از کارکنان متخصص و تجهیزات نوین مشغول به فعالیت می‌باشد.</p>\r\n<p><span style=\"color: rgb(65,168,95);\"><strong>نمونه گیری در م",
+  "ownership_type": 2,
+  "is_open_24_hours": 0,
+  "phone": "0719*******,0930*******,0991*******",
+  "location": {
+   "lat": 29.627331,
+   "lon": 52.52208435
+  },
+  "packages": [],
+  "full_address": "شیراز ، خیابان معدل غربی، حدفاصل ملاصدرا و باغشاه ، مجتمع پزشکی راز",
+  "city": {
+   "id": 1553,
+   "province_id": 40,
+   "name": "شیراز",
+   "slug": "shiraz",
+   "latitude": "29.60948827",
+   "longitude": "52.51757837",
+   "priority": 99,
+   "is_center": 1
+  },
+  "consultations": [
+   {
+    "id": 201221,
+    "title": "پذیرش آنلاین",
+    "type": {
+     "name": "مشاوره پذیرش آنلاین آزمایشگاه",
+     "value": 10
+    }
+   },
+   {
+    "id": 202009,
+    "title": "پکیج آزمایش",
+    "type": {
+     "name": "مشاوره دکترِتو کلینیک",
+     "value": 4
+    }
+   }
+  ],
+  "neighborhoods": [
+   {
+    "id": 1590,
+    "city_id": 1553,
+    "name": "ملاصدرا",
+    "slug": "mollasadra-shiraz",
+    "latitude": "0.00000000",
+    "longitude": "0.00000000"
+   }
+  ],
+  "insurances": [
+   {
+    "id": 6,
+    "name": "بیمه تکمیلی آتیه سازان",
+    "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2026/5/eSgAe8zENKRjLC1X9Ry0of6rSOdkvn2ZxOoNl0W4.jpg"
+   },
+   {
+    "id": 9,
+    "name": "بیمه تکمیلی آسیا",
+    "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2023/6/mHKlO0bUX3peMONYgnaXKCPmvlYrNR4wPx9vUQyL.jpg"
+   },
+   {
+    "id": 34,
+    "name": "بیمه بانک کشاورزی",
+    "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2025/11/fdEIFFk7tmxJkiXPwU5nA6kazPWeUMT88DhJuu7K.jpg"
+   },
+   {
+    "id": 25,
+    "name": "بیمه تکمیلی ما",
+    "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2023/6/tDVud2PuvaDfVWQ8UcIcZQaoNjp9csqpoGErQe35.jpg"
+   }
+  ],
+  "specialities": [
+   {
+    "id": 97,
+    "name": "پاتولوژی",
+    "slug": "pathologist",
+    "type": 2,
+    "parent_id": 1,
+    "type_name": "تخصص",
+    "full_name": "تخصص پاتولوژی"
+   },
+   {
+    "id": 94,
+    "name": "ژنتیک",
+    "slug": "medical-geneticist",
+    "type": 2,
+    "parent_id": 1,
+    "type_name": "تخصص",
+    "full_name": "تخصص ژنتیک"
+   },
+   {
+    "id": 59,
+    "name": "روماتولوژی",
+    "slug": "rheumatologist",
+    "type": 3,
+    "parent_id": 55,
+    "type_name": "فوق تخصص",
+    "full_name": "فوق تخصص روماتولوژی"
+   },
+   {
+    "id": 148,
+    "name": "هماتولوژی",
+    "slug": "hematologist",
+    "type": 3,
+    "parent_id": 55,
+    "type_name": "فوق تخصص",
+    "full_name": "فوق تخصص هماتولوژی"
+   }
+  ],
+  "tags": [
+   {
+    "id": 2594,
+    "name": "تست اسپرم",
+    "slug": "semen-analysis",
+    "vertical": {
+     "id": 14954,
+     "name": "تست اسپرم",
+     "tag_id": 2594,
+     "vertical": 3,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 2610,
+    "name": "تست عدم اعتیاد",
+    "slug": "addiction-test",
+    "vertical": {
+     "id": 15059,
+     "name": "تست عدم اعتیاد",
+     "tag_id": 2610,
+     "vertical": 3,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 910,
+    "name": "مشکلات هورمونی",
+    "slug": "hormone-disorders",
+    "vertical": {
+     "id": 12974,
+     "name": "مشکلات هورمونی",
+     "tag_id": 910,
+     "vertical": 3,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 2590,
+    "name": "پاتوبیولوژی",
+    "slug": "pathobiology",
+    "vertical": {
+     "id": 14949,
+     "name": "پاتوبیولوژی",
+     "tag_id": 2590,
+     "vertical": 3,
+     "status": 1,
+     "show_in_site": 1
+    }
+   }
+  ],
+  "rate": {
+   "count": 359,
+   "recommend": 353,
+   "percent": 99
+  },
+  "place_attributes": [
+   {
+    "title": "محیط تمیز و بهداشتی",
+    "name": "clean_hygienic_environment"
+   },
+   {
+    "title": "پذیرش منظم",
+    "name": "organized_reception"
+   },
+   {
+    "title": "جواب‌دهی سریع",
+    "name": "rapid"
+   },
+   {
+    "title": "کیفیت نمونه‌گیری",
+    "name": "sampling_quality"
+   }
+  ],
+  "presence_waiting_time": {
+   "average": null,
+   "range": null
+  },
+  "success_orders_count": 9609,
+  "doctor_count": 0,
+  "has_free_consultation_time": false,
+  "has_active_consultations": false,
+  "laboratory_has_active_consultations": true,
+  "has_active_offers": false,
+  "offer_tags": [],
+  "children": [],
+  "max_discount": 0,
+  "is_endorsable": true,
+  "endorsement_count": {
+   "total": 0,
+   "with_recommendation_letter": 0
+  },
+  "social_links": []
+ },
+ "message": "",
+ "errors": null
+}

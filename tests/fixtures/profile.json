@@ -1,0 +1,623 @@
+{
+ "items": {
+  "id": "xqbEWZ",
+  "user_id": 68651,
+  "result_type": 0,
+  "slug": "dr-kambiz-parazaran",
+  "full_name": "دکتر کامبیز پرآذران",
+  "medical_number": "97706",
+  "status": 1,
+  "city": null,
+  "title": "فوق تخصص بیماری‌های قلب و عروق",
+  "honor": null,
+  "about": "<p>بورد تخصصی بیماریهای داخلی و <a href=\"https://doctoreto.com/doctors/speciality/cardiologist\" target=\"_self\"><span style=\"color: rgb(44,130,201);\">دکتر قلب</span></a></p>\r\n<p>درمان نارسایی قلب، آریتمی ها، طپش قلب، دردهای قلبی، آنژین صدری، تنگی نفس و انسدادعروق کرونر.در مطب اکوکاردیوگرافی رنگی، تست ورزش، نوارقلب، هولتر ریتم، هولترفشارخون و تست تنفس انجام می شود.</p>\r\n<p>همکاری با بیمارستان نیکان اقدسیه</p>",
+  "avatar_url": "s3://drto/avatar/doctor/2025/7/1I5AuqRScnIggUqKsg4DiFjLAhSZRKJSPOytH8eq.jpg",
+  "specialities": [
+   {
+    "id": 72,
+    "slug": "cardiologist",
+    "name": "قلب و عروق",
+    "parent_id": 1,
+    "type": 2,
+    "type_name": "تخصص",
+    "full_name": "تخصص قلب و عروق",
+    "title": "متخصص قلب و عروق",
+    "nested_children": [
+     {
+      "id": 73,
+      "slug": "interventional-cardiologist",
+      "name": "اینترونشنال کاردیولوژی",
+      "parent_id": 72,
+      "type": 4,
+      "type_name": "فلوشیپ",
+      "full_name": "فلوشیپ اینترونشنال کاردیولوژی",
+      "nested_children": []
+     }
+    ]
+   },
+   {
+    "id": 55,
+    "slug": "internist",
+    "name": "داخلی",
+    "parent_id": 1,
+    "type": 2,
+    "type_name": "تخصص",
+    "full_name": "تخصص داخلی",
+    "title": "متخصص داخلی",
+    "nested_children": [
+     {
+      "id": 57,
+      "slug": "gastroenterologist",
+      "name": "گوارش و کبد",
+      "parent_id": 55,
+      "type": 3,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص گوارش و کبد",
+      "nested_children": []
+     },
+     {
+      "id": 58,
+      "slug": "nephrologist",
+      "name": "کلیه و نفرولوژی",
+      "parent_id": 55,
+      "type": 3,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص کلیه و نفرولوژی",
+      "nested_children": []
+     },
+     {
+      "id": 59,
+      "slug": "rheumatologist",
+      "name": "روماتولوژی",
+      "parent_id": 55,
+      "type": 3,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص روماتولوژی",
+      "nested_children": []
+     },
+     {
+      "id": 61,
+      "slug": "pulmonologist",
+      "name": "ریه",
+      "parent_id": 55,
+      "type": 3,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص ریه",
+      "nested_children": []
+     },
+     {
+      "id": 63,
+      "slug": "endocrinologist",
+      "name": "غدد و متابولیسم",
+      "parent_id": 55,
+      "type": 3,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص غدد و متابولیسم",
+      "nested_children": []
+     },
+     {
+      "id": 143,
+      "slug": "oncologist",
+      "name": "آنکولوژی",
+      "parent_id": 55,
+      "type": 3,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص آنکولوژی",
+      "nested_children": []
+     }
+    ]
+   }
+  ],
+  "first_speciality": {
+   "id": 72,
+   "slug": "cardiologist",
+   "full_name": "تخصص قلب و عروق",
+   "parent_id": 1,
+   "type": 2
+  },
+  "second_speciality": {
+   "id": 55,
+   "slug": "internist",
+   "full_name": "تخصص داخلی",
+   "parent_id": 1,
+   "type": 2
+  },
+  "consultations": [
+   {
+    "id": 1943,
+    "title": null,
+    "type": {
+     "name": "نوبت دهی مطب",
+     "value": 0
+    },
+    "call_duration": null,
+    "price": {
+     "price": 0,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "offline_price": {
+     "price": 250000,
+     "unit": "تومان",
+     "format_price": "250,000 تومان"
+    },
+    "pre_payment_price": {
+     "price": null,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "status": 1,
+    "description": null,
+    "is_description_required": false,
+    "place": {
+     "id": 1254,
+     "type": 0,
+     "name": "مطب خیابان پاسداران",
+     "status": 1,
+     "slug": null,
+     "address": "تهران، پاسداران، بوستان نهم (شهید جعفری)، پلاک 121، ساختمان پزشکان مهرگان، طبقه 5، واحد 121",
+     "description": null,
+     "is_open_24_hours": null,
+     "phone": "0903*******,0214*******,0214*******,0212*******,0212*******",
+     "avatar": null,
+     "location": {
+      "lat": "35.76801155",
+      "lon": "51.46007828"
+     },
+     "full_address": "تهران، پاسداران، بوستان نهم (شهید جعفری)، پلاک 121، ساختمان پزشکان مهرگان، طبقه 5، واحد 121",
+     "city": {
+      "id": 2200,
+      "province_id": 55,
+      "name": "تهران",
+      "slug": "tehran",
+      "latitude": "35.71634907",
+      "longitude": "51.39087920",
+      "priority": 100,
+      "is_center": 1,
+      "province": {
+       "id": 55,
+       "country_id": 205,
+       "name": "تهران",
+       "slug": "tehran",
+       "latitude": "35.20839701",
+       "longitude": "51.67508996"
+      }
+     },
+     "neighborhoods": [
+      {
+       "id": 1749,
+       "city_id": 2200,
+       "name": "منطقه 3",
+       "slug": "mantaghe3",
+       "latitude": "0.00000000",
+       "longitude": "0.00000000"
+      },
+      {
+       "id": 279,
+       "city_id": 2200,
+       "name": "قلهک",
+       "slug": "qolhak",
+       "latitude": "35.77366749",
+       "longitude": "51.44437120"
+      },
+      {
+       "id": 75,
+       "city_id": 2200,
+       "name": "پاسداران",
+       "slug": "pasdaran",
+       "latitude": "35.77268581",
+       "longitude": "51.46794685"
+      },
+      {
+       "id": 1750,
+       "city_id": 2200,
+       "name": "منطقه 4",
+       "slug": "mantaghe4",
+       "latitude": "0.00000000",
+       "longitude": "0.00000000"
+      }
+     ],
+     "specialities": [],
+     "rate": {
+      "count": 0,
+      "recommend": 0,
+      "percent": 0
+     }
+    },
+    "doctor_place_id": 691,
+    "insurances": [],
+    "start_show": 0,
+    "end_show": 720,
+    "commission_percent": "0.00",
+    "show_remind": 0,
+    "pay_type": {
+     "name": "پرداخت در محل",
+     "value": 0
+    },
+    "on_calls": [],
+    "is_triage": false,
+    "initial_message": null,
+    "priority": 0,
+    "service_tags": []
+   },
+   {
+    "id": 279292,
+    "title": null,
+    "type": {
+     "name": "مشاوره تلفنی",
+     "value": 1
+    },
+    "call_duration": 15,
+    "price": {
+     "price": 2250000,
+     "unit": "تومان",
+     "format_price": "2250000 تومان"
+    },
+    "offline_price": {
+     "price": null,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "pre_payment_price": {
+     "price": null,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "status": 1,
+    "description": "<p>کاربران گرامی:</p>\n<p>لطفاً توجه داشته تجویز دارو برای بیمارانی که پیش از این توسط پزشک ویزیت نشده‌اند، امکان پذیر نمی باشد .</p>",
+    "is_description_required": false,
+    "place": {
+     "specialities": [],
+     "city": []
+    },
+    "doctor_place_id": null,
+    "insurances": [],
+    "start_show": 4,
+    "end_show": 720,
+    "commission_percent": "20.00",
+    "show_remind": 1,
+    "pay_type": {
+     "name": "پرداخت آنلاین",
+     "value": 1
+    },
+    "on_calls": [],
+    "is_triage": false,
+    "initial_message": null,
+    "priority": 2,
+    "service_tags": []
+   },
+   {
+    "id": 691534,
+    "title": null,
+    "type": {
+     "name": "نوبت دهی مطب",
+     "value": 0
+    },
+    "call_duration": null,
+    "price": {
+     "price": 0,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "offline_price": {
+     "price": null,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "pre_payment_price": {
+     "price": null,
+     "unit": "تومان",
+     "format_price": "رایگان"
+    },
+    "status": 1,
+    "description": null,
+    "is_description_required": false,
+    "place": {
+     "id": 332365,
+     "type": 7,
+     "name": "ساختمان پزشکان قائم تهران",
+     "status": 1,
+     "slug": "ghaem-tehran-center",
+     "address": "تهران، انتهای نواب، جوادیه 20 متری، نبش کوچه نقی زاده اصل، پلاک 277، ساختمان پزشکان قائم",
+     "description": null,
+     "is_open_24_hours": 0,
+     "phone": "0904*******,0912*******",
+     "avatar": null,
+     "location": {
+      "lat": "35.65318730",
+      "lon": "51.38927245"
+     },
+     "full_address": "تهران، انتهای نواب، جوادیه 20 متری، نبش کوچه نقی زاده اصل، پلاک 277، ساختمان پزشکان قائم",
+     "city": {
+      "id": 2200,
+      "province_id": 55,
+      "name": "تهران",
+      "slug": "tehran",
+      "latitude": "35.71634907",
+      "longitude": "51.39087920",
+      "priority": 100,
+      "is_center": 1,
+      "province": {
+       "id": 55,
+       "country_id": 205,
+       "name": "تهران",
+       "slug": "tehran",
+       "latitude": "35.20839701",
+       "longitude": "51.67508996"
+      }
+     },
+     "neighborhoods": [
+      {
+       "id": 106,
+       "city_id": 2200,
+       "name": "جوادیه",
+       "slug": "javadiye",
+       "latitude": "35.65377095",
+       "longitude": "51.39801138"
+      },
+      {
+       "id": 1757,
+       "city_id": 2200,
+       "name": "منطقه 11",
+       "slug": "mantaghe11",
+       "latitude": "0.00000000",
+       "longitude": "0.00000000"
+      }
+     ],
+     "specialities": [
+      {
+       "id": 28,
+       "name": "جراحی عمومی",
+       "slug": "general-surgeon",
+       "type": 2,
+       "parent_id": 1,
+       "type_name": "تخصص",
+       "full_name": "تخصص جراحی عمومی"
+      },
+      {
+       "id": 2,
+       "name": "ارتوپدی",
+       "slug": "orthopedist",
+       "type": 2,
+       "parent_id": 1,
+       "type_name": "تخصص",
+       "full_name": "تخصص ارتوپدی"
+      },
+      {
+       "id": 65,
+       "name": "زنان و زایمان",
+       "slug": "ob-gyn",
+       "type": 2,
+       "parent_id": 1,
+       "type_name": "تخصص",
+       "full_name": "تخصص زنان و زایمان"
+      },
+      {
+       "id": 82,
+       "name": "گوارش و کبد کودکان",
+       "slug": "pediatric-gastroenterologist",
+       "type": 3,
+       "parent_id": 76,
+       "type_name": "فوق تخصص",
+       "full_name": "فوق تخصص گوارش و کبد کودکان"
+      },
+      {
+       "id": 50,
+       "name": "مغز و اعصاب و نورولوژی",
+       "slug": "neurologist",
+       "type": 2,
+       "parent_id": 1,
+       "type_name": "تخصص",
+       "full_name": "تخصص مغز و اعصاب و نورولوژی"
+      },
+      {
+       "id": 106,
+       "name": "تغذیه",
+       "slug": "dietitian",
+       "type": 2,
+       "parent_id": 102,
+       "type_name": "تخصص",
+       "full_name": "تخصص تغذیه"
+      }
+     ],
+     "rate": {
+      "count": 1,
+      "recommend": 1,
+      "percent": 100
+     }
+    },
+    "doctor_place_id": 389579,
+    "insurances": [],
+    "start_show": 24,
+    "end_show": 720,
+    "commission_percent": "0.00",
+    "show_remind": 1,
+    "pay_type": {
+     "name": "پرداخت در محل",
+     "value": 0
+    },
+    "on_calls": [],
+    "is_triage": false,
+    "initial_message": null,
+    "priority": null,
+    "service_tags": []
+   }
+  ],
+  "free_next_consultation_time": {
+   "id": 13860059649,
+   "status": 1,
+   "day": "2026-10-06",
+   "date": "2026-10-06 10:00:00",
+   "show_date": "2026-10-06 10:00:00",
+   "shamsi_date": "فردا",
+   "time": "10:00",
+   "format_time": "قبل از ظهر",
+   "shamsi_day": "1405-07-14",
+   "open_at": null,
+   "place": {
+    "id": 1254,
+    "type": 0
+   },
+   "consultation_type": {
+    "name": "نوبت دهی مطب",
+    "value": 0
+   },
+   "is_next_free_time": true
+  },
+  "show_comment": true,
+  "ads": null,
+  "rate": {
+   "count": 408,
+   "recommend": 373,
+   "percent": 92
+  },
+  "rate_avg": [
+   {
+    "title": "نحوه برخورد پزشک",
+    "rate": 4.74
+   },
+   {
+    "title": "توضیح پزشک در هنگام ویزیت",
+    "rate": 4.65
+   },
+   {
+    "title": "مهارت پزشک در تشخیص و درمان",
+    "rate": 4.66
+   },
+   {
+    "title": "فرآیند پذیرش و رفتار منشی",
+    "rate": 4.3
+   },
+   {
+    "title": "شرایط محیطی",
+    "rate": 4.6
+   }
+  ],
+  "graph": [
+   {
+    "name": "15 - 0 دقیقه",
+    "value": 159,
+    "label": "159 نفر"
+   },
+   {
+    "name": "45 - 15 دقیقه",
+    "value": 123,
+    "label": "123 نفر"
+   },
+   {
+    "name": "90 - 45 دقیقه",
+    "value": 68,
+    "label": "68 نفر"
+   },
+   {
+    "name": "بیش از 90 دقیقه",
+    "value": 50,
+    "label": "50 نفر"
+   }
+  ],
+  "cities": [
+   {
+    "id": 2200,
+    "slug": "tehran",
+    "name": "تهران",
+    "province_id": 55
+   }
+  ],
+  "count_done_orders": 6945,
+  "service_tags": [
+   {
+    "id": 816,
+    "name": "بی اشتهایی",
+    "slug": "anorexia",
+    "vertical": {
+     "id": 3114,
+     "name": "بی اشتهایی",
+     "tag_id": 816,
+     "vertical": 1,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 128,
+    "name": "خود ایمنی",
+    "slug": "auto-immune",
+    "vertical": {
+     "id": 484,
+     "name": "خود ایمنی",
+     "tag_id": 128,
+     "vertical": 1,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 278,
+    "name": "سی تی آنژیوگرافی",
+    "slug": "ct-angiogram",
+    "vertical": {
+     "id": 1099,
+     "name": "سی تی آنژیوگرافی",
+     "tag_id": 278,
+     "vertical": 1,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 2125,
+    "name": "فاویسم",
+    "slug": "favism",
+    "vertical": {
+     "id": 15744,
+     "name": "فاویسم",
+     "tag_id": 2125,
+     "vertical": 1,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 115,
+    "name": "آنوریسم آئورت شکمی",
+    "slug": "aortic-aneurysm-surgery",
+    "vertical": {
+     "id": 419,
+     "name": "آنوریسم آئورت شکمی",
+     "tag_id": 115,
+     "vertical": 1,
+     "status": 1,
+     "show_in_site": 1
+    }
+   },
+   {
+    "id": 1036,
+    "name": "تب مالت",
+    "slug": "brucellosis",
+    "vertical": {
+     "id": 4034,
+     "name": "تب مالت (بروسلوز)",
+     "tag_id": 1036,
+     "vertical": 1,
+     "status": 1,
+     "show_in_site": 1
+    }
+   }
+  ],
+  "insurances": [],
+  "presence_waiting_time": {
+   "avg": "36",
+   "average": "36 دقیقه ",
+   "range": "15-45 دقیقه"
+  },
+  "max_discount": 0,
+  "endorsement_count": {
+   "total": 5,
+   "with_recommendation_letter": 0
+  },
+  "is_endorsable": true,
+  "social_links": []
+ },
+ "message": "",
+ "errors": null
+}

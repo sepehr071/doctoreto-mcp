@@ -1,0 +1,624 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": 98957,
+    "hash_id": "YmexLx",
+    "name": "نوار قلب⬅️",
+    "image_url": "s3://drto/offer/2025/12/Im3v4vu4iFhhjfosHY87xnUSzabjqWxIMVFRBCMl.png",
+    "pics_count": 9,
+    "video_count": 5,
+    "type": 0,
+    "version": 2,
+    "consultations": [
+     {
+      "id": 19222,
+      "consultation_id": 408247,
+      "next_free_time": {
+       "id": 13841087399,
+       "status": 1,
+       "day": "2026-10-06",
+       "date": "2026-10-06 11:00:00",
+       "show_date": "2026-10-06 07:00:00",
+       "shamsi_date": "فردا",
+       "time": "11:00",
+       "format_time": "قبل از ظهر",
+       "shamsi_day": "1405-07-14",
+       "open_at": null,
+       "place": {
+        "id": 180356,
+        "type": 0
+       }
+      },
+      "offer_id": 98957,
+      "price": {
+       "price": 413000,
+       "unit": "تومان",
+       "format_price": "413,000 تومان"
+      },
+      "discount_price": {
+       "price": 413000,
+       "unit": "تومان",
+       "format_price": "413,000 تومان"
+      },
+      "payment_type": 2,
+      "is_installment": false,
+      "pre_payment_price": {
+       "price": 100000,
+       "unit": "تومان",
+       "format_price": "100,000 تومان"
+      },
+      "pre_payment_percent": null,
+      "sales_capacity": 1000,
+      "remaining_capacity": 997,
+      "limit_per_order": 10,
+      "discount": 0,
+      "commission": 0,
+      "is_default": 1,
+      "has_variation": 0,
+      "title": "مشاوره دکترتو کلینیک",
+      "type": {
+       "name": "مشاوره حضوری دکترِتو کلینیک",
+       "value": 4
+      },
+      "status": 1,
+      "place": {
+       "id": 180356,
+       "hash_id": "ZzbjGj",
+       "type": {
+        "value": 0,
+        "name": "مطب"
+       },
+       "name": "مطب سعادت آباد",
+       "slug": null,
+       "address": "سعادت آباد، چهار راه سرو، سرو غربی، کوچه نامی، طبقه سوم آزمایشگاه ساره",
+       "phone": "0990*******",
+       "avatar": null,
+       "location": {
+        "lat": "35.77905047",
+        "lon": "51.36165620"
+       },
+       "view_count": 0
+      },
+      "city": {
+       "id": 2200,
+       "name": "تهران",
+       "slug": "tehran",
+       "province": {
+        "id": 55,
+        "country_id": 205,
+        "name": "تهران",
+        "slug": "tehran",
+        "latitude": "35.20839701",
+        "longitude": "51.67508996"
+       },
+       "latitude": "35.71634907",
+       "longitude": "51.39087920"
+      },
+      "neighborhoods": [
+       {
+        "id": 180,
+        "name": "سعادت آباد",
+        "slug": "saadatabad"
+       }
+      ]
+     }
+    ],
+    "slug": "nvar-qlb",
+    "ads": null,
+    "subscription": true,
+    "consultation_id": 408247,
+    "payment_type": 2,
+    "price": {
+     "price": 413000,
+     "unit": "تومان",
+     "format_price": "413,000 تومان"
+    },
+    "payed_price": 413000,
+    "price_range": {
+     "min": null,
+     "max": null
+    },
+    "discount": 0,
+    "discount_price": {
+     "price": 413000,
+     "unit": "تومان",
+     "format_price": "413,000 تومان"
+    },
+    "pre_payment_price": {
+     "price": 100000,
+     "unit": "تومان",
+     "format_price": "100,000 تومان"
+    },
+    "pre_payment_percent": 0,
+    "sales_capacity": null,
+    "limit_per_order": 10,
+    "remaining_capacity": 997,
+    "is_available": true,
+    "next_free_time": {
+     "id": 13841087399,
+     "status": 1,
+     "day": "2026-10-06",
+     "date": "2026-10-06 11:00:00",
+     "show_date": "2026-10-06 07:00:00",
+     "shamsi_date": "فردا",
+     "time": "11:00",
+     "format_time": "قبل از ظهر",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "place": {
+      "id": 180356,
+      "type": 0
+     }
+    },
+    "has_variation": false,
+    "variations": [],
+    "doctor": {
+     "id": 461544,
+     "hash_id": "MdvEao",
+     "slug": "dr-hedieh-jabbari",
+     "full_name": "دکتر هدیه جباری",
+     "medical_number": "163761",
+     "view_count": 3,
+     "about": "<h4>دکتر هدیه جباری متخصص قلب و عروق،</h4>\r\n<h4>دارای بورد تخصصی از دانشگاه علوم پزشکی شهید بهشتی،</h4>\r\n<h4>یک درصد برتر دانشجویان پزشکی کشور،</h4>\r\n<h4>رتبه اول آزمون صلاحیت بالینی،</h4>\r\n<h4>تقدیر شده در دومین کنفرانس تجلیل از اساتید پزشکی کشور،</h4>\r\n<h4>عضو انجمن آترواسکلروز</h4>",
+     "avatar": "avatar/doctor/2025/8/CUdZiGrtwXL8x7rYrTePI2OPbnkYRKC5T6mDVnFh.jpg",
+     "avatar_url": "s3://drto/avatar/doctor/2025/8/CUdZiGrtwXL8x7rYrTePI2OPbnkYRKC5T6mDVnFh.jpg",
+     "specialities": [
+      {
+       "id": 72,
+       "name": "قلب و عروق",
+       "slug": "cardiologist"
+      }
+     ]
+    },
+    "place": {
+     "id": 180356,
+     "hash_id": "ZzbjGj",
+     "type": {
+      "value": 0,
+      "name": "مطب"
+     },
+     "name": "مطب سعادت آباد",
+     "slug": null,
+     "address": "سعادت آباد، چهار راه سرو، سرو غربی، کوچه نامی، طبقه سوم آزمایشگاه ساره",
+     "phone": "0990*******",
+     "avatar": null,
+     "location": {
+      "lat": "35.77905047",
+      "lon": "51.36165620"
+     },
+     "view_count": 0
+    },
+    "city": {
+     "id": 2200,
+     "name": "تهران",
+     "slug": "tehran",
+     "province": {
+      "id": 55,
+      "country_id": 205,
+      "name": "تهران",
+      "slug": "tehran",
+      "latitude": "35.20839701",
+      "longitude": "51.67508996"
+     },
+     "latitude": "35.71634907",
+     "longitude": "51.39087920"
+    },
+    "neighborhoods": [
+     {
+      "id": 180,
+      "name": "سعادت آباد",
+      "slug": "saadatabad"
+     }
+    ],
+    "specialities": [
+     {
+      "id": 72,
+      "slug": "cardiologist",
+      "name": "قلب و عروق",
+      "type": 2,
+      "parent_id": 1
+     }
+    ],
+    "tags": [
+     {
+      "id": 385,
+      "name": "نوار قلبی",
+      "slug": "cardic-ecg",
+      "vertical": {
+       "id": 6969,
+       "name": "نوار قلبی",
+       "tag_id": 385,
+       "vertical": 2,
+       "status": 1,
+       "show_in_site": 1
+      },
+      "verticals": {
+       "doctor": {
+        "id": 1509,
+        "name": "نوار قلبی",
+        "tag_id": 385,
+        "vertical": 1,
+        "status": 1,
+        "show_in_site": 1
+       },
+       "offer": {
+        "id": 6969,
+        "name": "نوار قلبی",
+        "tag_id": 385,
+        "vertical": 2,
+        "status": 1,
+        "show_in_site": 1
+       },
+       "place": {
+        "id": 11829,
+        "name": "نوار قلبی",
+        "tag_id": 385,
+        "vertical": 3,
+        "status": 1,
+        "show_in_site": 1
+       }
+      }
+     }
+    ],
+    "insurances": [],
+    "attributes": [],
+    "description": "<p style=\"text-align:start;\"></p>\n<p style=\"text-align:right;\"><span style=\"color: rgba(0,0,0,0.87);background-color: rgb(255,255,255);font-size: 14px;font-family: IRANSans, sans-serif;\"><strong>درباره خدمت</strong></span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgba(0,0,0,0.87);backgro",
+    "terms_of_use": "",
+    "pre_payment_terms": "",
+    "status": 1,
+    "is_pre_payment": false,
+    "is_online_payment": false,
+    "is_installment": false,
+    "view_count": 3,
+    "done_orders_count": 0,
+    "graph": {
+     "name": "15 - 0 دقیقه",
+     "value": 60,
+     "label": "60 نفر"
+    },
+    "rate": {
+     "count": 69,
+     "recommend": 69,
+     "percent": 100,
+     "total_related_rates": 69
+    },
+    "point": {
+     "average": 5,
+     "percent": 100,
+     "count": 69
+    },
+    "expire_at": "2026-11-11 23:59:59"
+   },
+   {
+    "id": 98962,
+    "hash_id": "KjbZJa",
+    "name": "اکو قلب⬅️",
+    "image_url": "s3://drto/offer/2025/12/86rBArTTnNPgotDLyaMfYD00tBuv0rpBJnRwxJaF.png",
+    "pics_count": 9,
+    "video_count": 5,
+    "type": 0,
+    "version": 2,
+    "consultations": [
+     {
+      "id": 19227,
+      "consultation_id": 408247,
+      "next_free_time": {
+       "id": 13841087399,
+       "status": 1,
+       "day": "2026-10-06",
+       "date": "2026-10-06 11:00:00",
+       "show_date": "2026-10-06 07:00:00",
+       "shamsi_date": "فردا",
+       "time": "11:00",
+       "format_time": "قبل از ظهر",
+       "shamsi_day": "1405-07-14",
+       "open_at": null,
+       "place": {
+        "id": 180356,
+        "type": 0
+       }
+      },
+      "offer_id": 98962,
+      "price": {
+       "price": 2300000,
+       "unit": "تومان",
+       "format_price": "2,300,000 تومان"
+      },
+      "discount_price": {
+       "price": 2300000,
+       "unit": "تومان",
+       "format_price": "2,300,000 تومان"
+      },
+      "payment_type": 2,
+      "is_installment": false,
+      "pre_payment_price": {
+       "price": 100000,
+       "unit": "تومان",
+       "format_price": "100,000 تومان"
+      },
+      "pre_payment_percent": null,
+      "sales_capacity": 1000,
+      "remaining_capacity": 990,
+      "limit_per_order": 10,
+      "discount": 0,
+      "commission": 0,
+      "is_default": 1,
+      "has_variation": 1,
+      "title": "مشاوره دکترتو کلینیک",
+      "type": {
+       "name": "مشاوره حضوری دکترِتو کلینیک",
+       "value": 4
+      },
+      "status": 1,
+      "place": {
+       "id": 180356,
+       "hash_id": "ZzbjGj",
+       "type": {
+        "value": 0,
+        "name": "مطب"
+       },
+       "name": "مطب سعادت آباد",
+       "slug": null,
+       "address": "سعادت آباد، چهار راه سرو، سرو غربی، کوچه نامی، طبقه سوم آزمایشگاه ساره",
+       "phone": "0990*******",
+       "avatar": null,
+       "location": {
+        "lat": "35.77905047",
+        "lon": "51.36165620"
+       },
+       "view_count": 0
+      },
+      "city": {
+       "id": 2200,
+       "name": "تهران",
+       "slug": "tehran",
+       "province": {
+        "id": 55,
+        "country_id": 205,
+        "name": "تهران",
+        "slug": "tehran",
+        "latitude": "35.20839701",
+        "longitude": "51.67508996"
+       },
+       "latitude": "35.71634907",
+       "longitude": "51.39087920"
+      },
+      "neighborhoods": [
+       {
+        "id": 180,
+        "name": "سعادت آباد",
+        "slug": "saadatabad"
+       }
+      ]
+     }
+    ],
+    "slug": "akvkardyvgrafy-qlb",
+    "ads": null,
+    "subscription": true,
+    "consultation_id": 408247,
+    "payment_type": 2,
+    "price": {
+     "price": 2300000,
+     "unit": "تومان",
+     "format_price": "2,300,000 تومان"
+    },
+    "payed_price": 2300000,
+    "price_range": {
+     "min": null,
+     "max": null
+    },
+    "discount": 0,
+    "discount_price": {
+     "price": 2300000,
+     "unit": "تومان",
+     "format_price": "2,300,000 تومان"
+    },
+    "pre_payment_price": {
+     "price": 100000,
+     "unit": "تومان",
+     "format_price": "100,000 تومان"
+    },
+    "pre_payment_percent": 0,
+    "sales_capacity": null,
+    "limit_per_order": 10,
+    "remaining_capacity": 990,
+    "is_available": true,
+    "next_free_time": {
+     "id": 13841087399,
+     "status": 1,
+     "day": "2026-10-06",
+     "date": "2026-10-06 11:00:00",
+     "show_date": "2026-10-06 07:00:00",
+     "shamsi_date": "فردا",
+     "time": "11:00",
+     "format_time": "قبل از ظهر",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "place": {
+      "id": 180356,
+      "type": 0
+     }
+    },
+    "has_variation": true,
+    "variations": [
+     {
+      "id": 49603,
+      "price": {
+       "price": 2300000,
+       "unit": "تومان",
+       "format_price": "2,300,000 تومان"
+      },
+      "discount": 0,
+      "discount_price": {
+       "price": 2300000,
+       "unit": "تومان",
+       "format_price": "2,300,000 تومان"
+      },
+      "pre_payment_price": {
+       "price": 100000,
+       "unit": "تومان",
+       "format_price": "100,000 تومان"
+      },
+      "is_default": 1,
+      "attribute_values": [
+       {
+        "id": 288,
+        "name": "نوع اکو",
+        "value": {
+         "id": 4548,
+         "name": "TTE (سینه ای)"
+        }
+       }
+      ]
+     }
+    ],
+    "doctor": {
+     "id": 461544,
+     "hash_id": "MdvEao",
+     "slug": "dr-hedieh-jabbari",
+     "full_name": "دکتر هدیه جباری",
+     "medical_number": "163761",
+     "view_count": 3,
+     "about": "<h4>دکتر هدیه جباری متخصص قلب و عروق،</h4>\r\n<h4>دارای بورد تخصصی از دانشگاه علوم پزشکی شهید بهشتی،</h4>\r\n<h4>یک درصد برتر دانشجویان پزشکی کشور،</h4>\r\n<h4>رتبه اول آزمون صلاحیت بالینی،</h4>\r\n<h4>تقدیر شده در دومین کنفرانس تجلیل از اساتید پزشکی کشور،</h4>\r\n<h4>عضو انجمن آترواسکلروز</h4>",
+     "avatar": "avatar/doctor/2025/8/CUdZiGrtwXL8x7rYrTePI2OPbnkYRKC5T6mDVnFh.jpg",
+     "avatar_url": "s3://drto/avatar/doctor/2025/8/CUdZiGrtwXL8x7rYrTePI2OPbnkYRKC5T6mDVnFh.jpg",
+     "specialities": [
+      {
+       "id": 72,
+       "name": "قلب و عروق",
+       "slug": "cardiologist"
+      }
+     ]
+    },
+    "place": {
+     "id": 180356,
+     "hash_id": "ZzbjGj",
+     "type": {
+      "value": 0,
+      "name": "مطب"
+     },
+     "name": "مطب سعادت آباد",
+     "slug": null,
+     "address": "سعادت آباد، چهار راه سرو، سرو غربی، کوچه نامی، طبقه سوم آزمایشگاه ساره",
+     "phone": "0990*******",
+     "avatar": null,
+     "location": {
+      "lat": "35.77905047",
+      "lon": "51.36165620"
+     },
+     "view_count": 0
+    },
+    "city": {
+     "id": 2200,
+     "name": "تهران",
+     "slug": "tehran",
+     "province": {
+      "id": 55,
+      "country_id": 205,
+      "name": "تهران",
+      "slug": "tehran",
+      "latitude": "35.20839701",
+      "longitude": "51.67508996"
+     },
+     "latitude": "35.71634907",
+     "longitude": "51.39087920"
+    },
+    "neighborhoods": [
+     {
+      "id": 180,
+      "name": "سعادت آباد",
+      "slug": "saadatabad"
+     }
+    ],
+    "specialities": [
+     {
+      "id": 72,
+      "slug": "cardiologist",
+      "name": "قلب و عروق",
+      "type": 2,
+      "parent_id": 1
+     }
+    ],
+    "tags": [
+     {
+      "id": 96,
+      "name": " اکوکاردیوگرافی (اکوی قلب)",
+      "slug": "echocardiography",
+      "vertical": {
+       "id": 6139,
+       "name": " اکوکاردیوگرافی (اکوی قلب)",
+       "tag_id": 96,
+       "vertical": 2,
+       "status": 1,
+       "show_in_site": 1
+      },
+      "verticals": {
+       "doctor": {
+        "id": 354,
+        "name": " اکوکاردیوگرافی (اکوی قلب)",
+        "tag_id": 96,
+        "vertical": 1,
+        "status": 1,
+        "show_in_site": 1
+       },
+       "offer": {
+        "id": 6139,
+        "name": " اکوکاردیوگرافی (اکوی قلب)",
+        "tag_id": 96,
+        "vertical": 2,
+        "status": 1,
+        "show_in_site": 1
+       },
+       "place": {
+        "id": 11199,
+        "name": " اکوکاردیوگرافی (اکوی قلب)",
+        "tag_id": 96,
+        "vertical": 3,
+        "status": 1,
+        "show_in_site": 1
+       }
+      }
+     }
+    ],
+    "insurances": [],
+    "attributes": [],
+    "description": "<h5><span style=\"color: rgba(0,0,0,0.87);background-color: rgb(255,255,255);font-size: 14px;font-family: IRANSans, sans-serif;\"><strong>درباره خدمت</strong></span></h5>\n<p style=\"text-align:right;\"><span style=\"color: rgba(0,0,0,0.87);background-color: rgb(255,255,255);font-size: 14px;font-family: I",
+    "terms_of_use": "",
+    "pre_payment_terms": "",
+    "status": 1,
+    "is_pre_payment": false,
+    "is_online_payment": false,
+    "is_installment": false,
+    "view_count": 3,
+    "done_orders_count": 0,
+    "graph": {
+     "name": "15 - 0 دقیقه",
+     "value": 60,
+     "label": "60 نفر"
+    },
+    "rate": {
+     "count": 69,
+     "recommend": 69,
+     "percent": 100,
+     "total_related_rates": 69
+    },
+    "point": {
+     "average": 5,
+     "percent": 100,
+     "count": 69
+    },
+    "expire_at": "2026-11-11 23:59:59"
+   }
+  ],
+  "from": 1,
+  "last_page": 2,
+  "next_page_url": "http://api.doctoreto.com/api/web/patient/v1/offers?page=2",
+  "per_page": 40,
+  "to": 40,
+  "total": 43
+ },
+ "message": "",
+ "errors": null
+}

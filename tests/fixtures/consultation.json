@@ -1,0 +1,375 @@
+{
+ "items": [
+  {
+   "id": 691534,
+   "title": null,
+   "type": {
+    "name": "نوبت دهی مطب",
+    "value": 0
+   },
+   "call_duration": null,
+   "price": {
+    "price": 0,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "total_price": {
+    "price": null,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "show_price": 0,
+   "status": 1,
+   "description_title": null,
+   "description": null,
+   "is_description_required": false,
+   "pause": 0,
+   "capacity": 0,
+   "clarification": null,
+   "advanced": 0,
+   "place": {
+    "id": "ZElKeK",
+    "type": 7,
+    "name": "ساختمان پزشکان قائم تهران",
+    "status": 1,
+    "slug": "ghaem-tehran-center",
+    "address": "تهران، انتهای نواب، جوادیه 20 متری، نبش کوچه نقی زاده اصل، پلاک 277، ساختمان پزشکان قائم",
+    "description": null,
+    "is_open_24_hours": 0,
+    "phone": "0904*******,0912*******",
+    "avatar": null,
+    "location": {
+     "lat": "35.65318730",
+     "lon": "51.38927245"
+    },
+    "full_address": "تهران، انتهای نواب، جوادیه 20 متری، نبش کوچه نقی زاده اصل، پلاک 277، ساختمان پزشکان قائم",
+    "city": {
+     "id": 2200,
+     "province_id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.71634907",
+     "longitude": "51.39087920",
+     "priority": 100,
+     "is_center": 1
+    },
+    "neighborhoods": [
+     {
+      "id": 106,
+      "city_id": 2200,
+      "name": "جوادیه",
+      "slug": "javadiye",
+      "latitude": "35.65377095",
+      "longitude": "51.39801138"
+     },
+     {
+      "id": 1757,
+      "city_id": 2200,
+      "name": "منطقه 11",
+      "slug": "mantaghe11",
+      "latitude": "0.00000000",
+      "longitude": "0.00000000"
+     }
+    ],
+    "specialities": [
+     {
+      "id": 28,
+      "name": "جراحی عمومی",
+      "slug": "general-surgeon",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص جراحی عمومی"
+     },
+     {
+      "id": 2,
+      "name": "ارتوپدی",
+      "slug": "orthopedist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص ارتوپدی"
+     },
+     {
+      "id": 65,
+      "name": "زنان و زایمان",
+      "slug": "ob-gyn",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص زنان و زایمان"
+     },
+     {
+      "id": 82,
+      "name": "گوارش و کبد کودکان",
+      "slug": "pediatric-gastroenterologist",
+      "type": 3,
+      "parent_id": 76,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص گوارش و کبد کودکان"
+     }
+    ],
+    "rate": {
+     "count": 1,
+     "recommend": 1,
+     "percent": 100
+    }
+   },
+   "doctor_place_id": 389579,
+   "insurances": [],
+   "start_show": 24,
+   "end_show": 720,
+   "specialities": [],
+   "show_remind": 1,
+   "pay_type": {
+    "name": "پرداخت در محل",
+    "value": 0
+   },
+   "days": [
+    {
+     "title": "فردا",
+     "date": "2026-10-07",
+     "shamsi_date": "15 مهر"
+    },
+    {
+     "title": "پنج‌شنبه",
+     "date": "2026-10-08",
+     "shamsi_date": "16 مهر"
+    },
+    {
+     "title": "جمعه",
+     "date": "2026-10-09",
+     "shamsi_date": "17 مهر"
+    },
+    {
+     "title": "شنبه",
+     "date": "2026-10-10",
+     "shamsi_date": "18 مهر"
+    }
+   ],
+   "service_tags": [],
+   "on_calls": [],
+   "next_free_time": {
+    "datetime": "2026-10-13 10:00:00",
+    "shamsi_date": "سه‌شنبه 21 مهر",
+    "shamsi_time": "10:00",
+    "open_at": null,
+    "is_next_free_time": true
+   },
+   "is_triage": false,
+   "initial_message": null
+  },
+  {
+   "id": 1943,
+   "title": null,
+   "type": {
+    "name": "نوبت دهی مطب",
+    "value": 0
+   },
+   "call_duration": null,
+   "price": {
+    "price": 0,
+    "unit": "تومان",
+    "format_price": "رایگان"
+   },
+   "total_price": {
+    "price": 250000,
+    "unit": "تومان",
+    "format_price": "250,000 تومان"
+   },
+   "show_price": 0,
+   "status": 1,
+   "description_title": null,
+   "description": null,
+   "is_description_required": false,
+   "pause": 0,
+   "capacity": 0,
+   "clarification": null,
+   "advanced": 0,
+   "place": {
+    "id": "AVnxNA",
+    "type": 0,
+    "name": "مطب خیابان پاسداران",
+    "status": 1,
+    "slug": null,
+    "address": "تهران، پاسداران، بوستان نهم (شهید جعفری)، پلاک 121، ساختمان پزشکان مهرگان، طبقه 5، واحد 121",
+    "description": null,
+    "is_open_24_hours": null,
+    "phone": "0903*******,0214*******,0214*******,0212*******,0212*******",
+    "avatar": null,
+    "location": {
+     "lat": "35.76801155",
+     "lon": "51.46007828"
+    },
+    "full_address": "تهران، پاسداران، بوستان نهم (شهید جعفری)، پلاک 121، ساختمان پزشکان مهرگان، طبقه 5، واحد 121",
+    "city": {
+     "id": 2200,
+     "province_id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.71634907",
+     "longitude": "51.39087920",
+     "priority": 100,
+     "is_center": 1
+    },
+    "neighborhoods": [
+     {
+      "id": 1749,
+      "city_id": 2200,
+      "name": "منطقه 3",
+      "slug": "mantaghe3",
+      "latitude": "0.00000000",
+      "longitude": "0.00000000"
+     },
+     {
+      "id": 279,
+      "city_id": 2200,
+      "name": "قلهک",
+      "slug": "qolhak",
+      "latitude": "35.77366749",
+      "longitude": "51.44437120"
+     },
+     {
+      "id": 75,
+      "city_id": 2200,
+      "name": "پاسداران",
+      "slug": "pasdaran",
+      "latitude": "35.77268581",
+      "longitude": "51.46794685"
+     },
+     {
+      "id": 1750,
+      "city_id": 2200,
+      "name": "منطقه 4",
+      "slug": "mantaghe4",
+      "latitude": "0.00000000",
+      "longitude": "0.00000000"
+     }
+    ],
+    "specialities": [],
+    "rate": {
+     "count": 0,
+     "recommend": 0,
+     "percent": 0
+    }
+   },
+   "doctor_place_id": 691,
+   "insurances": [],
+   "start_show": 0,
+   "end_show": 720,
+   "specialities": [],
+   "show_remind": 0,
+   "pay_type": {
+    "name": "پرداخت در محل",
+    "value": 0
+   },
+   "days": [
+    {
+     "title": "امروز",
+     "date": "2026-10-06",
+     "shamsi_date": "14 مهر"
+    },
+    {
+     "title": "فردا",
+     "date": "2026-10-07",
+     "shamsi_date": "15 مهر"
+    },
+    {
+     "title": "پنج‌شنبه",
+     "date": "2026-10-08",
+     "shamsi_date": "16 مهر"
+    },
+    {
+     "title": "جمعه",
+     "date": "2026-10-09",
+     "shamsi_date": "17 مهر"
+    }
+   ],
+   "service_tags": [],
+   "on_calls": [],
+   "next_free_time": {
+    "datetime": "2026-10-06 10:00:00",
+    "shamsi_date": "امروز",
+    "shamsi_time": "10:00",
+    "open_at": null,
+    "is_next_free_time": true
+   },
+   "is_triage": false,
+   "initial_message": null
+  },
+  {
+   "id": 279292,
+   "title": null,
+   "type": {
+    "name": "مشاوره تلفنی",
+    "value": 1
+   },
+   "call_duration": 15,
+   "price": {
+    "price": 750000,
+    "unit": "تومان",
+    "format_price": "750,000 تومان"
+   },
+   "total_price": {
+    "price": 750000,
+    "unit": "تومان",
+    "format_price": "750,000 تومان"
+   },
+   "show_price": 0,
+   "status": 1,
+   "description_title": null,
+   "description": "<p>کاربران گرامی:</p>\n<p>لطفاً توجه داشته تجویز دارو برای بیمارانی که پیش از این توسط پزشک ویزیت نشده‌اند، امکان پذیر نمی باشد .</p>",
+   "is_description_required": false,
+   "pause": 0,
+   "capacity": 0,
+   "clarification": null,
+   "advanced": 0,
+   "place": null,
+   "doctor_place_id": null,
+   "insurances": [],
+   "start_show": 4,
+   "end_show": 720,
+   "specialities": [],
+   "show_remind": 1,
+   "pay_type": {
+    "name": "پرداخت آنلاین",
+    "value": 1
+   },
+   "days": [
+    {
+     "title": "امروز",
+     "date": "2026-10-06",
+     "shamsi_date": "14 مهر"
+    },
+    {
+     "title": "فردا",
+     "date": "2026-10-07",
+     "shamsi_date": "15 مهر"
+    },
+    {
+     "title": "پنج‌شنبه",
+     "date": "2026-10-08",
+     "shamsi_date": "16 مهر"
+    },
+    {
+     "title": "جمعه",
+     "date": "2026-10-09",
+     "shamsi_date": "17 مهر"
+    }
+   ],
+   "service_tags": [],
+   "on_calls": [],
+   "next_free_time": {
+    "datetime": "2026-10-06 10:00:00",
+    "shamsi_date": "امروز",
+    "shamsi_time": "10:00",
+    "open_at": null,
+    "is_next_free_time": true
+   },
+   "is_triage": false,
+   "initial_message": null
+  }
+ ],
+ "message": "",
+ "errors": null
+}

@@ -1,0 +1,142 @@
+{
+ "items": {
+  "city": {
+   "id": 2200,
+   "province_id": 55,
+   "name": "تهران",
+   "slug": "tehran",
+   "latitude": "35.71634907",
+   "longitude": "51.39087920",
+   "is_center": 1,
+   "priority": 100,
+   "province": {
+    "id": 55,
+    "name": "تهران",
+    "slug": "tehran",
+    "latitude": "35.20839701",
+    "longitude": "51.67508996"
+   },
+   "place_count": 0,
+   "tag_count": 0,
+   "doctor_count": 0,
+   "offer_count": 0
+  },
+  "nearby_neighborhoods": [
+   {
+    "id": 2909,
+    "city_id": 2200,
+    "name": "غرب",
+    "slug": "west",
+    "latitude": "0.00000000",
+    "longitude": "0.00000000",
+    "tag_count": 157,
+    "doctor_count": 163,
+    "place_count": 315,
+    "offer_count": 867
+   },
+   {
+    "id": 1748,
+    "city_id": 2200,
+    "name": "منطقه 2",
+    "slug": "mantaghe2",
+    "latitude": "0.00000000",
+    "longitude": "0.00000000",
+    "tag_count": 139,
+    "doctor_count": 155,
+    "place_count": 130,
+    "offer_count": 1011
+   },
+   {
+    "id": 1749,
+    "city_id": 2200,
+    "name": "منطقه 3",
+    "slug": "mantaghe3",
+    "latitude": "0.00000000",
+    "longitude": "0.00000000",
+    "tag_count": 104,
+    "doctor_count": 149,
+    "place_count": 151,
+    "offer_count": 1351
+   }
+  ],
+  "nearby_cities": [
+   {
+    "id": 2173,
+    "province_id": 55,
+    "name": "اسلامشهر",
+    "slug": "eslamshahr",
+    "latitude": "35.53604680",
+    "longitude": "51.22969194",
+    "is_center": 0,
+    "priority": 20,
+    "province": {
+     "id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.20839701",
+     "longitude": "51.67508996"
+    },
+    "place_count": 58,
+    "tag_count": 52,
+    "doctor_count": 23,
+    "offer_count": 22
+   },
+   {
+    "id": 2182,
+    "province_id": 55,
+    "name": "شهریار",
+    "slug": "shahriar",
+    "latitude": "35.65997327",
+    "longitude": "51.04308134",
+    "is_center": 0,
+    "priority": 20,
+    "province": {
+     "id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.20839701",
+     "longitude": "51.67508996"
+    },
+    "place_count": 89,
+    "tag_count": 57,
+    "doctor_count": 15,
+    "offer_count": 110
+   },
+   {
+    "id": 2204,
+    "province_id": 55,
+    "name": "شهر ری",
+    "slug": "rey",
+    "latitude": "35.57262000",
+    "longitude": "51.44087470",
+    "is_center": 0,
+    "priority": 20,
+    "province": {
+     "id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.20839701",
+     "longitude": "51.67508996"
+    },
+    "place_count": 88,
+    "tag_count": 43,
+    "doctor_count": 15,
+    "offer_count": 113
+   }
+  ],
+  "city_total_counts": {
+   "total_place_count": 478,
+   "total_tag_count": 553,
+   "total_doctor_count": 101,
+   "total_offer_count": 354
+  },
+  "neighborhood_total_counts": {
+   "total_place_count": 4239,
+   "total_tag_count": 6440,
+   "total_doctor_count": 2611,
+   "total_offer_count": 14373
+  }
+ },
+ "message": "",
+ "errors": null
+}

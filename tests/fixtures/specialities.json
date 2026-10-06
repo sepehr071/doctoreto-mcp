@@ -1,0 +1,295 @@
+{
+ "items": [
+  {
+   "id": 1,
+   "slug": "medical",
+   "name": "پزشکی",
+   "parent_id": null,
+   "type": 1,
+   "type_name": "رسته",
+   "full_name": "رسته پزشکی",
+   "title": null,
+   "nested_children": [
+    {
+     "id": 2,
+     "slug": "orthopedist",
+     "name": "ارتوپدی",
+     "parent_id": 1,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص ارتوپدی",
+     "nested_children": [
+      {
+       "id": 5,
+       "slug": "knee-surgeon",
+       "name": "جراحی زانو",
+       "parent_id": 2,
+       "type": 4,
+       "type_name": "فلوشیپ",
+       "full_name": "فلوشیپ جراحی زانو",
+       "nested_children": []
+      },
+      {
+       "id": 7,
+       "slug": "pelvic-surgeon",
+       "name": "جراحی لگن و ران",
+       "parent_id": 2,
+       "type": 4,
+       "type_name": "فلوشیپ",
+       "full_name": "فلوشیپ جراحی لگن و ران",
+       "nested_children": []
+      },
+      {
+       "id": 8,
+       "slug": "shoulder-surgeon",
+       "name": "جراحی شانه و آرنج",
+       "parent_id": 2,
+       "type": 4,
+       "type_name": "فلوشیپ",
+       "full_name": "فلوشیپ جراحی شانه و آرنج",
+       "nested_children": []
+      },
+      {
+       "id": 9,
+       "slug": "foot-surgeon",
+       "name": "جراحی پا و مچ پا",
+       "parent_id": 2,
+       "type": 4,
+       "type_name": "فلوشیپ",
+       "full_name": "فلوشیپ جراحی پا و مچ پا",
+       "nested_children": []
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "slug": "spinal-surgeon",
+     "name": "جراحی ستون فقرات",
+     "parent_id": 1,
+     "type": 4,
+     "type_name": "فلوشیپ",
+     "full_name": "فلوشیپ جراحی ستون فقرات",
+     "nested_children": []
+    },
+    {
+     "id": 10,
+     "slug": "ophthalmologist",
+     "name": "چشم پزشکی",
+     "parent_id": 1,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص چشم پزشکی",
+     "nested_children": [
+      {
+       "id": 13,
+       "slug": "cornea-specialist",
+       "name": "قرنیه",
+       "parent_id": 10,
+       "type": 4,
+       "type_name": "فلوشیپ",
+       "full_name": "فلوشیپ قرنیه",
+       "nested_children": []
+      },
+      {
+       "id": 14,
+       "slug": "pediatric-ophthalmologist",
+       "name": "چشم پزشکی کودکان",
+       "parent_id": 10,
+       "type": 4,
+       "type_name": "فلوشیپ",
+       "full_name": "فلوشیپ چشم پزشکی کودکان",
+       "nested_children": []
+      }
+     ]
+    },
+    {
+     "id": 17,
+     "slug": "infectiologist",
+     "name": "عفونی",
+     "parent_id": 1,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص عفونی",
+     "nested_children": []
+    },
+    {
+     "id": 18,
+     "slug": "neuropsychiatry",
+     "name": "اعصاب و روان",
+     "parent_id": 1,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص اعصاب و روان",
+     "nested_children": [
+      {
+       "id": 19,
+       "slug": "pediatric-psychiatrist",
+       "name": "روانپزشکی کودک و نوجوان",
+       "parent_id": 18,
+       "type": 3,
+       "type_name": "فوق تخصص",
+       "full_name": "فوق تخصص روانپزشکی کودک و نوجوان",
+       "nested_children": []
+      }
+     ]
+    },
+    {
+     "id": 21,
+     "slug": "radiotherapist",
+     "name": "رادیوتراپی و پرتو درمانی",
+     "parent_id": 1,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص رادیوتراپی و پرتو درمانی",
+     "nested_children": []
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "slug": "paramedical",
+   "name": "پیراپزشکی",
+   "parent_id": null,
+   "type": 1,
+   "type_name": "رسته",
+   "full_name": "رسته پیراپزشکی",
+   "title": null,
+   "nested_children": [
+    {
+     "id": 103,
+     "slug": "speech-therapist",
+     "name": "گفتاردرمانی",
+     "parent_id": 102,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص گفتاردرمانی",
+     "nested_children": []
+    },
+    {
+     "id": 104,
+     "slug": "physiotherapist",
+     "name": "فیزیوتراپی",
+     "parent_id": 102,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص فیزیوتراپی",
+     "nested_children": []
+    },
+    {
+     "id": 105,
+     "slug": "optometrist",
+     "name": "بینایی سنجی و اپتومتری",
+     "parent_id": 102,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص بینایی سنجی و اپتومتری",
+     "nested_children": []
+    },
+    {
+     "id": 106,
+     "slug": "dietitian",
+     "name": "تغذیه",
+     "parent_id": 102,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص تغذیه",
+     "nested_children": []
+    },
+    {
+     "id": 108,
+     "slug": "psychology",
+     "name": "روانشناسی",
+     "parent_id": 102,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص روانشناسی",
+     "nested_children": []
+    },
+    {
+     "id": 109,
+     "slug": "midwife",
+     "name": "مامایی",
+     "parent_id": 102,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص مامایی",
+     "nested_children": []
+    }
+   ]
+  },
+  {
+   "id": 114,
+   "slug": "dentiist",
+   "name": "دندان پزشکی",
+   "parent_id": null,
+   "type": 1,
+   "type_name": "رسته",
+   "full_name": "رسته دندان پزشکی",
+   "title": null,
+   "nested_children": [
+    {
+     "id": 115,
+     "slug": "dentist",
+     "name": "دندانپزشکی",
+     "parent_id": 114,
+     "type": 5,
+     "type_name": "پزشک",
+     "full_name": "پزشک دندانپزشکی",
+     "nested_children": []
+    },
+    {
+     "id": 116,
+     "slug": "maxillofacial-oral-surgeon",
+     "name": "جراحی فک و صورت",
+     "parent_id": 114,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص جراحی فک و صورت",
+     "nested_children": []
+    },
+    {
+     "id": 119,
+     "slug": "pediatric-dentist",
+     "name": "دندانپزشکی کودکان",
+     "parent_id": 114,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص دندانپزشکی کودکان",
+     "nested_children": []
+    },
+    {
+     "id": 121,
+     "slug": "endodontist",
+     "name": "درمان ریشه دندان",
+     "parent_id": 114,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص درمان ریشه دندان",
+     "nested_children": []
+    },
+    {
+     "id": 122,
+     "slug": "restorative-dentist",
+     "name": "دندانپزشکی ترمیمی",
+     "parent_id": 114,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص دندانپزشکی ترمیمی",
+     "nested_children": []
+    },
+    {
+     "id": 123,
+     "slug": "periodontist",
+     "name": "پریودنتیست",
+     "parent_id": 114,
+     "type": 2,
+     "type_name": "تخصص",
+     "full_name": "تخصص پریودنتیست",
+     "nested_children": []
+    }
+   ]
+  }
+ ],
+ "message": "",
+ "errors": null
+}

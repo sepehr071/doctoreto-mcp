@@ -1,0 +1,219 @@
+{
+ "items": {
+  "doctors": [
+   {
+    "id": "MVgkAZ",
+    "slug": "alireza-pak-ghalb",
+    "full_name": "علیرضا پاک قلب",
+    "medical_number": "ف-3806",
+    "avatar_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/avatar/doctor/2025/3/Z2S2vZjaZAiqW1tDnKKT1Kd62Boc9n66T6Jq6t5H.jpg",
+    "specialities": [
+     {
+      "id": 104,
+      "name": "فیزیوتراپی",
+      "slug": "physiotherapist",
+      "type": 2,
+      "type_name": "تخصص"
+     }
+    ],
+    "consultations": [
+     {
+      "status": 1,
+      "priority": null,
+      "type": 0,
+      "place": {
+       "type": 4,
+       "name": "مرکز فیزیوتراپی دکتر نصیری تهران",
+       "address": "تهران، جنت آباد جنوبی، خیابان پژوهنده (شاهین جنوبی)، بین میدان آتش نشانی و چهارراه لاله، نبش کوچه قماشی، پلاک 34، طبقه سوم",
+       "slug": "nasiri-tehran-clinic",
+       "avatar": "avatar/place/2025/9/Ob9XIN6On5EkCvPl52InW6Y3sVN0F1exbn9K7Ykk.jpg",
+       "location": {
+        "lat": "35.74914092",
+        "lon": "51.31040147"
+       },
+       "city": {
+        "id": 2200,
+        "name": "تهران",
+        "slug": "tehran"
+       },
+       "neighborhoods": [
+        {
+         "name": "جنت آباد",
+         "slug": "janatabadejnoubi",
+         "location": {
+          "lat": "35.74573126",
+          "lon": "51.30586489"
+         }
+        },
+        {
+         "name": "منطقه 5",
+         "slug": "mantaghe5",
+         "location": {
+          "lat": "0.00000000",
+          "lon": "0.00000000"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "status": 1,
+      "priority": null,
+      "type": 1,
+      "place": null
+     }
+    ],
+    "show_comment": 1,
+    "service_tags": [],
+    "rate_count_percent": 123,
+    "rate": {
+     "count": 23,
+     "recommend": 23,
+     "percent": 100
+    }
+   },
+   {
+    "id": "qkWkQk",
+    "slug": "dr-sepide-mahdi-ghalb",
+    "full_name": "دکتر سپیده مهدی قلب",
+    "medical_number": "103849",
+    "avatar_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/avatar/doctor/2024/10/aHmnwCU7SiTgPeULEfHl11D2bZiD58ibgAoGPNvY.jpg",
+    "specialities": [
+     {
+      "id": 65,
+      "name": "زنان و زایمان",
+      "slug": "ob-gyn",
+      "type": 2,
+      "type_name": "تخصص"
+     }
+    ],
+    "consultations": [
+     {
+      "status": 1,
+      "priority": null,
+      "type": 0,
+      "place": {
+       "type": 0,
+       "name": "مطب شهران جنوبی",
+       "address": "شهران جنوبی، کنار گذر همت، خیابان آرمان علیوردی غربی، پلاک 6، واحد 1",
+       "slug": null,
+       "avatar": null,
+       "location": {
+        "lat": "35.75831730",
+        "lon": "51.28962020"
+       },
+       "city": {
+        "id": 2200,
+        "name": "تهران",
+        "slug": "tehran"
+       },
+       "neighborhoods": [
+        {
+         "name": "شهران",
+         "slug": "shahran",
+         "location": {
+          "lat": "35.77123192",
+          "lon": "51.28747519"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "show_comment": 1,
+    "service_tags": [],
+    "rate_count_percent": 122,
+    "rate": {
+     "count": 22,
+     "recommend": 22,
+     "percent": 100
+    }
+   }
+  ],
+  "specialities": [
+   {
+    "id": 72,
+    "name": "قلب و عروق",
+    "slug": "cardiologist",
+    "type": 2,
+    "type_name": "تخصص"
+   },
+   {
+    "id": 77,
+    "name": "قلب کودکان",
+    "slug": "pediatric-cardiologist",
+    "type": 3,
+    "type_name": "فوق تخصص"
+   }
+  ],
+  "service_tags": [
+   {
+    "id": 3819,
+    "name": "سی تی اسکن قلب",
+    "slug": "cardia-ct-scan",
+    "count": 16
+   },
+   {
+    "id": 2035,
+    "name": "باطری قلب",
+    "slug": "pacemaker",
+    "count": 11
+   }
+  ],
+  "places": [
+   {
+    "id": "YwQkzM",
+    "name": "کلینیک قلب و عروق بهار",
+    "slug": "bahar-heart-clinic",
+    "type": 4,
+    "address": "تهران،اشرفی اصفهانی، ابتدای بلوار مرزداران،مرکز درمانی بهار، طبقه 2",
+    "location": null,
+    "avatar_url": null,
+    "city": {
+     "id": 2200,
+     "name": "تهران",
+     "slug": "tehran",
+     "location": {
+      "lat": "35.71634907",
+      "lon": "51.39087920"
+     }
+    },
+    "doctor_count": 0,
+    "specialities_count": 0,
+    "specialities": [],
+    "insurances": []
+   },
+   {
+    "id": "ZRQXwo",
+    "name": "کلینیک قلب ایران زمین",
+    "slug": "iran-zamiin-clinic",
+    "type": 4,
+    "address": "تهران، انقلاب، کارگر شمالی، نبش خیابان نصرت، درمانگاه ایران زمین، کلینیک قلب ایران زمین، طبقه 2",
+    "location": null,
+    "avatar_url": null,
+    "city": {
+     "id": 2200,
+     "name": "تهران",
+     "slug": "tehran",
+     "location": {
+      "lat": "35.71634907",
+      "lon": "51.39087920"
+     }
+    },
+    "doctor_count": 0,
+    "specialities_count": 0,
+    "specialities": [],
+    "insurances": []
+   }
+  ],
+  "total_counts": {
+   "doctors": 5,
+   "specialities": 3,
+   "service_tags": 28,
+   "places": 58
+  },
+  "queryId": "223737CDDF1C1071"
+ },
+ "message": "",
+ "errors": null
+}

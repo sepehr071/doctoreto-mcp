@@ -1,0 +1,9 @@
+{
+ "items": {
+  "id_card_required": false,
+  "prescription_file_allowed": true,
+  "no_prescription_allowed": true
+ },
+ "message": "",
+ "errors": null
+}

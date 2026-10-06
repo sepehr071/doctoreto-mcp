@@ -1,0 +1,245 @@
+{
+ "items": {
+  "clusters": [
+   {
+    "count": 46,
+    "location": {
+     "lat": 35.70972991530257,
+     "lon": 51.39362345814057
+    }
+   },
+   {
+    "count": 28,
+    "location": {
+     "lat": 35.71149205855493,
+     "lon": 51.43364519213459
+    }
+   }
+  ],
+  "data": [
+   {
+    "id": "MnqaDl",
+    "type": 3,
+    "name": "بیمارستان شهدای گمنام تهران",
+    "status": 1,
+    "slug": "shohadayegomnan-tehran-hospital",
+    "result_type": 0,
+    "has_laboratory_consultation": false,
+    "laboratory_has_active_consultations": false,
+    "free_buffet": false,
+    "has_sampling_at_place": false,
+    "is_prescription_file_allowed": true,
+    "avatar_url": "",
+    "ads": null,
+    "advertisement": {
+     "priority": 0,
+     "flag": 0,
+     "city": {
+      "id": 0,
+      "province_id": 0,
+      "name": "",
+      "slug": "",
+      "latitude": "",
+      "longitude": "",
+      "priority": 0,
+      "is_center": 0
+     },
+     "speciality": {
+      "id": 0,
+      "name": "",
+      "slug": "",
+      "type": 0,
+      "parent_id": 0,
+      "type_name": "",
+      "full_name": ""
+     },
+     "tag": {
+      "id": 0,
+      "name": "",
+      "slug": ""
+     },
+     "place_type": 0
+    },
+    "address": "تهران ،میدان خراسان، ابتدای خیابان خاوران ، خیابان شهید اعظم نظامی",
+    "description": "",
+    "ownership_type": 1,
+    "is_open_24_hours": 0,
+    "phone": "0213*******,0213*******,0213*******,0213*******,0213*******,0213*******",
+    "location": {
+     "lat": 35.66327781,
+     "lon": 51.44992844
+    },
+    "full_address": "تهران ،میدان خراسان، ابتدای خیابان خاوران ، خیابان شهید اعظم نظامی",
+    "city": {
+     "id": 2200,
+     "province_id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.71634907",
+     "longitude": "51.39087920",
+     "priority": 100,
+     "is_center": 1
+    },
+    "consultations": [],
+    "neighborhoods": [],
+    "insurances": [],
+    "specialities": [
+     {
+      "id": 58,
+      "name": "کلیه و نفرولوژی",
+      "slug": "nephrologist",
+      "type": 3,
+      "parent_id": 55,
+      "type_name": "فوق تخصص",
+      "full_name": "فوق تخصص کلیه و نفرولوژی"
+     },
+     {
+      "id": 55,
+      "name": "داخلی",
+      "slug": "internist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص داخلی"
+     }
+    ],
+    "tags": [],
+    "rate": {
+     "count": 1,
+     "recommend": 1,
+     "percent": 100
+    },
+    "place_attributes": null,
+    "presence_waiting_time": {
+     "average": null,
+     "range": null
+    },
+    "success_orders_count": 0,
+    "doctor_count": 2,
+    "has_free_consultation_time": false,
+    "has_active_consultations": false,
+    "has_active_offers": false,
+    "offer_tags": [],
+    "children": [],
+    "max_discount": 0
+   },
+   {
+    "id": "AVrnak",
+    "type": 3,
+    "name": "بیمارستان خیریه ولی عصر تهران",
+    "status": 1,
+    "slug": "valiasrkheyryeh-tehran-hospital",
+    "result_type": 0,
+    "has_laboratory_consultation": false,
+    "laboratory_has_active_consultations": false,
+    "free_buffet": false,
+    "has_sampling_at_place": false,
+    "is_prescription_file_allowed": true,
+    "avatar_url": "",
+    "ads": null,
+    "advertisement": {
+     "priority": 0,
+     "flag": 0,
+     "city": {
+      "id": 0,
+      "province_id": 0,
+      "name": "",
+      "slug": "",
+      "latitude": "",
+      "longitude": "",
+      "priority": 0,
+      "is_center": 0
+     },
+     "speciality": {
+      "id": 0,
+      "name": "",
+      "slug": "",
+      "type": 0,
+      "parent_id": 0,
+      "type_name": "",
+      "full_name": ""
+     },
+     "tag": {
+      "id": 0,
+      "name": "",
+      "slug": ""
+     },
+     "place_type": 0
+    },
+    "address": "تهران، شوش، بخارایی، بین بهزاد پور و پور جوادی، بیمارستان ولی عصر عج",
+    "description": "",
+    "ownership_type": 2,
+    "is_open_24_hours": 1,
+    "phone": "0215*******",
+    "location": {
+     "lat": 35.65620462,
+     "lon": 51.42116685
+    },
+    "full_address": "تهران، شوش، بخارایی، بین بهزاد پور و پور جوادی، بیمارستان ولی عصر عج",
+    "city": {
+     "id": 2200,
+     "province_id": 55,
+     "name": "تهران",
+     "slug": "tehran",
+     "latitude": "35.71634907",
+     "longitude": "51.39087920",
+     "priority": 100,
+     "is_center": 1
+    },
+    "consultations": [],
+    "neighborhoods": [
+     {
+      "id": 57,
+      "city_id": 2200,
+      "name": "باغ آذری",
+      "slug": "baghazari",
+      "latitude": "35.65288079",
+      "longitude": "51.42319436"
+     }
+    ],
+    "insurances": [],
+    "specialities": [
+     {
+      "id": 2,
+      "name": "ارتوپدی",
+      "slug": "orthopedist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص ارتوپدی"
+     },
+     {
+      "id": 39,
+      "name": "اورولوژی",
+      "slug": "urologist",
+      "type": 2,
+      "parent_id": 1,
+      "type_name": "تخصص",
+      "full_name": "تخصص اورولوژی"
+     }
+    ],
+    "tags": [],
+    "rate": {
+     "count": 0,
+     "recommend": 0,
+     "percent": 0
+    },
+    "place_attributes": null,
+    "presence_waiting_time": {
+     "average": null,
+     "range": null
+    },
+    "success_orders_count": 0,
+    "doctor_count": 1,
+    "has_free_consultation_time": false,
+    "has_active_consultations": false,
+    "has_active_offers": false,
+    "offer_tags": [],
+    "children": [],
+    "max_discount": 0
+   }
+  ]
+ },
+ "message": "",
+ "errors": null
+}

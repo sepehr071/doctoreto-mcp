@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "id": 46,
+   "name": "بیمه ارتش",
+   "type": 1,
+   "slug": "artesh",
+   "logo": "logo/insurance/2026/5/5sjigsudCxAAQIlVxg3jGB6TO8wV7vfMhik6vQeS.jpg",
+   "description": null,
+   "old_id": 46,
+   "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2026/5/5sjigsudCxAAQIlVxg3jGB6TO8wV7vfMhik6vQeS.jpg"
+  },
+  {
+   "id": 50,
+   "name": "بیمه ایثارگران",
+   "type": 1,
+   "slug": "issargaran",
+   "logo": "logo/insurance/2026/5/A0QFX0OVAmHUXqCao3Hc0JLsouhJYFxuzZs8nvFy.jpg",
+   "description": null,
+   "old_id": 50,
+   "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2026/5/A0QFX0OVAmHUXqCao3Hc0JLsouhJYFxuzZs8nvFy.jpg"
+  },
+  {
+   "id": 45,
+   "name": "بیمه ایرانیان",
+   "type": 1,
+   "slug": "iranian",
+   "logo": "logo/insurance/2023/6/rrN6bvRwhOFEL84jSWs6x4PADYTATJgoeSztupX8.jpg",
+   "description": null,
+   "old_id": 45,
+   "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2023/6/rrN6bvRwhOFEL84jSWs6x4PADYTATJgoeSztupX8.jpg"
+  },
+  {
+   "id": 11,
+   "name": "بیمه بانک تجارت",
+   "type": 1,
+   "slug": "bank-tejarat",
+   "logo": "logo/insurance/2025/2/I6Z6pTyC30T1yXwbP3uNLF3tGKrK9yvPvmJwCQIE.jpg",
+   "description": null,
+   "old_id": 11,
+   "logo_url": "https://statics.doctoreto.com/resize:fill:180:180:0/gravity:sm/format:webp/plain/s3://drto/logo/insurance/2025/2/I6Z6pTyC30T1yXwbP3uNLF3tGKrK9yvPvmJwCQIE.jpg"
+  }
+ ],
+ "message": "",
+ "errors": null
+}

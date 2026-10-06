@@ -1,0 +1,263 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": "ZpyYmq",
+    "result_type": 0,
+    "slug": "dr-behrooz-meghdadi",
+    "full_name": "دکتر بهروز مقدادی",
+    "city": null,
+    "title": "متخصص کودکان و اطفال",
+    "avatar_url": "s3://drto/avatar/doctor/2021/11/cwLjGvJuCLLs1gwidcB4jxteoW3NOT4sSuz4Lvyc.jpg",
+    "specialities": [
+     {
+      "name": "کودکان و اطفال",
+      "slug": "pediatric",
+      "type": 2,
+      "type_name": "تخصص",
+      "parent_id": 1,
+      "full_name": "تخصص کودکان و اطفال",
+      "title": null,
+      "childs": [
+       {
+        "name": "قلب کودکان",
+        "slug": "pediatric-cardiologist",
+        "type": 3
+       },
+       {
+        "name": "کلیه (نفرولوژی) کودکان",
+        "slug": "pediatric-nephrologist",
+        "type": 3
+       }
+      ]
+     }
+    ],
+    "consultations": [
+     {
+      "status": 1,
+      "priority": 0,
+      "type": {
+       "name": "نوبت دهی مطب",
+       "value": 0
+      },
+      "place": {
+       "type": 0,
+       "name": "مطب بلوار شهران",
+       "address": "تهران، بلوار شهران شمالی، بالاتر از فلکه دوم شهران، بعد از مسجد امام علی، ساختمان داروخانه شبانه روزی دکتر کریمان، طبقه سوم، بلوک شرقی، واحد 31",
+       "slug": null,
+       "avatar": null,
+       "location": {
+        "lat": "35.76840630",
+        "lon": "51.29174731"
+       },
+       "city": {
+        "id": 2200,
+        "name": "تهران",
+        "slug": "tehran"
+       },
+       "neighborhoods": [
+        {
+         "name": "منطقه 5",
+         "slug": "mantaghe5",
+         "location": {
+          "lat": "0.00000000",
+          "lon": "0.00000000"
+         }
+        },
+        {
+         "name": "شهران",
+         "slug": "shahran",
+         "location": {
+          "lat": "35.77123192",
+          "lon": "51.28747519"
+         }
+        }
+       ],
+       "specialities": []
+      },
+      "service_tags": []
+     },
+     {
+      "status": 1,
+      "priority": 3,
+      "type": {
+       "name": "مشاوره تلفنی",
+       "value": 1
+      },
+      "place": {
+       "specialities": [],
+       "city": []
+      },
+      "service_tags": []
+     }
+    ],
+    "free_next_consultation_time": {
+     "date": "2026-10-06T12:00:00",
+     "show_date": "2026-10-06 09:00:00",
+     "format_time": "بعد از ظهر",
+     "shamsi_date": "امروز",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "consultation_type": {
+      "name": "مشاوره تلفنی",
+      "value": 1
+     },
+     "is_next_free_time": true
+    },
+    "ads": false,
+    "has_badge": false,
+    "rate": {
+     "count": 6415,
+     "recommend": 6045,
+     "percent": 95
+    },
+    "is_insurance": false,
+    "is_minimum_delay": false,
+    "count_done_orders": 77626,
+    "card_buttons": {
+     "presence": false,
+     "online": true
+    },
+    "is_endorsable": true,
+    "endorsement_count": {
+     "total": 16,
+     "with_recommendation_letter": 1
+    }
+   },
+   {
+    "id": "qjYayZ",
+    "result_type": 0,
+    "slug": "dr-behnam-meghdadi",
+    "full_name": "دکتر بهنام مقدادی",
+    "city": null,
+    "title": "متخصص کودکان و اطفال",
+    "avatar_url": "s3://drto/profile/avatar/2026/6/VuNEFnDTSicUdBvOA3BCjDbyYpS8kCVO94Ngy3Ig.jpg",
+    "specialities": [
+     {
+      "name": "کودکان و اطفال",
+      "slug": "pediatric",
+      "type": 2,
+      "type_name": "تخصص",
+      "parent_id": 1,
+      "full_name": "تخصص کودکان و اطفال",
+      "title": null,
+      "childs": [
+       {
+        "name": "قلب کودکان",
+        "slug": "pediatric-cardiologist",
+        "type": 3
+       },
+       {
+        "name": "کلیه (نفرولوژی) کودکان",
+        "slug": "pediatric-nephrologist",
+        "type": 3
+       }
+      ]
+     }
+    ],
+    "consultations": [
+     {
+      "status": 1,
+      "priority": 0,
+      "type": {
+       "name": "نوبت دهی مطب",
+       "value": 0
+      },
+      "place": {
+       "type": 0,
+       "name": "مطب خیابان فرجام غربی",
+       "address": "تهران، خیابان فرجام غربی، تقاطع فرجام و شهید آیت (میدان صدم)، ساختمان پزشکان نگین، واحد 3",
+       "slug": null,
+       "avatar": null,
+       "location": {
+        "lat": "35.73961182",
+        "lon": "51.49622524"
+       },
+       "city": {
+        "id": 2200,
+        "name": "تهران",
+        "slug": "tehran"
+       },
+       "neighborhoods": [
+        {
+         "name": "نارمک",
+         "slug": "narmak",
+         "location": {
+          "lat": "35.73638624",
+          "lon": "51.50437948"
+         }
+        },
+        {
+         "name": "منطقه 4",
+         "slug": "mantaghe4",
+         "location": {
+          "lat": "0.00000000",
+          "lon": "0.00000000"
+         }
+        }
+       ],
+       "specialities": []
+      },
+      "service_tags": []
+     },
+     {
+      "status": 1,
+      "priority": 2,
+      "type": {
+       "name": "مشاوره تلفنی",
+       "value": 1
+      },
+      "place": {
+       "specialities": [],
+       "city": []
+      },
+      "service_tags": []
+     }
+    ],
+    "free_next_consultation_time": {
+     "date": "2026-10-06T11:00:00",
+     "show_date": "2026-10-06 09:00:00",
+     "format_time": "قبل از ظهر",
+     "shamsi_date": "امروز",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "consultation_type": {
+      "name": "مشاوره تلفنی",
+      "value": 1
+     },
+     "is_next_free_time": true
+    },
+    "ads": false,
+    "has_badge": false,
+    "rate": {
+     "count": 6159,
+     "recommend": 5952,
+     "percent": 97
+    },
+    "is_insurance": false,
+    "is_minimum_delay": true,
+    "count_done_orders": 69615,
+    "card_buttons": {
+     "presence": true,
+     "online": true
+    },
+    "is_endorsable": true,
+    "endorsement_count": {
+     "total": 24,
+     "with_recommendation_letter": 2
+    }
+   }
+  ],
+  "from": 1,
+  "last_page": 3,
+  "next_page_url": "/?page=2",
+  "per_page": 20,
+  "to": 5,
+  "total": 51,
+  "queryId": "A17F9430A6D2CDA9",
+  "nearby_neighborhood": null
+ },
+ "message": "",
+ "errors": null
+}

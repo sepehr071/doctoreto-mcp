@@ -1,0 +1,344 @@
+{
+ "items": {
+  "id": 129311,
+  "hash_id": "ArraJa",
+  "name": "سونوگرافی واریس پا⬅️",
+  "image_url": "s3://drto/offer/2026/6/fcVwv70VMzlrKOx6ZUYWwoipmDPd7ZmTqQtM2wTt.jpg",
+  "pics_count": 1,
+  "video_count": 0,
+  "type": 0,
+  "version": 2,
+  "consultations": [
+   {
+    "id": 52161,
+    "consultation_id": 650321,
+    "next_free_time": {
+     "id": 13780293656,
+     "status": 1,
+     "day": "2026-10-06",
+     "date": "2026-10-06 14:00:00",
+     "show_date": "2026-10-06 02:00:00",
+     "shamsi_date": "فردا",
+     "time": "14:00",
+     "format_time": "بعد از ظهر",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "place": {
+      "id": 295755,
+      "type": 0
+     }
+    },
+    "offer_id": 129311,
+    "price": {
+     "price": 3520000,
+     "unit": "تومان",
+     "format_price": "3,520,000 تومان"
+    },
+    "discount_price": {
+     "price": 3520000,
+     "unit": "تومان",
+     "format_price": "3,520,000 تومان"
+    },
+    "payment_type": 2,
+    "is_installment": false,
+    "pre_payment_price": {
+     "price": 100000,
+     "unit": "تومان",
+     "format_price": "100,000 تومان"
+    },
+    "pre_payment_percent": null,
+    "sales_capacity": 1000,
+    "remaining_capacity": 1000,
+    "limit_per_order": 10,
+    "discount": 0,
+    "commission": 0,
+    "is_default": 1,
+    "has_variation": 0,
+    "title": "مشاوره حضوری دکترتوکلینیک خیابان شریعتی",
+    "type": {
+     "name": "مشاوره حضوری دکترِتو کلینیک",
+     "value": 4
+    },
+    "status": 1,
+    "place": {
+     "id": 295755,
+     "hash_id": "ZWpOLy",
+     "type": {
+      "value": 0,
+      "name": "مطب"
+     },
+     "name": "خیابان شریعتی",
+     "slug": null,
+     "address": "خیابان شریعتی، ابتدای خیابان دستگردی (خیابان ظفر) ، کوچه صبر، پلاک 4، طبقه دوم",
+     "phone": "0212*******,0212*******,0212*******,0912*******,0212*******",
+     "avatar": null,
+     "location": null,
+     "view_count": 0
+    },
+    "city": {
+     "id": 2200,
+     "name": "تهران",
+     "slug": "tehran",
+     "province": {
+      "id": 55,
+      "country_id": 205,
+      "name": "تهران",
+      "slug": "tehran",
+      "latitude": "35.20839701",
+      "longitude": "51.67508996"
+     },
+     "latitude": "35.71634907",
+     "longitude": "51.39087920"
+    },
+    "neighborhoods": []
+   }
+  ],
+  "slug": "svnvgrafy-varys-pa",
+  "ads": null,
+  "subscription": true,
+  "consultation_id": 650321,
+  "payment_type": 2,
+  "price": {
+   "price": 3520000,
+   "unit": "تومان",
+   "format_price": "3,520,000 تومان"
+  },
+  "payed_price": 3520000,
+  "price_range": {
+   "min": null,
+   "max": null
+  },
+  "discount": 0,
+  "discount_price": {
+   "price": 3520000,
+   "unit": "تومان",
+   "format_price": "3,520,000 تومان"
+  },
+  "pre_payment_price": {
+   "price": 100000,
+   "unit": "تومان",
+   "format_price": "100,000 تومان"
+  },
+  "pre_payment_percent": 0,
+  "sales_capacity": null,
+  "limit_per_order": 10,
+  "remaining_capacity": 1000,
+  "is_available": true,
+  "next_free_time": {
+   "id": 13780293656,
+   "status": 1,
+   "day": "2026-10-06",
+   "date": "2026-10-06 14:00:00",
+   "show_date": "2026-10-06 02:00:00",
+   "shamsi_date": "فردا",
+   "time": "14:00",
+   "format_time": "بعد از ظهر",
+   "shamsi_day": "1405-07-14",
+   "open_at": null,
+   "place": {
+    "id": 295755,
+    "type": 0
+   }
+  },
+  "has_variation": false,
+  "variations": [],
+  "doctor": {
+   "id": 3329,
+   "hash_id": "MkaNbq",
+   "slug": "dr-alireza-dadpay",
+   "full_name": "دکتر علیرضا دادپی",
+   "medical_number": "88071",
+   "view_count": 4407,
+   "about": null,
+   "avatar": "avatar/doctor/2026/9/yedyKYCQZf7cSHvkltlSAuYZEB19kXwjwat195x4.jpg",
+   "avatar_url": "s3://drto/avatar/doctor/2026/9/yedyKYCQZf7cSHvkltlSAuYZEB19kXwjwat195x4.jpg",
+   "specialities": [
+    {
+     "id": 72,
+     "name": "قلب و عروق",
+     "slug": "cardiologist"
+    },
+    {
+     "id": 73,
+     "name": "اینترونشنال کاردیولوژی",
+     "slug": "interventional-cardiologist"
+    }
+   ]
+  },
+  "place": {
+   "id": 295755,
+   "hash_id": "ZWpOLy",
+   "type": {
+    "value": 0,
+    "name": "مطب"
+   },
+   "name": "خیابان شریعتی",
+   "slug": null,
+   "address": "خیابان شریعتی، ابتدای خیابان دستگردی (خیابان ظفر) ، کوچه صبر، پلاک 4، طبقه دوم",
+   "phone": "0212*******,0212*******,0212*******,0912*******,0212*******",
+   "avatar": null,
+   "location": null,
+   "view_count": 0
+  },
+  "city": {
+   "id": 2200,
+   "name": "تهران",
+   "slug": "tehran",
+   "province": {
+    "id": 55,
+    "country_id": 205,
+    "name": "تهران",
+    "slug": "tehran",
+    "latitude": "35.20839701",
+    "longitude": "51.67508996"
+   },
+   "latitude": "35.71634907",
+   "longitude": "51.39087920"
+  },
+  "neighborhoods": [],
+  "specialities": [
+   {
+    "id": 72,
+    "slug": "cardiologist",
+    "name": "قلب و عروق",
+    "type": 2,
+    "parent_id": 1
+   }
+  ],
+  "tags": [
+   {
+    "id": 5419,
+    "name": "سونو در آب",
+    "slug": "underwater-ultrasound",
+    "vertical": {
+     "id": 19974,
+     "name": "سونو در آب",
+     "tag_id": 5419,
+     "vertical": 2,
+     "status": 1,
+     "show_in_site": 1
+    },
+    "verticals": {
+     "doctor": null,
+     "offer": {
+      "id": 19974,
+      "name": "سونو در آب",
+      "tag_id": 5419,
+      "vertical": 2,
+      "status": 1,
+      "show_in_site": 1
+     },
+     "place": null
+    }
+   },
+   {
+    "id": 307,
+    "name": "سونوگرافی واریس پا",
+    "slug": "intravascular-ultrasound",
+    "vertical": {
+     "id": 6789,
+     "name": "سونوگرافی واریس پا",
+     "tag_id": 307,
+     "vertical": 2,
+     "status": 1,
+     "show_in_site": 1
+    },
+    "verticals": {
+     "doctor": {
+      "id": 1224,
+      "name": "سونوگرافی واریس پا",
+      "tag_id": 307,
+      "vertical": 1,
+      "status": 1,
+      "show_in_site": 1
+     },
+     "offer": {
+      "id": 6789,
+      "name": "سونوگرافی واریس پا",
+      "tag_id": 307,
+      "vertical": 2,
+      "status": 1,
+      "show_in_site": 1
+     },
+     "place": {
+      "id": 11604,
+      "name": "سونوگرافی واریس پا",
+      "tag_id": 307,
+      "vertical": 3,
+      "status": 1,
+      "show_in_site": 1
+     }
+    }
+   },
+   {
+    "id": 105,
+    "name": "واریس",
+    "slug": "varicose",
+    "vertical": {
+     "id": 6154,
+     "name": "عمل جراحی واریس پا",
+     "tag_id": 105,
+     "vertical": 2,
+     "status": 1,
+     "show_in_site": 1
+    },
+    "verticals": {
+     "doctor": {
+      "id": 384,
+      "name": "واریس",
+      "tag_id": 105,
+      "vertical": 1,
+      "status": 1,
+      "show_in_site": 1
+     },
+     "offer": {
+      "id": 6154,
+      "name": "عمل جراحی واریس پا",
+      "tag_id": 105,
+      "vertical": 2,
+      "status": 1,
+      "show_in_site": 1
+     },
+     "place": {
+      "id": 10994,
+      "name": "واریس",
+      "tag_id": 105,
+      "vertical": 3,
+      "status": 1,
+      "show_in_site": 1
+     }
+    }
+   }
+  ],
+  "insurances": [],
+  "attributes": [],
+  "description": "<p><strong>درباره پزشک ارائه دهنده</strong></p>\n<p>دکتر مرضیه ولوئیان متخصص قلب و عروق</p>",
+  "terms_of_use": "",
+  "pre_payment_terms": "",
+  "status": 1,
+  "is_pre_payment": false,
+  "is_online_payment": false,
+  "is_installment": false,
+  "view_count": 4407,
+  "done_orders_count": 0,
+  "graph": {
+   "name": "15 - 0 دقیقه",
+   "value": 34,
+   "label": "34 نفر"
+  },
+  "rate": {
+   "count": 78,
+   "recommend": 76,
+   "percent": 98,
+   "total_related_rates": 78
+  },
+  "point": {
+   "average": 4.9,
+   "percent": 98,
+   "count": 78
+  },
+  "expire_at": "2026-12-23 23:59:59"
+ },
+ "message": "",
+ "errors": null
+}

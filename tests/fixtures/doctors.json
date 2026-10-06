@@ -1,0 +1,422 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": "GvKkxe",
+    "result_type": 0,
+    "slug": "dr-nastaran-ameli",
+    "full_name": "دکتر نسترن عاملی",
+    "city": null,
+    "title": "متخصص قلب و عروق",
+    "avatar_url": "s3://drto/avatar/doctor/2023/12/kYF9gmNueH8Be99BkeA0ysllEJVHLwJvvvDZhOhS.jpg",
+    "specialities": [
+     {
+      "id": 72,
+      "slug": "cardiologist",
+      "name": "قلب و عروق",
+      "parent_id": 1,
+      "type": 2,
+      "type_name": "تخصص",
+      "full_name": "تخصص قلب و عروق",
+      "title": "متخصص قلب و عروق",
+      "nested_children": [
+       {
+        "id": 73,
+        "slug": "interventional-cardiologist",
+        "name": "اینترونشنال کاردیولوژی",
+        "parent_id": 72,
+        "type": 4,
+        "type_name": "فلوشیپ",
+        "full_name": "فلوشیپ اینترونشنال کاردیولوژی",
+        "nested_children": []
+       }
+      ]
+     }
+    ],
+    "consultations": [
+     {
+      "id": 443722,
+      "title": null,
+      "type": {
+       "name": "نوبت دهی مطب",
+       "value": 0
+      },
+      "call_duration": null,
+      "price": {
+       "price": 0,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "offline_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "pre_payment_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "status": 1,
+      "description": null,
+      "is_description_required": false,
+      "place": {
+       "id": 51805,
+       "type": 3,
+       "name": "بیمارستان عرفان نیایش تهران",
+       "status": 1,
+       "slug": "erfan-niayesh-hospital",
+       "address": "تهران، بزرگراه همت غرب، به سمت جنت آباد، خیابان شاهین شمالی، خیابان بهار، پلاک 17",
+       "description": null,
+       "is_open_24_hours": 1,
+       "phone": "0214*******,0214*******,0214*******,0214*******",
+       "avatar": "avatar/place/2024/3/pmvBgFruJLDmk4ybA3pJtsNyuAjtA6rjNs46pk0o.jpg",
+       "location": {
+        "lat": "35.76526072",
+        "lon": "51.31556333"
+       },
+       "full_address": "تهران، بزرگراه همت غرب، به سمت جنت آباد، خیابان شاهین شمالی، خیابان بهار، پلاک 17",
+       "city": {
+        "id": 2200,
+        "province_id": 55,
+        "name": "تهران",
+        "slug": "tehran",
+        "latitude": "35.71634907",
+        "longitude": "51.39087920",
+        "priority": 100,
+        "is_center": 1,
+        "province": {
+         "id": 55,
+         "country_id": 205,
+         "name": "تهران",
+         "slug": "tehran",
+         "latitude": "35.20839701",
+         "longitude": "51.67508996"
+        }
+       },
+       "neighborhoods": [
+        {
+         "id": 1749,
+         "city_id": 2200,
+         "name": "منطقه 3",
+         "slug": "mantaghe3",
+         "latitude": "0.00000000",
+         "longitude": "0.00000000"
+        },
+        {
+         "id": 2909,
+         "city_id": 2200,
+         "name": "غرب",
+         "slug": "west",
+         "latitude": "0.00000000",
+         "longitude": "0.00000000"
+        }
+       ],
+       "specialities": [
+        {
+         "id": 32,
+         "name": "جراحی قلب و عروق",
+         "slug": "cardiac-surgeon",
+         "type": 3,
+         "parent_id": 28,
+         "type_name": "فوق تخصص",
+         "full_name": "فوق تخصص جراحی قلب و عروق"
+        },
+        {
+         "id": 2,
+         "name": "ارتوپدی",
+         "slug": "orthopedist",
+         "type": 2,
+         "parent_id": 1,
+         "type_name": "تخصص",
+         "full_name": "تخصص ارتوپدی"
+        }
+       ],
+       "rate": {
+        "count": 76,
+        "recommend": 65,
+        "percent": 86
+       }
+      },
+      "doctor_place_id": 263237,
+      "insurances": [],
+      "start_show": 4,
+      "end_show": 720,
+      "commission_percent": "0.00",
+      "show_remind": 1,
+      "pay_type": {
+       "name": "پرداخت در محل",
+       "value": 0
+      },
+      "on_calls": [],
+      "is_triage": false,
+      "initial_message": null,
+      "priority": null,
+      "service_tags": []
+     }
+    ],
+    "free_next_consultation_time": {
+     "id": 13779716549,
+     "status": 1,
+     "day": "2026-10-06",
+     "date": "2026-10-06 08:00:00",
+     "show_date": "2026-10-06 04:00:00",
+     "shamsi_date": "فردا",
+     "time": "08:00",
+     "format_time": "قبل از ظهر",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "place": {
+      "id": 51805,
+      "type": 3
+     },
+     "consultation_type": {
+      "name": "نوبت دهی مطب",
+      "value": 0
+     },
+     "is_next_free_time": true
+    },
+    "ads": false,
+    "has_badge": false,
+    "rate": {
+     "count": 0,
+     "recommend": 0,
+     "percent": 0
+    },
+    "is_insurance": false,
+    "is_minimum_delay": false,
+    "count_done_orders": 5,
+    "card_buttons": {
+     "presence": true,
+     "online": false
+    },
+    "is_endorsable": true,
+    "endorsement_count": {
+     "total": 0,
+     "with_recommendation_letter": 0
+    }
+   },
+   {
+    "id": "MdPdaM",
+    "result_type": 0,
+    "slug": "dr-fatemeh-mottaghi-zadeh",
+    "full_name": "دکتر فاطمه متقی زاده",
+    "city": null,
+    "title": "متخصص قلب و عروق",
+    "avatar_url": "s3://drto/avatar/doctor/2024/12/yAXCUQ5u72i2AUX0ryWw1ViFaQ4MldQGBibqghU9.jpg",
+    "specialities": [
+     {
+      "id": 72,
+      "slug": "cardiologist",
+      "name": "قلب و عروق",
+      "parent_id": 1,
+      "type": 2,
+      "type_name": "تخصص",
+      "full_name": "تخصص قلب و عروق",
+      "title": "متخصص قلب و عروق",
+      "nested_children": [
+       {
+        "id": 73,
+        "slug": "interventional-cardiologist",
+        "name": "اینترونشنال کاردیولوژی",
+        "parent_id": 72,
+        "type": 4,
+        "type_name": "فلوشیپ",
+        "full_name": "فلوشیپ اینترونشنال کاردیولوژی",
+        "nested_children": []
+       }
+      ]
+     }
+    ],
+    "consultations": [
+     {
+      "id": 185301,
+      "title": null,
+      "type": {
+       "name": "نوبت دهی مطب",
+       "value": 0
+      },
+      "call_duration": null,
+      "price": {
+       "price": 0,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "offline_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "pre_payment_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "status": 1,
+      "description": "<p>لطفا قبل از نوبت گیری با شماره تماس کلینیک تماس بگیرید.</p>",
+      "is_description_required": false,
+      "place": {
+       "id": 95309,
+       "type": 0,
+       "name": "کلینیک قلب آرام",
+       "status": 1,
+       "slug": null,
+       "address": "تهران سهروردی شمالی بالاتر از مطهری روبروی پمپ بنزین نبش تقوی پلاک 48 طبقه اول",
+       "description": null,
+       "is_open_24_hours": 0,
+       "phone": "0218*******,0900*******",
+       "avatar": null,
+       "location": {
+        "lat": "35.70111538",
+        "lon": "51.42580032"
+       },
+       "full_address": "تهران سهروردی شمالی بالاتر از مطهری روبروی پمپ بنزین نبش تقوی پلاک 48 طبقه اول",
+       "city": {
+        "id": 2200,
+        "province_id": 55,
+        "name": "تهران",
+        "slug": "tehran",
+        "latitude": "35.71634907",
+        "longitude": "51.39087920",
+        "priority": 100,
+        "is_center": 1,
+        "province": {
+         "id": 55,
+         "country_id": 205,
+         "name": "تهران",
+         "slug": "tehran",
+         "latitude": "35.20839701",
+         "longitude": "51.67508996"
+        }
+       },
+       "neighborhoods": [
+        {
+         "id": 183,
+         "city_id": 2200,
+         "name": "سهروردی",
+         "slug": "sohrevardi",
+         "latitude": "35.72111071",
+         "longitude": "51.43456922"
+        }
+       ],
+       "specialities": [],
+       "rate": {
+        "count": 0,
+        "recommend": 0,
+        "percent": 0
+       }
+      },
+      "doctor_place_id": 107353,
+      "insurances": [],
+      "start_show": 4,
+      "end_show": 720,
+      "commission_percent": "0.00",
+      "show_remind": 1,
+      "pay_type": {
+       "name": "پرداخت در محل",
+       "value": 0
+      },
+      "on_calls": [],
+      "is_triage": false,
+      "initial_message": null,
+      "priority": 0,
+      "service_tags": []
+     },
+     {
+      "id": 190425,
+      "title": null,
+      "type": {
+       "name": "مشاوره تلفنی",
+       "value": 1
+      },
+      "call_duration": 15,
+      "price": {
+       "price": 600000,
+       "unit": "تومان",
+       "format_price": "600000 تومان"
+      },
+      "offline_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "pre_payment_price": {
+       "price": null,
+       "unit": "تومان",
+       "format_price": "رایگان"
+      },
+      "status": 1,
+      "description": null,
+      "is_description_required": false,
+      "place": {
+       "specialities": [],
+       "city": []
+      },
+      "doctor_place_id": null,
+      "insurances": [],
+      "start_show": 4,
+      "end_show": 720,
+      "commission_percent": "20.00",
+      "show_remind": 1,
+      "pay_type": {
+       "name": "پرداخت آنلاین",
+       "value": 1
+      },
+      "on_calls": [],
+      "is_triage": false,
+      "initial_message": null,
+      "priority": 7,
+      "service_tags": []
+     }
+    ],
+    "free_next_consultation_time": {
+     "id": 13779029586,
+     "status": 1,
+     "day": "2026-10-06",
+     "date": "2026-10-06 08:00:00",
+     "show_date": "2026-10-06 04:00:00",
+     "shamsi_date": "فردا",
+     "time": "08:00",
+     "format_time": "قبل از ظهر",
+     "shamsi_day": "1405-07-14",
+     "open_at": null,
+     "place": null,
+     "consultation_type": {
+      "name": "مشاوره تلفنی",
+      "value": 1
+     },
+     "is_next_free_time": true
+    },
+    "ads": false,
+    "has_badge": false,
+    "rate": {
+     "count": 11,
+     "recommend": 10,
+     "percent": 91
+    },
+    "is_insurance": false,
+    "is_minimum_delay": true,
+    "count_done_orders": 47,
+    "card_buttons": {
+     "presence": true,
+     "online": false
+    },
+    "is_endorsable": true,
+    "endorsement_count": {
+     "total": 1,
+     "with_recommendation_letter": 0
+    }
+   }
+  ],
+  "from": 1,
+  "last_page": 167,
+  "next_page_url": "http://api.doctoreto.com/api/web/patient/v1/doctors?page=2",
+  "per_page": 3,
+  "to": 3,
+  "total": 499,
+  "nearby_neighborhood": null
+ },
+ "message": "",
+ "errors": null
+}

@@ -1,0 +1,45 @@
+{
+ "items": {
+  "current_page": 1,
+  "data": [
+   {
+    "id": 20972,
+    "first_name": "redacted",
+    "form_id": 1,
+    "waiting_time_office": "0-15 دقیقه",
+    "suggest_the_offer": true,
+    "rate_to_offer": null,
+    "comment_to_offer": "بسیار دقیق و با اخلاق هستن",
+    "created_at": "2021-11-11T22:20:07.000000Z"
+   },
+   {
+    "id": 37480,
+    "first_name": "redacted",
+    "form_id": 1,
+    "waiting_time_office": "15-45 دقیقه",
+    "suggest_the_offer": true,
+    "rate_to_offer": null,
+    "comment_to_offer": "واقعا برای بیمارانشون وقت میگذاشتند.",
+    "created_at": "2021-07-20T05:24:20.000000Z"
+   },
+   {
+    "id": 46083,
+    "first_name": "redacted",
+    "form_id": 1,
+    "waiting_time_office": "0-15 دقیقه",
+    "suggest_the_offer": true,
+    "rate_to_offer": null,
+    "comment_to_offer": "آقای دکتر فوق العاده هستن",
+    "created_at": "2021-11-11T22:21:50.000000Z"
+   }
+  ],
+  "from": 1,
+  "last_page": 26,
+  "next_page_url": "http://api.doctoreto.com/api/web/patient/v1/offers/ArraJa/reaction?page=2",
+  "per_page": 3,
+  "to": 3,
+  "total": 78
+ },
+ "message": "",
+ "errors": null
+}
