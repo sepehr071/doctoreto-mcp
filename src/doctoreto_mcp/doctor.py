@@ -18,6 +18,7 @@ from .search import (
     DoctorRef,
     Page,
     areas,
+    avatar,
     clip,
     html_text,
     local,
@@ -40,7 +41,7 @@ async def dt_doctor(doctor: DoctorRef) -> dict[str, Any]:
     (input of dt_free_slots), `fee` (the full price: for an office visit the fee paid at the office, for
     online visits the online price), `pay_online_now` (charged when booking; usually 0 for office visits),
     the office address and coordinates, and `next_free` (Tehran time). Also the about text, review summary
-    (count, recommend percent, 1-5 averages per category), office waiting time and treated conditions.
+    (count, recommend percent, 1-5 averages per category), office waiting time, treated conditions and photo.
     Booking needs an SMS login on the site: give the user `url`. Next: dt_free_slots, dt_reviews.
     """
     hid = ref(doctor, "doctor")
@@ -70,6 +71,7 @@ async def dt_doctor(doctor: DoctorRef) -> dict[str, Any]:
         "treats": [t.get("name") for t in profile.get("service_tags") or []][:20],
         "insurances": [i.get("name") for i in profile.get("insurances") or []],
         "url": page_url("doctor", profile.get("slug"), profile.get("id")),
+        "image": avatar(profile.get("avatar_url")),
     }
 
 

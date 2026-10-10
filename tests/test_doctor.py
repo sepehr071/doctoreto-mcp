@@ -19,6 +19,7 @@ async def test_dt_doctor(client, api):
     assert params(api.calls[1]) == {"search": ["[type != 4]"]}
     assert all(c.headers["app-version"] == "2.0.0" for c in api.calls)
     assert data["url"] == url and data["medical_number"] == "97706"
+    assert data["image"].startswith("https://statics.doctoreto.com/rt:fit/s:300/plain/s3://drto/avatar/doctor/")
     assert data["about"].startswith("بورد تخصصی") and "<" not in data["about"]
     assert (data["reviews"], data["recommend_percent"]) == (408, 92)
     assert data["category_stars"]["نحوه برخورد پزشک"] == 4.74

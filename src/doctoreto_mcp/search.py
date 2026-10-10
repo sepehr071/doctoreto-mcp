@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 from mcp.server.mcpserver.exceptions import ToolError
 from pydantic import Field
 
-from .http import API, SITE, fetch
+from .http import API, SITE, STATICS, fetch
 from .registry import tool
 
 TEHRAN = timezone(timedelta(hours=3, minutes=30))  # Iran has no daylight saving time since 2022
@@ -157,7 +157,7 @@ async def dt_search_doctors(
 
     Each card has the hash `id` (input of dt_doctor), visit types offered, the office visit fee when listed,
     office areas, the earliest free slot over all services (Tehran time, with the Jalali date), review count,
-    recommend percent and bookings. Online consultation prices are not in the cards (the list's phone price
+    recommend percent, bookings and the photo URL (`image`). Online consultation prices are not in the cards (the list's phone price
     differs from the booking page): call dt_doctor for prices. near_lat/near_lon narrow to doctors near a point.
     Next: dt_doctor -> dt_free_slots.
     """
@@ -341,6 +341,7 @@ def doctor_card(d: dict[str, Any]) -> dict[str, Any]:
         if visit_type(c) == "office" and p.get("name") and len(offices) < 3:
             offices.append(
                 {
+                    "id": p.get("id"),
                     "name": p.get("name"),
                     "city": (p.get("city") or {}).get("name"),
                     "areas": areas(p),
@@ -348,6 +349,9 @@ def doctor_card(d: dict[str, Any]) -> dict[str, Any]:
                 }
             )
     rate = d.get("rate") or {}
+    earliest = free_time(d.get("free_next_consultation_time"))
+    if earliest and (place_id := (d["free_next_consultation_time"].get("place") or {}).get("id")):
+        earliest["place_id"] = place_id  # the office of that slot: `offices[].id`
     return {
         "id": d.get("id"),
         "name": d.get("full_name"),
@@ -356,13 +360,21 @@ def doctor_card(d: dict[str, Any]) -> dict[str, Any]:
         "visit_types": sorted({t for c in cons if (t := visit_type(c))}),
         "office_fee": min([f for f in fees if f], default=None),
         "offices": offices,
-        "earliest_free": free_time(d.get("free_next_consultation_time")),
+        "earliest_free": earliest,
         "reviews": rate.get("count"),
         "recommend_percent": rate.get("percent"),
         "bookings": d.get("count_done_orders"),
         "sponsored": bool(d.get("ads")),
         "url": page_url("doctor", d.get("slug"), d.get("id")),
+        "image": avatar(d.get("avatar_url")),
     }
+
+
+def avatar(s: Any) -> str | None:
+    """Photo URL: the API gives 's3://drto/avatar/...' paths that the site serves through its image proxy."""
+    if isinstance(s, str) and s.startswith("s3://"):
+        return f"{STATICS}/rt:fit/s:300/plain/{s}"
+    return s if isinstance(s, str) and s.startswith("https://") else None
 
 
 def free_time(f: Any) -> dict[str, Any] | None:

@@ -61,6 +61,11 @@ async def test_dt_search_doctors(client, api):
     assert d["offices"][0]["areas"] == ["سهروردی"] and "phone" not in str(d["offices"])
     assert (d["reviews"], d["recommend_percent"], d["bookings"]) == (11, 91, 47)
     assert d["url"] == "https://doctoreto.com/doctor/dr-fatemeh-mottaghi-zadeh/MdPdaM"
+    assert d["image"] == (
+        "https://statics.doctoreto.com/rt:fit/s:300/plain/s3://drto/avatar/doctor/2024/12/yAXCUQ5u72i2AUX0ryWw1ViFaQ4MldQGBibqghU9.jpg"
+    )
+    first = data["doctors"][0]  # its earliest slot is at office 51805
+    assert first["earliest_free"]["place_id"] == 51805 == first["offices"][0]["id"]
 
 
 async def test_dt_search_doctors_keeps_limit(client, api):

@@ -18,6 +18,7 @@ from mcp.server.mcpserver.exceptions import ToolError
 API = "https://api.doctoreto.com/api/web/patient/v1"
 ROOT = "https://api.doctoreto.com"  # center search and map live here, without the /api/... prefix
 SITE = "https://doctoreto.com"
+STATICS = "https://statics.doctoreto.com"  # image proxy for s3:// avatar paths
 BLOG = f"{SITE}/blog/wp-json/wp/v2"
 
 HEADERS = {
