@@ -193,6 +193,7 @@ All 14 tools are annotated `readOnlyHint: true` and return compact structured JS
 - **Insurance:** few doctors list insurances, so `insurance_ids` narrows a search a lot. Centers list theirs in `dt_center`; the center search ignores insurance filters.
 - **Reviews:** doctor and center reviews come newest first, offer reviews oldest first; each review date is the Tehran day, as on the page.
 - **Search pages** hold exactly `limit` doctors, also when the site mixes sponsored doctors in.
+- **Photos and offices:** search cards and `dt_doctor` carry the doctor's photo URL (`image`). In a search card, `earliest_free.place_id` matches an `offices[].id`, so you can tell which office has the first free slot.
 - **Privacy:** no phone numbers and no reviewer names are returned.
 - **Checked against the website:** on 2026-10-06 every tool's output was compared with the live doctoreto.com pages (names, fees, free times per day, review order, search totals and order, centers, offers).
 
