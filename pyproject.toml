@@ -1,6 +1,6 @@
 [project]
 name = "doctoreto-mcp"
-version = "0.1.1"
+version = "0.2.0"
 description = "Unofficial read-only MCP server for Doctoreto: find Iranian doctors, visit fees, free appointment slots, reviews, clinics, labs and clinic offers."
 readme = "README.md"
 license = "MIT"
