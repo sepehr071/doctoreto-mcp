@@ -2,11 +2,11 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/sepehr071/doctoreto-mcp/main/.github/banner.png" alt="doctoreto-mcp: let your AI agent compare visit fees and free times on Doctoreto" width="100%">
+<img src="https://raw.githubusercontent.com/sepehr071/doctoreto-mcp/main/.github/banner.png" alt="doctoreto-mcp: unofficial Doctoreto MCP server for Claude, Cursor and Copilot" width="100%">
 
-# 🩺 doctoreto-mcp
+# 🩺 doctoreto-mcp: Doctoreto MCP server for AI agents
 
-**Let your AI agent find the right doctor on Doctoreto.**<br>
+**Unofficial, read-only MCP server that lets your AI agent find the right Iranian doctor on Doctoreto (دکترتو).**<br>
 Search Iranian doctors by speciality, city, neighborhood and visit type, compare visit fees,<br>
 see free appointment times, read reviews, and find hospitals, labs and clinic offers, all from Claude, Cursor or Copilot.
 
@@ -24,6 +24,19 @@ see free appointment times, read reviews, and find hospitals, labs and clinic of
 </div>
 
 ---
+
+## For AI agents
+
+- **What:** Unofficial MCP server for Doctoreto (دکترتو, doctoreto.com), the Iranian doctor appointment and online consultation site. Queries in Persian or English; prices in Toman.
+- **Install:** `claude mcp add doctoreto -- uvx doctoreto-mcp` (stdio, needs [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.10+).
+- **Auth:** none. Optional `DOCTORETO_MCP_PROXY` sets an HTTP proxy for every request.
+- **Access:** read-only. It cannot log in, book, pay or post a review; give the user the doctor's page link to book.
+- **Tools:** 14, all prefixed `dt_`. Start with `dt_suggest` (free phrase to doctors and slugs), `dt_search_doctors`, `dt_doctor`, `dt_free_slots`; `dt_search_centers` and `dt_search_offers` for hospitals, labs and clinic offers.
+- **Typical sequence:** `dt_search_doctors` -> `dt_doctor` -> `dt_free_slots` -> `dt_reviews`.
+- **Use when:** the user wants to find a doctor in Iran, compare visit fees (office, phone, video) or see free appointment times, centers or fixed-price clinic offers.
+- **Do not use when:** the user wants to actually book or pay, or needs medical advice.
+- **Output:** compact JSON. Prices in Toman, dates Gregorian `YYYY-MM-DD`, times Tehran local. Doctors, centers and offers use a 6-character id (or the page URL); a name slug alone cannot be resolved. Use `dt_doctor` for online prices.
+- **Machine-readable:** [server.json](https://github.com/sepehr071/doctoreto-mcp/blob/main/server.json), and the catalog of all Iranian MCP servers [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp) (`TOOLS.md`, `servers.json`, `llms.txt`).
 
 ## Why
 
@@ -200,6 +213,27 @@ All 14 tools are annotated `readOnlyHint: true` and return compact structured JS
 ## FAQ
 
 <details>
+<summary><b>Is there a Doctoreto API or MCP server for AI agents?</b></summary>
+
+Yes: this unofficial MCP server wraps the public endpoints the Doctoreto website itself uses, so Claude, Cursor or
+Copilot can search doctors, compare visit fees and read free times.
+</details>
+
+<details>
+<summary><b>How do I use Doctoreto with Claude, Cursor or Copilot?</b></summary>
+
+Add the server with `claude mcp add doctoreto -- uvx doctoreto-mcp` (or use the Cursor and VS Code buttons above),
+then ask in Persian or English, for example "a cardiologist in Pasdaran, Tehran, as soon as possible".
+</details>
+
+<details>
+<summary><b>Is it official, safe and free?</b></summary>
+
+It is unofficial, open source (MIT) and free. It is read-only, needs no account or API key, and runs on your
+machine without sending data to any other server.
+</details>
+
+<details>
 <summary><b>Can it book an appointment for me?</b></summary>
 
 No, and that's deliberate. It has no login and never calls the booking, payment, review or chat endpoints.
@@ -247,12 +281,14 @@ npx @modelcontextprotocol/inspector uvx doctoreto-mcp
 |---|---|---|
 | `DOCTORETO_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port` |
 
-## فارسی
+<a id="فارسی"></a>
+
+## فارسی: سرور MCP دکترتو
 
 <div dir="rtl">
 
-**doctoreto-mcp** به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...) اجازه می&zwnj;دهد در دکترتو پزشک مناسب را
-بر اساس تخصص، شهر، محله، بیمه و نوع ویزیت (حضوری، تلفنی، متنی، تصویری) پیدا کند، هزینه ویزیت و زمان&zwnj;های خالی نوبت
+**doctoreto-mcp** یک سرور MCP غیررسمی برای دکترتو است که به دستیار هوش مصنوعی شما (Claude، Cursor، Copilot و ...)
+اجازه می&zwnj;دهد در میان پزشکان ایران، پزشک مناسب را در دکترتو بر اساس تخصص، شهر، محله، بیمه و نوع ویزیت (حضوری، تلفنی، متنی، تصویری) پیدا کند، هزینه ویزیت و زمان&zwnj;های خالی نوبت
 را ببیند، نظرات بیماران را بخواند و بیمارستان، آزمایشگاه و خدمات دکترتو کلینیک را هم جست&zwnj;وجو کند.
 
 - فقط خواندنی است: وارد حساب نمی&zwnj;شود، نوبت رزرو نمی&zwnj;کند و پرداخت نمی&zwnj;کند؛ لینک صفحه پزشک را برای رزرو می&zwnj;دهد.
@@ -291,11 +327,18 @@ and fixes for API changes.
 Releases: bump the version in `pyproject.toml` and `server.json`, then push a `v*` tag. GitHub Actions tests,
 publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.io), and creates the GitHub Release.
 
+## Related servers
+
+- [Paziresh24 MCP server](https://github.com/sepehr071/paziresh24-mcp) for Iranian doctors, profiles and free appointment slots
+- All Iranian MCP servers: [awesome-iran-mcp](https://github.com/sepehr071/awesome-iran-mcp)
+
 ## Disclaimer
 
 Unofficial and not affiliated with or endorsed by Doctoreto. It uses the public endpoints of the doctoreto.com
 website, which can change without notice. It gives information, not medical advice. Please keep request rates
 reasonable.
+
+If this saves you clicks, a star helps others find it.
 
 ## License
 
