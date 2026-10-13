@@ -1,11 +1,11 @@
 [project]
 name = "doctoreto-mcp"
-version = "0.2.1"
+version = "0.2.2"
 description = "Unofficial read-only MCP server for Doctoreto: find Iranian doctors, visit fees, free appointment slots, reviews, clinics, labs and clinic offers."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Sepehr", email = "sepehr@nextofx.com" }]
+authors = [{ name = "Sepehr Radmard", email = "sepehrr80@gmail.com" }]
 requires-python = ">=3.10"
 keywords = ["mcp", "model-context-protocol", "doctoreto", "iran", "health", "doctor", "appointment", "booking", "clinic"]
 classifiers = [
