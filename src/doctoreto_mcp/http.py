@@ -8,7 +8,9 @@ into `ToolError` messages the model can act on.
 from __future__ import annotations
 
 import asyncio
+import copy
 import os
+import time
 from typing import Any
 from urllib.parse import urlsplit
 
@@ -32,6 +34,7 @@ MAX_CONCURRENCY = 4
 _transport: httpx.AsyncBaseTransport | None = None
 _client: httpx.AsyncClient | None = None
 _limit: asyncio.Semaphore | None = None
+_cache: dict[tuple, tuple[float, Any]] = {}  # (url, sorted params) -> (expires, body), for static lookups only
 
 
 class ApiError(ToolError):
@@ -46,6 +49,7 @@ def set_transport(transport: httpx.AsyncBaseTransport | None) -> None:
     """Swap the transport (tests use httpx.MockTransport). Drops the current client."""
     global _transport, _client, _limit
     _transport, _client, _limit = transport, None, None
+    _cache.clear()
 
 
 def _get_client() -> tuple[httpx.AsyncClient, asyncio.Semaphore]:
@@ -66,11 +70,17 @@ def _get_client() -> tuple[httpx.AsyncClient, asyncio.Semaphore]:
     return _client, _limit
 
 
-async def fetch(url: str, params: dict[str, Any] | None = None) -> Any:
-    """GET an endpoint and return the parsed JSON body with the `{items, ...}` envelope unwrapped."""
+async def fetch(url: str, params: dict[str, Any] | None = None, ttl: float = 0) -> Any:
+    """GET an endpoint and return the parsed JSON body with the `{items, ...}` envelope unwrapped.
+
+    `ttl` (seconds) caches the body for static lookups (specialities, cities, insurances); callers get a copy.
+    """
     client, limit = _get_client()
     host = urlsplit(url).hostname
     params = {k: v for k, v in (params or {}).items() if v is not None}
+    key = (url, tuple(sorted((k, str(v)) for k, v in params.items())))
+    if ttl and (hit := _cache.get(key)) and hit[0] > time.monotonic():
+        return copy.deepcopy(hit[1])
     r = None
     # A reused keep-alive connection is sometimes dropped; one retry after a short pause fixes it.
     for attempt in range(2):
@@ -97,7 +107,10 @@ async def fetch(url: str, params: dict[str, Any] | None = None) -> Any:
         body = r.json()
     except ValueError as e:
         raise ApiError(f"{host} returned a non-JSON response (HTTP {r.status_code}).", r.status_code) from e
-    return unwrap(body)
+    body = unwrap(body)
+    if ttl:
+        _cache[key] = (time.monotonic() + ttl, copy.deepcopy(body))
+    return body
 
 
 def unwrap(body: Any) -> Any:

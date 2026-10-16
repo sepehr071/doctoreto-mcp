@@ -1,3 +1,4 @@
+import json
 import sys
 
 import pytest
@@ -12,4 +13,4 @@ async def test_stdio_server():
     async with Client(server) as c:
         assert len((await c.list_tools()).tools) == 14
         result = await c.call_tool("dt_cities", {"query": "تهران", "limit": 3})
-        assert not result.is_error and result.structured_content["cities"][0]["slug"] == "tehran"
+        assert not result.is_error and json.loads(result.content[0].text)["cities"][0]["slug"] == "tehran"

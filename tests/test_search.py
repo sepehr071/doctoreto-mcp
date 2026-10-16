@@ -82,7 +82,7 @@ async def test_dt_search_doctors_by_name(client, api):
     assert sent["query"] == ["مقدادی"] and sent["show_ads"] == ["false"] and sent["is_on_call"] == ["true"]
     assert "consultation_types[]" not in sent
     d = data["doctors"][0]
-    assert d["id"] == "ZpyYmq" and d["office_fee"] is None  # name-search cards carry no prices
+    assert d["id"] == "ZpyYmq" and "office_fee" not in d  # name-search cards carry no prices
     assert d["earliest_free"]["at"] == "2026-10-06 12:00"  # ISO 'T' form normalised
     assert d["visit_types"] == ["office", "phone"]
 
@@ -99,7 +99,7 @@ async def test_dt_specialities(client, api):
     data = (await client.call_tool("dt_specialities", {})).structured_content
     rows = data["specialities"]
     assert "medical" not in [r["slug"] for r in rows]  # root categories are skipped
-    assert rows[0] == {"slug": "orthopedist", "name": "ارتوپدی", "level": "تخصص", "parent": None}
+    assert rows[0] == {"slug": "orthopedist", "name": "ارتوپدی", "level": "تخصص"}
     assert rows[1] == {"slug": "knee-surgeon", "name": "جراحی زانو", "level": "فلوشیپ", "parent": "orthopedist"}
     knee = (await client.call_tool("dt_specialities", {"query": "زانو"})).structured_content
     assert [r["slug"] for r in knee["specialities"]] == ["knee-surgeon"]
@@ -137,8 +137,11 @@ async def test_dt_neighborhoods(client, api):
 async def test_dt_insurances(client, api):
     api[f"{V1}/insurances"] = fixture("insurances.json")
     data = (await client.call_tool("dt_insurances", {"query": "ارتش"})).structured_content
-    assert data == {"insurances": [{"id": 46, "name": "بیمه ارتش", "kind": "basic"}]}
+    assert data == {"total": 1, "insurances": [{"id": 46, "name": "بیمه ارتش", "kind": "basic"}]}
     assert params(api.calls[0]) == {"sort": ["[name=asc]"]}
+    # The lookup is cached: a second call (even with other filters) sends no request.
+    both = (await client.call_tool("dt_insurances", {"limit": 1})).structured_content
+    assert both["total"] > 1 and len(both["insurances"]) == 1 and len(api.calls) == 1
 
 
 def test_ref():

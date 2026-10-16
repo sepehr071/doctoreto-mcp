@@ -199,13 +199,14 @@ All 14 tools are annotated `readOnlyHint: true` and return compact structured JS
 
 ## Good to know
 
-- **Prices are in Toman.** For an office visit `fee` is what you pay at the office and `pay_online_now` what is charged when booking (usually 0). For phone, text and video `fee` is the online price. A `null` fee means the doctor lists none.
+- **Prices are in Toman.** For an office visit `fee` is what you pay at the office and `pay_online_now` what is charged when booking (usually 0). For phone, text and video `fee` is the online price. A missing `fee` means the doctor lists none (null and empty values are left out of results; `false` and `0` are kept).
 - **Use `dt_doctor` for online prices.** The search list and the profile show a phone price three times the one on the booking page; `dt_doctor` reads the booking box, which matches the page.
 - **Dates are Gregorian** `YYYY-MM-DD` (1405-07-22 = 2026-10-14); times are Tehran local. Jalali dates are given next to them.
 - **Booking happens on the site.** It needs an SMS code, so the agent finds the doctor and time and gives you the page link.
 - **Insurance:** few doctors list insurances, so `insurance_ids` narrows a search a lot. Centers list theirs in `dt_center`; the center search ignores insurance filters.
 - **Reviews:** doctor and center reviews come newest first, offer reviews oldest first; each review date is the Tehran day, as on the page.
-- **Search pages** hold exactly `limit` doctors, also when the site mixes sponsored doctors in.
+- **Search pages** hold exactly `limit` doctors, also when the site mixes sponsored doctors in. `dt_search_offers` and the non-map `dt_search_centers` cut the site's page (about 40 / 20 items) to `limit` and report `on_page`.
+- **Lists:** `dt_specialities` and `dt_insurances` return up to `limit` entries (defaults cover the whole list) plus `total`, and are cached for an hour together with `dt_cities`. Long review, about, description and terms texts are cut (400 to 800 characters); `full_text=true` on `dt_doctor`, `dt_reviews`, `dt_center` and `dt_offer` returns them whole.
 - **Photos and offices:** search cards and `dt_doctor` carry the doctor's photo URL (`image`). In a search card, `earliest_free.place_id` matches an `offices[].id`, so you can tell which office has the first free slot.
 - **Privacy:** no phone numbers and no reviewer names are returned.
 - **Checked against the website:** on 2026-10-06 every tool's output was compared with the live doctoreto.com pages (names, fees, free times per day, review order, search totals and order, centers, offers).

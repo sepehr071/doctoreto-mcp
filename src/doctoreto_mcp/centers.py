@@ -14,6 +14,7 @@ from .http import API, ROOT, ApiError, fetch
 from .registry import tool
 from .search import (
     PLACE_TYPES,
+    FullText,
     Lat,
     Lon,
     Page,
@@ -35,7 +36,7 @@ CenterRef = Annotated[
     Field(
         min_length=6,
         max_length=300,
-        description="Center hash id from a search ('YNrrOb') or its page URL ('https://doctoreto.com/center/raz-shiraz-lap/YNrrOb').",
+        description="Center hash id ('YNrrOb') or page URL ('https://doctoreto.com/center/raz-shiraz-lap/YNrrOb').",
     ),
 ]
 
@@ -69,11 +70,10 @@ async def dt_search_centers(
 ) -> dict[str, Any]:
     """Find hospitals, clinics, infirmaries, laboratories, imaging centers and pharmacies with filters.
 
-    Each card has the hash `id` (input of dt_center), kind, state/private, 24h flag, address, coordinates,
-    review count and recommend percent, doctor count and whether it takes online bookings. With near_lat and
-    near_lon it searches a square around the point (map search) and sorts by distance; dense areas return only
-    part of the centers as cards and count the rest in `more_in_area`. Insurance filters have no effect
-    upstream: check `insurances` in dt_center. Next: dt_center, dt_reviews(of='center').
+    Cards carry the hash `id` for dt_center. With near_lat and near_lon it searches a square around the point
+    sorted by distance; dense areas return only part of the centers and count the rest in `more_in_area`.
+    Without them `limit` cuts the upstream page (`on_page` items). No insurance filter: see dt_center.
+    Next: dt_center, dt_reviews(of='center').
     """
     if neighborhood and not city:
         raise ToolError("neighborhood needs city too, e.g. city='tehran', neighborhood='pasdaran'.")
@@ -92,7 +92,8 @@ async def dt_search_centers(
     }
     if near_lat is None or near_lon is None:
         data = await fetch(f"{ROOT}/search/places", {**params, "page": page}) or {}
-        return {**pages(data), "centers": [center_card(c) for c in (data.get("data") or [])[:limit]]}
+        rows = data.get("data") or []
+        return {**pages(data), "on_page": len(rows), "centers": [center_card(c) for c in rows[:limit]]}
 
     dlat = radius_km / 111.0
     dlon = radius_km / (111.0 * math.cos(math.radians(near_lat)))
@@ -118,13 +119,14 @@ async def dt_search_centers(
 async def dt_center(
     center: CenterRef,
     doctors: Annotated[int, Field(ge=0, le=30, description="How many of its doctors to list (0 = none).")] = 10,
+    full_text: FullText = False,
 ) -> dict[str, Any]:
     """A center's page: address, coordinates, departments, services, accepted insurances, attributes, opening
     hours, lab admission rules, bookable services with `consultation_id` (for dt_free_slots) and its doctors
     (hash ids for dt_doctor, with each doctor's earliest free slot).
 
-    Doctor private offices (type office) have no center page: use dt_doctor for them. Booking needs an SMS
-    login on the site: give the user `url`. Next: dt_free_slots, dt_doctor, dt_reviews(of='center').
+    Doctor private offices (type office) have no center page: use dt_doctor.
+    Next: dt_free_slots, dt_doctor, dt_reviews(of='center').
     """
     hid = ref(center, "center")
     detail, services, hours, configs, docs = await asyncio.gather(
@@ -138,16 +140,16 @@ async def dt_center(
         if isinstance(detail, dict) and detail.get("type") == 0:
             raise ToolError(f"{hid} is a doctor's private office, which has no center page. Use dt_doctor.")
         raise ToolError(f"Center {hid} not found.")
-    out = center_card(detail)
+    out = center_card(detail, full_text)
     out.update(
         {
-            "description": clip(html_text(detail.get("description")), 800),
+            "description": clip(html_text(detail.get("description")), 800, full_text),
             "departments": [s.get("name") for s in detail.get("specialities") or []],
             "services": [t.get("name") for t in detail.get("tags") or []][:30],
             "insurances": [i.get("name") for i in detail.get("insurances") or []],
             "attributes": [a.get("title") for a in detail.get("place_attributes") or []],
             "hours": [{"day": h.get("day"), "time": h.get("time")} for h in hours or []],
-            "bookable": [service(c) for c in services or []],
+            "bookable": [service(c, full_text) for c in services or []],
         }
     )
     if detail.get("type") == 2 and isinstance(configs, dict):
@@ -167,7 +169,7 @@ async def dt_center(
     return out
 
 
-def center_card(c: dict[str, Any]) -> dict[str, Any]:
+def center_card(c: dict[str, Any], full_text: bool = False) -> dict[str, Any]:
     loc = c.get("location") or {}
     rate = c.get("rate") or {}
     return {
@@ -178,7 +180,7 @@ def center_card(c: dict[str, Any]) -> dict[str, Any]:
         "open_24h": bool(c.get("is_open_24_hours")),
         "city": (c.get("city") or {}).get("name"),
         "areas": areas(c),
-        "address": clip(c.get("full_address") or c.get("address"), 200),
+        "address": clip(c.get("full_address") or c.get("address"), 200, full_text),
         "lat": num(loc.get("lat")),
         "lon": num(loc.get("lon")),
         "reviews": rate.get("count"),

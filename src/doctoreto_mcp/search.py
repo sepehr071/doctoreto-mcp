@@ -39,8 +39,11 @@ VISIT_TYPES = {
 VISIT_FILTER = {"office": [0], "phone": [1, 11], "text": [2, 12], "video": [3], "any_online": [1, 2, 3, 11, 12]}
 SORTS = {"popular": "rate", "earliest": "free_time", "most_booked": "max_orders"}
 
+TTL = 3600  # seconds to cache the static lookups (specialities, cities, insurances)
+
 Slug = Annotated[str, Field(pattern=r"^[a-z0-9][a-z0-9_-]*$", max_length=80)]
 Page = Annotated[int, Field(ge=1, le=500, description="1-based page number.")]
+FullText = Annotated[bool, Field(description="Return complete texts instead of cutting long ones.")]
 Lat = Annotated[float | None, Field(ge=24, le=40, description="Latitude of a point in Iran, e.g. 35.7575.")]
 Lon = Annotated[float | None, Field(ge=44, le=64, description="Longitude of a point in Iran, e.g. 51.4100.")]
 DoctorRef = Annotated[
@@ -48,7 +51,7 @@ DoctorRef = Annotated[
     Field(
         min_length=6,
         max_length=300,
-        description="Doctor hash id from a search ('xqbEWZ') or the doctor's page URL ('https://doctoreto.com/doctor/dr-kambiz-parazaran/xqbEWZ'). The slug alone cannot be resolved.",
+        description="Doctor hash id ('xqbEWZ') or page URL ('https://doctoreto.com/doctor/dr-kambiz-parazaran/xqbEWZ').",
     ),
 ]
 
@@ -69,11 +72,10 @@ async def dt_suggest(
     ] = None,
     limit: Annotated[int, Field(ge=1, le=10, description="Max items of each kind.")] = 5,
 ) -> dict[str, Any]:
-    """Search-box suggestions: matching doctors (with hash id), speciality slugs, service tags and centers.
+    """Search-box suggestions: doctors (hash id), speciality slugs, service tags and centers for a free phrase.
 
-    Use it to turn a free phrase into the slugs and ids the other tools need, e.g. 'قلب' -> speciality
-    'cardiologist' for dt_search_doctors. Doctors match by name text, so for a speciality prefer the returned
-    speciality slug over the doctor list. Next: dt_search_doctors, dt_doctor or dt_center.
+    E.g. 'قلب' -> speciality 'cardiologist'. Doctors match by name, so for a speciality use the slug.
+    Next: dt_search_doctors, dt_doctor or dt_center.
     """
     data = await fetch(f"{API}/suggestions/search", {"q": fa(query), "city_id": city_id, "per_page": limit}) or {}
     return {
@@ -137,28 +139,21 @@ async def dt_search_doctors(
     ] = None,
     visit_type: Annotated[
         Literal["office", "phone", "text", "video", "instant", "any_online"] | None,
-        Field(
-            description="Only doctors offering this visit: office (in person), phone, text (chat), video, instant (on-call phone/text now), any_online."
-        ),
+        Field(description="Only doctors offering this visit; instant = on-call phone/text now."),
     ] = None,
     has_free_slot: Annotated[bool, Field(description="Only doctors with a free appointment slot.")] = False,
     sort: Annotated[
         Literal["default", "popular", "earliest", "most_booked"],
-        Field(
-            description="default = site ranking (sponsored first), popular = review count and recommend rate, earliest = soonest free slot, most_booked = most bookings."
-        ),
+        Field(description="default = site ranking (sponsored first); popular = reviews and recommend rate."),
     ] = "default",
     near_lat: Lat = None,
     near_lon: Lon = None,
     page: Page = 1,
     limit: Annotated[int, Field(ge=1, le=25, description="Doctors per page (about 1 KB each).")] = 10,
 ) -> dict[str, Any]:
-    """Search doctors on Doctoreto by city, speciality, neighborhood, service tag, name, gender, insurance and visit type.
+    """Search doctors by city, speciality, neighborhood, service tag, name, gender, insurance and visit type.
 
-    Each card has the hash `id` (input of dt_doctor), visit types offered, the office visit fee when listed,
-    office areas, the earliest free slot over all services (Tehran time, with the Jalali date), review count,
-    recommend percent, bookings and the photo URL (`image`). Online consultation prices are not in the cards (the list's phone price
-    differs from the booking page): call dt_doctor for prices. near_lat/near_lon narrow to doctors near a point.
+    Cards carry the hash `id` for dt_doctor; online prices are not in cards (use dt_doctor).
     Next: dt_doctor -> dt_free_slots.
     """
     if neighborhood and not city:
@@ -191,17 +186,16 @@ async def dt_search_doctors(
 async def dt_specialities(
     query: Annotated[
         str | None,
-        Field(
-            max_length=50, description="Part of the name in Persian or the slug, e.g. 'قلب' or 'cardio'. Omit for all."
-        ),
+        Field(max_length=50, description="Part of the name or slug, e.g. 'قلب' or 'cardio'. Omit for all."),
     ] = None,
+    limit: Annotated[int, Field(ge=1, le=300, description="Max entries (about 100 exist).")] = 150,
 ) -> dict[str, Any]:
-    """List medical, paramedical and dental specialities with the slug dt_search_doctors needs.
+    """List specialities with the slug dt_search_doctors needs; `total` counts all matches.
 
     `level` is specialist, subspecialist, fellowship or general; `parent` is the broader speciality
-    (interventional cardiology -> cardiologist). About 100 entries. Next: dt_search_doctors(speciality=slug).
+    (interventional cardiology -> cardiologist). Prefer `query`. Next: dt_search_doctors(speciality=slug).
     """
-    tree = await fetch(f"{API}/specialities") or []
+    tree = await fetch(f"{API}/specialities", ttl=TTL) or []
     q = fa(query).lower() if query else ""
     out = []
     for node, parent in _walk(tree, None):
@@ -218,7 +212,7 @@ async def dt_specialities(
                 "parent": parent.get("slug") if parent and parent.get("type") != 1 else None,
             }
         )
-    return {"specialities": out}
+    return {"total": len(out), "specialities": out[:limit]}
 
 
 @tool("Cities")
@@ -232,10 +226,9 @@ async def dt_cities(
     ] = None,
     limit: Annotated[int, Field(ge=1, le=100, description="Max cities.")] = 20,
 ) -> dict[str, Any]:
-    """Find a city's slug (for search filters) and numeric id (for dt_suggest).
+    """Find a city's slug (for search filters) and numeric id (for dt_suggest); main cities first.
 
-    Without arguments returns the main cities first. With `speciality` returns only cities that have doctors
-    of it, with the doctor count (main cities only; a search may still find doctors elsewhere).
+    With `speciality`: only main cities that have such doctors, with counts (a search may find more elsewhere).
     Next: dt_search_doctors(city=slug) or dt_neighborhoods.
     """
     if speciality:
@@ -244,7 +237,7 @@ async def dt_cities(
             {"slug": c.get("slug"), "name": c.get("name"), "id": c.get("id"), "doctors": c.get("count")} for c in rows
         ]
     else:
-        rows = await fetch(f"{API}/regions/cities/available") or []
+        rows = await fetch(f"{API}/regions/cities/available", ttl=TTL) or []
         rows = sorted(rows, key=lambda c: -(c.get("priority") or 0))
         cities = [
             {
@@ -275,8 +268,7 @@ async def dt_neighborhoods(
 ) -> dict[str, Any]:
     """Neighborhoods of a city (most doctors first) and nearby cities, each with a doctor count.
 
-    Some entries are district groupings (منطقه 3, غرب) that work as filters too. Use a slug as
-    dt_search_doctors(city=..., neighborhood=slug); suggest a nearby city when the user's city has few doctors.
+    District groupings (منطقه 3, غرب) are filters too. Next: dt_search_doctors(city=..., neighborhood=slug).
     """
     data = await fetch(f"{API}/doctors/nearby-areas", {"city_slug": city, "speciality_slug": speciality}) or {}
     hoods = sorted(data.get("nearby_neighborhoods") or [], key=lambda n: -(n.get("doctor_count") or 0))
@@ -300,21 +292,21 @@ async def dt_insurances(
     query: Annotated[
         str | None, Field(max_length=50, description="Part of the insurer's name in Persian, e.g. 'تامین' or 'آتیه'.")
     ] = None,
+    limit: Annotated[int, Field(ge=1, le=200, description="Max insurers (about 84 exist).")] = 100,
 ) -> dict[str, Any]:
     """List basic and supplementary insurers with the ids dt_search_doctors(insurance_ids=...) takes.
 
-    About 84 insurers. Few doctors list insurances, so an insurance filter narrows a search a lot; centers list
+    `total` counts all matches. Few doctors list insurances, so the filter narrows a search a lot; centers list
     theirs in dt_center.
     """
-    rows = await fetch(f"{API}/insurances", {"sort": "[name=asc]"}) or []
+    rows = await fetch(f"{API}/insurances", {"sort": "[name=asc]"}, ttl=TTL) or []
     q = fa(query) if query else ""
-    return {
-        "insurances": [
-            {"id": i.get("id"), "name": i.get("name"), "kind": {1: "basic", 2: "supplementary"}.get(i.get("type"))}
-            for i in rows
-            if q in (i.get("name") or "")
-        ]
-    }
+    found = [
+        {"id": i.get("id"), "name": i.get("name"), "kind": {1: "basic", 2: "supplementary"}.get(i.get("type"))}
+        for i in rows
+        if q in (i.get("name") or "")
+    ]
+    return {"total": len(found), "insurances": found[:limit]}
 
 
 # Shared helpers -------------------------------------------------------------------------------------------
@@ -463,9 +455,9 @@ def fa(s: str) -> str:
     return s.strip().replace("ي", "ی").replace("ك", "ک")
 
 
-def clip(s: Any, n: int) -> str | None:
+def clip(s: Any, n: int, full: bool = False) -> str | None:
     s = (s or "").strip() if isinstance(s, str) else ""
-    return (s[: n - 1] + "…" if len(s) > n else s) or None
+    return (s[: n - 1] + "…" if len(s) > n and not full else s) or None
 
 
 def html_text(s: Any) -> str:

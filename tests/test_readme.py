@@ -22,3 +22,7 @@ async def test_tools_are_read_only_and_documented(client):
         assert t.title and t.description, t.name
         for name, prop in t.input_schema.get("properties", {}).items():
             assert prop.get("description"), f"{t.name}.{name} has no description"
+
+
+async def test_tools_have_no_output_schema(client):
+    assert all(t.output_schema is None for t in (await client.list_tools()).tools)

@@ -9,7 +9,21 @@ from pydantic import Field
 
 from .http import API, fetch
 from .registry import tool
-from .search import DoctorRef, Page, Slug, clip, fa, free_time, html_text, money, page_url, pages, ref, visit_type
+from .search import (
+    DoctorRef,
+    FullText,
+    Page,
+    Slug,
+    clip,
+    fa,
+    free_time,
+    html_text,
+    money,
+    page_url,
+    pages,
+    ref,
+    visit_type,
+)
 
 PAYMENT = {0: "at_place", 1: "online", 2: "deposit_online", 3: "after_inspection"}
 OfferRef = Annotated[
@@ -17,7 +31,7 @@ OfferRef = Annotated[
     Field(
         min_length=4,
         max_length=300,
-        description="Offer hash id ('ArraJa'), numeric id ('129311') or page URL ('https://doctoreto.com/offer/ArraJa').",
+        description="Offer hash id ('ArraJa'), numeric id ('129311') or page URL.",
     ),
 ]
 
@@ -47,13 +61,12 @@ async def dt_search_offers(
         int, Field(ge=1, le=40, description="Offers to return from the page (the API pages by about 40).")
     ] = 10,
 ) -> dict[str, Any]:
-    """Search Doctoreto clinic offers: fixed-price procedures and packages (ultrasound, echo, laser, dental,
-    check-ups) sold by doctors and centers.
+    """Search clinic offers: fixed-price procedures and packages (ultrasound, laser, dental, check-ups).
 
-    Each card has the price and price after discount (Toman), what is paid online (`pay_online`: the deposit
-    when `payment` is deposit_online, the rest at the place), provider doctor, place, earliest free time,
-    star rating and the default `consultation_id` for dt_free_slots. Unknown sort upstream: compare prices
-    yourself. Next: dt_offer, dt_free_slots, dt_reviews(of='offer').
+    Cards give price and discounted price (Toman), `pay_online` (the deposit when `payment` is deposit_online,
+    the rest at the place) and the default `consultation_id` for dt_free_slots. No sort. `limit` cuts the
+    upstream page (`on_page` items): raise it to see the rest, `page` jumps a whole page.
+    Next: dt_offer, dt_free_slots, dt_reviews(of='offer').
     """
     params = {
         "query": fa(query) if query else None,
@@ -68,28 +81,26 @@ async def dt_search_offers(
         "page": page,
     }
     data = await fetch(f"{API}/offers", params) or {}
-    return {**pages(data), "offers": [offer_card(o) for o in (data.get("data") or [])[:limit]]}
+    rows = data.get("data") or []
+    return {**pages(data), "on_page": len(rows), "offers": [offer_card(o) for o in rows[:limit]]}
 
 
 @tool("Clinic offer details")
-async def dt_offer(offer: OfferRef) -> dict[str, Any]:
+async def dt_offer(offer: OfferRef, full_text: FullText = False) -> dict[str, Any]:
     """One clinic offer in full: price, discount, deposit, who performs it and where, description, terms,
-    capacity, expiry, rating, and its bookable variants with `consultation_id` for dt_free_slots.
-
-    Booking and payment need an SMS login on the site: give the user `url`.
-    """
+    capacity, expiry, rating, and bookable variants with `consultation_id` for dt_free_slots."""
     oid = ref(offer, "offer")
     o = await fetch(f"{API}/offers/{oid}")
     if not isinstance(o, dict) or not o.get("id"):  # unknown ids answer 200 with items: []
         raise ToolError(f"Offer {oid} not found.")
-    out = offer_card(o)
+    out = offer_card(o, full_text)
     out.update(
         {
             "available": o.get("is_available"),
             "remaining": o.get("remaining_capacity"),
-            "description": clip(html_text(o.get("description")), 1500),
-            "terms": clip(html_text(o.get("terms_of_use")), 600),
-            "deposit_terms": clip(html_text(o.get("pre_payment_terms")), 400),
+            "description": clip(html_text(o.get("description")), 800, full_text),
+            "terms": clip(html_text(o.get("terms_of_use")), 400, full_text),
+            "deposit_terms": clip(html_text(o.get("pre_payment_terms")), 300, full_text),
             "variants": [
                 {
                     "consultation_id": v.get("consultation_id"),
@@ -108,7 +119,7 @@ async def dt_offer(offer: OfferRef) -> dict[str, Any]:
     return out
 
 
-def offer_card(o: dict[str, Any]) -> dict[str, Any]:
+def offer_card(o: dict[str, Any], full_text: bool = False) -> dict[str, Any]:
     pay = o.get("payment_type")
     price, final = money(o.get("price")), money(o.get("discount_price"))
     deposit = money(o.get("pre_payment_price"))
@@ -132,7 +143,7 @@ def offer_card(o: dict[str, Any]) -> dict[str, Any]:
         if doc
         else None,
         "place": place.get("name"),
-        "address": clip(place.get("address"), 160),
+        "address": clip(place.get("address"), 160, full_text),
         "city": (o.get("city") or {}).get("name"),
         "next_free": free_time(o.get("next_free_time")),
         "stars": point.get("average"),

@@ -79,6 +79,13 @@ async def test_dt_free_slots_pages_windows_and_drops_past_times(client, api):
     assert data["days"][-1]["date"] == "2026-10-15"
 
 
+async def test_dt_free_slots_31_days_covers_every_window(client, api):
+    api[SLOTS] = fixture("slots.json")
+    await client.call_tool("dt_free_slots", {"consultation_id": 1943, "days": 31})
+    starts = sorted(c.url.params["start_date"] for c in api.calls)
+    assert starts == ["2026-10-06", "2026-10-14", "2026-10-22", "2026-10-30"]
+
+
 async def test_dt_free_slots_validation(client, api):
     assert "not Jalali" in await error(client, "dt_free_slots", {"consultation_id": 1943, "start_date": "1405-07-22"})
     assert "in the past" in await error(client, "dt_free_slots", {"consultation_id": 1943, "start_date": "2026-10-05"})
@@ -120,4 +127,4 @@ async def test_dt_reviews_center_and_offer(client, api):
     assert center["reviews"][0]["visit"] == "مشاوره پذیرش آنلاین آزمایشگاه" and center["reviews"][0]["recommends"]
     offer = (await client.call_tool("dt_reviews", {"of": "offer", "id": "ArraJa"})).structured_content
     assert offer["total"] == 78 and offer["reviews"][0]["text"] == "بسیار دقیق و با اخلاق هستن"
-    assert offer["reviews"][0]["recommends"] is True and offer["reviews"][0]["stars"] is None
+    assert offer["reviews"][0]["recommends"] is True and "stars" not in offer["reviews"][0]

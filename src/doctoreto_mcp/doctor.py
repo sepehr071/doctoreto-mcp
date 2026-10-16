@@ -16,6 +16,7 @@ from .search import (
     PLACE_TYPES,
     TEHRAN,
     DoctorRef,
+    FullText,
     Page,
     areas,
     avatar,
@@ -34,15 +35,15 @@ BOOKED_HERE = "نوبت گرفته از دکترتو"  # review tag: the visit w
 
 
 @tool("Doctor profile")
-async def dt_doctor(doctor: DoctorRef) -> dict[str, Any]:
+async def dt_doctor(doctor: DoctorRef, full_text: FullText = False) -> dict[str, Any]:
     """A doctor's profile with every bookable service, its price in Toman and its next free time.
 
-    `services[]` lists each office and online visit (phone, text, video, instant) with `consultation_id`
-    (input of dt_free_slots), `fee` (the full price: for an office visit the fee paid at the office, for
-    online visits the online price), `pay_online_now` (charged when booking; usually 0 for office visits),
-    the office address and coordinates, and `next_free` (Tehran time). Also the about text, review summary
-    (count, recommend percent, 1-5 averages per category), office waiting time, treated conditions and photo.
-    Booking needs an SMS login on the site: give the user `url`. Next: dt_free_slots, dt_reviews.
+    `services[]` lists each office and online visit with `consultation_id` (input of dt_free_slots), `fee`
+    (office visit: paid at the office; online: the online price), `pay_online_now` (charged when booking),
+    the office address and coordinates, and `next_free`. Also about text, review summary (count, recommend
+    percent, 1-5 category averages), office waiting time, treated conditions and photo.
+    Long texts are cut (about 800 chars); full_text returns them whole.
+    Next: dt_free_slots, dt_reviews.
     """
     hid = ref(doctor, "doctor")
     profile, services = await asyncio.gather(
@@ -59,7 +60,7 @@ async def dt_doctor(doctor: DoctorRef) -> dict[str, Any]:
         "title": profile.get("title"),
         "medical_number": profile.get("medical_number"),
         "specialities": [{"slug": s.get("slug"), "name": s.get("name")} for s in profile.get("specialities") or []],
-        "about": clip(html_text(profile.get("about")), 1500),
+        "about": clip(html_text(profile.get("about")), 800, full_text),
         "reviews": rate.get("count"),
         "recommend_percent": rate.get("percent"),
         "category_stars": {r.get("title"): r.get("rate") for r in profile.get("rate_avg") or []},
@@ -67,7 +68,7 @@ async def dt_doctor(doctor: DoctorRef) -> dict[str, Any]:
         if wait
         else None,
         "bookings": profile.get("count_done_orders"),
-        "services": [service(c) for c in services or []],
+        "services": [service(c, full_text) for c in services or []],
         "treats": [t.get("name") for t in profile.get("service_tags") or []][:20],
         "insurances": [i.get("name") for i in profile.get("insurances") or []],
         "url": page_url("doctor", profile.get("slug"), profile.get("id")),
@@ -82,7 +83,7 @@ async def dt_free_slots(
         Field(
             ge=1,
             le=10**11,
-            description="Consultation id of one service, from dt_doctor services[], dt_center services[] or dt_offer variants[], e.g. 1943.",
+            description="Consultation id from dt_doctor services[], dt_center bookable[] or dt_offer variants[], e.g. 1943.",
         ),
     ],
     start_date: Annotated[
@@ -92,10 +93,9 @@ async def dt_free_slots(
 ) -> dict[str, Any]:
     """Free appointment times of one service (office visit, phone/video call, clinic offer, lab admission).
 
-    Returns only days with free times: date, English weekday, Jalali date and the free start times
-    (HH:MM, Tehran local; for phone/video the call start). Times already past today are dropped.
-    `bookable_until` is the last day the doctor has opened (often about 30 days ahead). Text consultations
-    usually have no time slots. Booking needs an SMS login on doctoreto.com: give the user the page URL.
+    Returns only days with free times: date, weekday, Jalali date and free start times (HH:MM, Tehran local).
+    Past times today are dropped. `bookable_until` is the last day opened (often ~30 days ahead). Text
+    consultations usually have no slots.
     """
     start = start_date or search.today()
     if start.year < 1900:
@@ -105,21 +105,24 @@ async def dt_free_slots(
     last = start + timedelta(days=days - 1)
     found: dict[str, dict[str, Any]] = {}
     info: dict[str, Any] = {}
-    cur = start
-    while cur <= last:  # the API returns at most 8 days per call (day_navigate max 7)
-        info = (
-            await fetch(
-                f"{API}/consultation-times/days",
-                {"consultation_id": consultation_id, "start_date": str(cur), "day_navigate": 7},
-            )
-            or {}
+
+    async def window(cur: date) -> dict[str, Any]:  # the API returns at most 8 days per call (day_navigate max 7)
+        info = await fetch(
+            f"{API}/consultation-times/days",
+            {"consultation_id": consultation_id, "start_date": str(cur), "day_navigate": 7},
         )
-        got = [d for d in info.get("days") or [] if d.get("date")]
-        for d in got:
-            found.setdefault(d["date"], d)
-        if not got or got[-1]["date"] >= (info.get("end_date") or ""):
-            break
-        cur = date.fromisoformat(got[-1]["date"]) + timedelta(days=1)
+        return info or {}
+
+    # The first window tells how far the doctor has opened days; the rest are independent, so fetch them together.
+    infos = [await window(start)]
+    end = infos[0].get("end_date") or ""
+    later = [c for k in range(1, 4) if (c := start + timedelta(days=8 * k)) <= last and (not end or str(c) <= end)]
+    infos += await asyncio.gather(*(window(c) for c in later))
+    info = infos[0]
+    for i in infos:
+        for d in i.get("days") or []:
+            if d.get("date"):
+                found.setdefault(d["date"], d)
     now = local(info.get("now")) or search.now().strftime("%Y-%m-%d %H:%M")
     out = []
     for key in sorted(found):
@@ -159,26 +162,26 @@ async def dt_reviews(
         Field(
             min_length=4,
             max_length=300,
-            description="Hash id or page URL of the doctor, center or offer, e.g. 'xqbEWZ' or 'https://doctoreto.com/center/raz-shiraz-lap/YNrrOb'.",
+            description="Hash id or page URL of the doctor, center or offer, e.g. 'xqbEWZ'.",
         ),
     ],
     page: Page = 1,
     limit: Annotated[int, Field(ge=1, le=30, description="Reviews per page.")] = 10,
+    full_text: FullText = False,
 ) -> dict[str, Any]:
-    """Patient reviews in the site's order (doctors and centers newest first, offers oldest first): stars 1-5,
-    recommends or not, text, chosen labels, visit type, reason for the visit, office waiting time, date
-    (Gregorian Tehran day and Jalali) and the doctor's reply.
+    """Patient reviews (doctors and centers newest first, offers oldest first): stars 1-5, recommends, text
+    (cut at 400 chars unless full_text), labels, visit type, reason, office waiting time, date (Gregorian + Jalali) and reply.
 
-    Reviewer names are never returned. There is no sort or filter upstream: to find low ratings, page through
-    (pages = total / limit). The summary (count, recommend percent, category averages) is in dt_doctor.
+    No sort or filter upstream: to find low ratings, page through (pages = total / limit).
+    The summary (count, recommend percent, category averages) is in dt_doctor.
     """
     hid = ref(id, of)
     path = {"doctor": "doctors", "center": "places", "offer": "offers"}[of]
     data = await fetch(f"{API}/{path}/{hid}/reaction", {"page": page, "per_page": limit}) or {}
-    return {**pages(data), "reviews": [_review(r) for r in data.get("data") or []]}
+    return {**pages(data), "reviews": [_review(r, full_text) for r in data.get("data") or []]}
 
 
-def service(c: dict[str, Any]) -> dict[str, Any]:
+def service(c: dict[str, Any], full_text: bool = False) -> dict[str, Any]:
     """One bookable service from /doctors/{id}/consultation or /places/{id}/consultation."""
     kind = visit_type(c)
     p = c.get("place") or {}
@@ -204,12 +207,12 @@ def service(c: dict[str, Any]) -> dict[str, Any]:
             "type": PLACE_TYPES.get(p.get("type")),
             "city": (p.get("city") or {}).get("name"),
             "areas": areas(p),
-            "address": clip(p.get("full_address") or p.get("address"), 200),
+            "address": clip(p.get("full_address") or p.get("address"), 200, full_text),
             "lat": num(loc.get("lat")),
             "lon": num(loc.get("lon")),
             "center_url": page_url("center", p.get("slug"), p.get("id")) if p.get("type") else None,
         }
-    notes = clip(html_text(c.get("description")), 300)
+    notes = clip(html_text(c.get("description")), 300, full_text)
     if notes:
         out["notes"] = notes
     if c.get("insurances"):
@@ -217,7 +220,7 @@ def service(c: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
-def _review(r: dict[str, Any]) -> dict[str, Any]:
+def _review(r: dict[str, Any], full_text: bool = False) -> dict[str, Any]:
     text = r.get("comment_to_doctor") or r.get("comment_to_place") or r.get("comment_to_offer")
     if isinstance(text, dict):
         text = text.get("value")
@@ -228,7 +231,7 @@ def _review(r: dict[str, Any]) -> dict[str, Any]:
     return {
         "stars": r.get("rate") if r.get("rate") is not None else r.get("rate_to_offer"),
         "recommends": recommends,
-        "text": clip(text, 600),
+        "text": clip(text, 400, full_text),
         "labels": r.get("labels") or r.get("badges") or [],
         "visit": r.get("consultation_type") or r.get("type"),
         "reason": r.get("reason_sickness"),
@@ -236,7 +239,7 @@ def _review(r: dict[str, Any]) -> dict[str, Any]:
         "booked_here": r.get("tag") == BOOKED_HERE if r.get("tag") else None,
         "date": _tehran_day(r.get("created_at")),
         "jalali_date": r.get("shamsi_created_at"),
-        "reply": clip(html_text(reply), 400) if isinstance(reply, str) else None,
+        "reply": clip(html_text(reply), 300, full_text) if isinstance(reply, str) else None,
     }
 
 
