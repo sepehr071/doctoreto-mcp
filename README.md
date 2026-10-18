@@ -29,7 +29,7 @@ see free appointment times, read reviews, and find hospitals, labs and clinic of
 
 - **What:** Unofficial MCP server for Doctoreto (دکترتو, doctoreto.com), the Iranian doctor appointment and online consultation site. Queries in Persian or English; prices in Toman.
 - **Install:** `claude mcp add doctoreto -- uvx doctoreto-mcp` (stdio, needs [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.10+).
-- **Auth:** none. Optional `DOCTORETO_MCP_PROXY` sets an HTTP proxy for every request.
+- **Auth:** none. Optional `DOCTORETO_MCP_PROXY` sets an HTTP proxy for every request (a comma-separated list is tried one at a time).
 - **Access:** read-only. It cannot log in, book, pay or post a review; give the user the doctor's page link to book.
 - **Tools:** 14, all prefixed `dt_`. Start with `dt_suggest` (free phrase to doctors and slugs), `dt_search_doctors`, `dt_doctor`, `dt_free_slots`; `dt_search_centers` and `dt_search_offers` for hospitals, labs and clinic offers.
 - **Typical sequence:** `dt_search_doctors` -> `dt_doctor` -> `dt_free_slots` -> `dt_reviews`.
@@ -280,7 +280,9 @@ npx @modelcontextprotocol/inspector uvx doctoreto-mcp
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `DOCTORETO_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port` |
+| `DOCTORETO_MCP_PROXY` | unset | HTTP proxy for every request, e.g. `http://user:pass@host:port`; a comma-separated list is used one at a time, next after a block or connect error |
+
+Requests use a Chrome-like TLS fingerprint and headers, at most 2 at a time with a short random pause, and retry twice on timeouts, 5xx and 429. If Doctoreto ever serves a bot-check page, install `doctoreto-mcp[browser]` and run `patchright install chromium`; a headless browser then clears it once and the cookies are reused.
 
 <a id="فارسی"></a>
 
