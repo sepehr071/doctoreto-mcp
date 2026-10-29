@@ -15,6 +15,7 @@ search doctors by speciality, city and visit type, compare visit fees, see free 
 [![CI](https://github.com/sepehr071/doctoreto-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sepehr071/doctoreto-mcp/actions/workflows/ci.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071%2Fdoctoreto--mcp-7c3aed)](https://registry.modelcontextprotocol.io/?q=doctoreto-mcp)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](https://github.com/sepehr071/doctoreto-mcp/blob/main/LICENSE)
+[![mcpfarsi](https://mcpfarsi.ir/badge/doctoreto.svg)](https://mcpfarsi.ir/servers/doctoreto/)
 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=doctoreto&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJkb2N0b3JldG8tbWNwIl19)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_doctoreto--mcp-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=doctoreto&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22doctoreto-mcp%22%5D%7D)
@@ -407,6 +408,7 @@ publishes to PyPI and the [MCP Registry](https://registry.modelcontextprotocol.i
 - [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp) for Iranian doctors, profiles and free appointment slots on Paziresh24
 - [jabama-mcp](https://github.com/sepehr071/jabama-mcp) for Iranian stays and villa rentals on Jabama
 - [iran-news-mcp](https://github.com/sepehr071/iran-news-mcp) for Iranian news
+- Listed on [mcpfarsi.ir](https://mcpfarsi.ir/servers/doctoreto/), the Persian MCP marketplace
 
 ## Disclaimer
 

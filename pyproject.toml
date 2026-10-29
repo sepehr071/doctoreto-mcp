@@ -35,6 +35,7 @@ Homepage = "https://github.com/sepehr071/doctoreto-mcp"
 Source = "https://github.com/sepehr071/doctoreto-mcp"
 Changelog = "https://github.com/sepehr071/doctoreto-mcp/releases"
 Issues = "https://github.com/sepehr071/doctoreto-mcp/issues"
+Website = "https://mcpfarsi.ir/servers/doctoreto/"
 
 [project.scripts]
 doctoreto-mcp = "doctoreto_mcp.server:main"
