@@ -36,7 +36,7 @@ CenterRef = Annotated[
     Field(
         min_length=6,
         max_length=300,
-        description="Center hash id ('YNrrOb') or page URL ('https://doctoreto.com/center/raz-shiraz-lap/YNrrOb').",
+        description="Center hash id ('YNrrOb') or page URL.",
     ),
 ]
 
@@ -46,34 +46,29 @@ async def dt_search_centers(
     type: Annotated[CenterType | None, Field(description="Kind of center, e.g. 'laboratory'.")] = None,
     city: Annotated[Slug | None, Field(description="City slug from dt_cities, e.g. 'tehran'.")] = None,
     neighborhood: Annotated[
-        Slug | None, Field(description="Neighborhood slug from dt_neighborhoods, with city only, e.g. 'pasdaran'.")
+        Slug | None, Field(description="Slug from dt_neighborhoods (needs city), e.g. 'pasdaran'.")
     ] = None,
     speciality: Annotated[
-        Slug | None, Field(description="Department / speciality slug from dt_specialities, e.g. 'ophthalmologist'.")
+        Slug | None, Field(description="Department slug from dt_specialities, e.g. 'ophthalmologist'.")
     ] = None,
-    service_tag: Annotated[Slug | None, Field(description="Service tag slug from dt_suggest, e.g. 'mri'.")] = None,
+    service_tag: Annotated[Slug | None, Field(description="Tag slug from dt_suggest, e.g. 'mri'.")] = None,
     name: Annotated[
-        str | None, Field(min_length=2, max_length=80, description="Part of the center's name in Persian, e.g. 'قلب'.")
+        str | None, Field(min_length=2, max_length=80, description="Part of Persian name, e.g. 'قلب'.")
     ] = None,
-    open_24h: Annotated[bool, Field(description="Only centers open around the clock (pharmacies, hospitals).")] = False,
+    open_24h: Annotated[bool, Field(description="Only centers open 24 hours.")] = False,
     ownership: Annotated[Literal["state", "private"] | None, Field(description="State (public) or private.")] = None,
-    online_lab_admission: Annotated[
-        bool, Field(description="Only laboratories that take online admission bookings.")
-    ] = False,
+    online_lab_admission: Annotated[bool, Field(description="Only labs with online admission.")] = False,
     near_lat: Lat = None,
     near_lon: Lon = None,
-    radius_km: Annotated[
-        float, Field(ge=0.3, le=20, description="With near_lat/near_lon: half-width of the square searched, in km.")
-    ] = 2,
+    radius_km: Annotated[float, Field(ge=0.3, le=20, description="With near_*: half-width of the square, km.")] = 2,
     page: Page = 1,
-    limit: Annotated[int, Field(ge=1, le=20, description="Centers per page (the API pages by 20).")] = 10,
+    limit: Annotated[int, Field(ge=1, le=20, description="Centers per page.")] = 10,
 ) -> dict[str, Any]:
     """Find hospitals, clinics, infirmaries, laboratories, imaging centers and pharmacies with filters.
 
-    Cards carry the hash `id` for dt_center. With near_lat and near_lon it searches a square around the point
-    sorted by distance; dense areas return only part of the centers and count the rest in `more_in_area`.
-    Without them `limit` cuts the upstream page (`on_page` items). No insurance filter: see dt_center.
-    Next: dt_center, dt_reviews(of='center').
+    Cards have the hash `id` for dt_center. With near_lat/near_lon: a square around the point sorted by distance
+    (dense areas return part of the centers, the rest counted in `more_in_area`). Otherwise `limit` cuts the
+    upstream page (`on_page`). Next: dt_center, dt_reviews(of='center').
     """
     if neighborhood and not city:
         raise ToolError("neighborhood needs city too, e.g. city='tehran', neighborhood='pasdaran'.")
@@ -118,15 +113,13 @@ async def dt_search_centers(
 @tool("Center details")
 async def dt_center(
     center: CenterRef,
-    doctors: Annotated[int, Field(ge=0, le=30, description="How many of its doctors to list (0 = none).")] = 10,
+    doctors: Annotated[int, Field(ge=0, le=30, description="Doctors to list (0 = none).")] = 10,
     full_text: FullText = False,
 ) -> dict[str, Any]:
-    """A center's page: address, coordinates, departments, services, accepted insurances, attributes, opening
-    hours, lab admission rules, bookable services with `consultation_id` (for dt_free_slots) and its doctors
-    (hash ids for dt_doctor, with each doctor's earliest free slot).
+    """A center's page: address, departments, services, insurances, hours, lab rules, bookable services with
+    `consultation_id` (for dt_free_slots) and its doctors (hash ids, earliest free slot).
 
-    Doctor private offices (type office) have no center page: use dt_doctor.
-    Next: dt_free_slots, dt_doctor, dt_reviews(of='center').
+    Doctor private offices have no center page: use dt_doctor. Next: dt_free_slots, dt_doctor.
     """
     hid = ref(center, "center")
     detail, services, hours, configs, docs = await asyncio.gather(

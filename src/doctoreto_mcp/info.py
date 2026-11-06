@@ -18,18 +18,15 @@ async def dt_health_articles(
         Field(
             min_length=2,
             max_length=100,
-            description="Disease, test, drug or treatment in Persian, e.g. 'فشار خون' or 'آزمایش تیروئید'.",
+            description="Persian disease, test or treatment, e.g. 'فشار خون'.",
         ),
     ],
     limit: Annotated[int, Field(ge=1, le=10, description="Max articles.")] = 5,
-    text_chars: Annotated[
-        int, Field(ge=0, le=8000, description="Characters of article text to include per article; 0 = summary only.")
-    ] = 0,
+    text_chars: Annotated[int, Field(ge=0, le=8000, description="Article text characters each; 0 = summary only.")] = 0,
 ) -> dict[str, Any]:
-    """Search Doctoreto's health magazine (about 5,000 articles) for background on a condition, test or treatment.
+    """Search Doctoreto's health magazine for background on a condition, test or treatment.
 
-    Returns title, link, publish date and a summary; set text_chars to read the articles. General information
-    only, not medical advice: for a diagnosis book a doctor (dt_search_doctors).
+    Returns title, link, date and summary; set text_chars to read the articles. Not medical advice.
     """
     fields = "id,date,link,title,excerpt" + (",content" if text_chars else "")
     params = {"search": fa(query), "orderby": "relevance", "per_page": limit, "_fields": fields}  # default is newest

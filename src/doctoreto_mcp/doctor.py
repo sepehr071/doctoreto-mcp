@@ -38,11 +38,8 @@ BOOKED_HERE = "نوبت گرفته از دکترتو"  # review tag: the visit w
 async def dt_doctor(doctor: DoctorRef, full_text: FullText = False) -> dict[str, Any]:
     """A doctor's profile with every bookable service, its price in Toman and its next free time.
 
-    `services[]` lists each office and online visit with `consultation_id` (input of dt_free_slots), `fee`
-    (office visit: paid at the office; online: the online price), `pay_online_now` (charged when booking),
-    the office address and coordinates, and `next_free`. Also about text, review summary (count, recommend
-    percent, 1-5 category averages), office waiting time, treated conditions and photo.
-    Long texts are cut (about 800 chars); full_text returns them whole.
+    `services[]` lists each office and online visit with `consultation_id` (for dt_free_slots), `fee`, `pay_online_now`,
+    address and `next_free`. Also review summary, about text and treated conditions.
     Next: dt_free_slots, dt_reviews.
     """
     hid = ref(doctor, "doctor")
@@ -83,19 +80,16 @@ async def dt_free_slots(
         Field(
             ge=1,
             le=10**11,
-            description="Consultation id from dt_doctor services[], dt_center bookable[] or dt_offer variants[], e.g. 1943.",
+            description="Id from dt_doctor services[], dt_center bookable[] or dt_offer variants[].",
         ),
     ],
-    start_date: Annotated[
-        date | None, Field(description="First day, Gregorian YYYY-MM-DD; default today (Tehran), e.g. '2026-10-14'.")
-    ] = None,
-    days: Annotated[int, Field(ge=1, le=31, description="Number of days to check from start_date.")] = 7,
+    start_date: Annotated[date | None, Field(description="Gregorian YYYY-MM-DD; default today (Tehran).")] = None,
+    days: Annotated[int, Field(ge=1, le=31, description="Days to check.")] = 7,
 ) -> dict[str, Any]:
     """Free appointment times of one service (office visit, phone/video call, clinic offer, lab admission).
 
-    Returns only days with free times: date, weekday, Jalali date and free start times (HH:MM, Tehran local).
-    Past times today are dropped. `bookable_until` is the last day opened (often ~30 days ahead). Text
-    consultations usually have no slots.
+    Returns only days with free times (HH:MM, Tehran local). `bookable_until` is the last day opened.
+    Text consultations usually have no slots.
     """
     start = start_date or search.today()
     if start.year < 1900:
@@ -154,26 +148,22 @@ async def dt_free_slots(
 
 @tool("Reviews")
 async def dt_reviews(
-    of: Annotated[
-        Literal["doctor", "center", "offer"], Field(description="Whose reviews: a doctor, a center or a clinic offer.")
-    ],
+    of: Annotated[Literal["doctor", "center", "offer"], Field(description="Whose reviews.")],
     id: Annotated[
         str,
         Field(
             min_length=4,
             max_length=300,
-            description="Hash id or page URL of the doctor, center or offer, e.g. 'xqbEWZ'.",
+            description="Hash id or page URL, e.g. 'xqbEWZ'.",
         ),
     ],
     page: Page = 1,
     limit: Annotated[int, Field(ge=1, le=30, description="Reviews per page.")] = 10,
     full_text: FullText = False,
 ) -> dict[str, Any]:
-    """Patient reviews (doctors and centers newest first, offers oldest first): stars 1-5, recommends, text
-    (cut at 400 chars unless full_text), labels, visit type, reason, office waiting time, date (Gregorian + Jalali) and reply.
+    """Patient reviews (doctors and centers newest first, offers oldest first): stars 1-5, text, date and reply.
 
-    No sort or filter upstream: to find low ratings, page through (pages = total / limit).
-    The summary (count, recommend percent, category averages) is in dt_doctor.
+    No sort or filter upstream: page through to find low ratings. The summary is in dt_doctor.
     """
     hid = ref(id, of)
     path = {"doctor": "doctors", "center": "places", "offer": "offers"}[of]

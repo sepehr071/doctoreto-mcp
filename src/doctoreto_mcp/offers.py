@@ -39,34 +39,27 @@ OfferRef = Annotated[
 @tool("Search clinic offers")
 async def dt_search_offers(
     query: Annotated[
-        str | None, Field(min_length=2, max_length=80, description="Service in Persian, e.g. 'سونوگرافی' or 'لیزر'.")
+        str | None, Field(min_length=2, max_length=80, description="Persian service, e.g. 'سونوگرافی'.")
     ] = None,
     city: Annotated[Slug | None, Field(description="City slug from dt_cities, e.g. 'tehran'.")] = None,
-    neighborhood: Annotated[Slug | None, Field(description="Neighborhood slug, e.g. 'pasdaran'.")] = None,
-    speciality: Annotated[Slug | None, Field(description="Speciality slug, e.g. 'cardiologist'.")] = None,
-    service_tag: Annotated[Slug | None, Field(description="Service tag slug, e.g. 'rhinoplasty'.")] = None,
-    min_price: Annotated[
-        int | None, Field(ge=0, le=10**10, description="Minimum price in Toman, e.g. 1000000.")
-    ] = None,
-    max_price: Annotated[
-        int | None, Field(ge=0, le=10**10, description="Maximum price in Toman, e.g. 2000000.")
-    ] = None,
-    doctor: Annotated[DoctorRef | None, Field(description="Only offers of this doctor (hash id or page URL).")] = None,
+    neighborhood: Annotated[Slug | None, Field(description="Slug, needs city, e.g. 'pasdaran'.")] = None,
+    speciality: Annotated[Slug | None, Field(description="Slug, e.g. 'cardiologist'.")] = None,
+    service_tag: Annotated[Slug | None, Field(description="Tag slug, e.g. 'rhinoplasty'.")] = None,
+    min_price: Annotated[int | None, Field(ge=0, le=10**10, description="Min price, Toman.")] = None,
+    max_price: Annotated[int | None, Field(ge=0, le=10**10, description="Max price, Toman.")] = None,
+    doctor: Annotated[DoctorRef | None, Field(description="Doctor hash id or page URL.")] = None,
     center: Annotated[
         str | None,
-        Field(min_length=6, max_length=300, description="Only offers at this place (hash id), e.g. 'ZWpOLy'."),
+        Field(min_length=6, max_length=300, description="Center hash id, e.g. 'ZWpOLy'."),
     ] = None,
     page: Page = 1,
-    limit: Annotated[
-        int, Field(ge=1, le=40, description="Offers to return from the page (the API pages by about 40).")
-    ] = 10,
+    limit: Annotated[int, Field(ge=1, le=40, description="Offers to return from the page.")] = 10,
 ) -> dict[str, Any]:
     """Search clinic offers: fixed-price procedures and packages (ultrasound, laser, dental, check-ups).
 
-    Cards give price and discounted price (Toman), `pay_online` (the deposit when `payment` is deposit_online,
-    the rest at the place) and the default `consultation_id` for dt_free_slots. No sort. `limit` cuts the
-    upstream page (`on_page` items): raise it to see the rest, `page` jumps a whole page.
-    Next: dt_offer, dt_free_slots, dt_reviews(of='offer').
+    Cards give price and discounted price (Toman), `pay_online` (deposit if `payment` is deposit_online) and
+    `consultation_id` for dt_free_slots. No sort. `limit` cuts the upstream page (`on_page`).
+    Next: dt_offer, dt_free_slots.
     """
     params = {
         "query": fa(query) if query else None,
@@ -87,8 +80,7 @@ async def dt_search_offers(
 
 @tool("Clinic offer details")
 async def dt_offer(offer: OfferRef, full_text: FullText = False) -> dict[str, Any]:
-    """One clinic offer in full: price, discount, deposit, who performs it and where, description, terms,
-    capacity, expiry, rating, and bookable variants with `consultation_id` for dt_free_slots."""
+    """One clinic offer in full: price, deposit, doctor, place, terms and bookable variants with `consultation_id`."""
     oid = ref(offer, "offer")
     o = await fetch(f"{API}/offers/{oid}")
     if not isinstance(o, dict) or not o.get("id"):  # unknown ids answer 200 with items: []
