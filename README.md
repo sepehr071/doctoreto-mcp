@@ -14,7 +14,7 @@ search doctors by speciality, city and visit type, compare visit fees, see free 
 [![Python](https://img.shields.io/pypi/pyversions/doctoreto-mcp)](https://pypi.org/project/doctoreto-mcp/)
 [![CI](https://github.com/sepehr071/doctoreto-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/sepehr071/doctoreto-mcp/actions/workflows/ci.yml)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.github.sepehr071%2Fdoctoreto--mcp-7c3aed)](https://registry.modelcontextprotocol.io/?q=doctoreto-mcp)
-[![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](https://github.com/sepehr071/doctoreto-mcp/blob/main/LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-c2410c)](https://github.com/sepehr071/doctoreto-mcp/blob/main/LICENSE)
 [![mcpfarsi](https://mcpfarsi.ir/badge/doctoreto.svg)](https://mcpfarsi.ir/servers/doctoreto/)
 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=doctoreto&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJkb2N0b3JldG8tbWNwIl19)
@@ -277,7 +277,7 @@ cardiologist in Pasdaran, Tehran, as soon as possible".
 <details>
 <summary><b>Is it official, safe and free?</b></summary>
 
-It is unofficial, open source (MIT) and free. It is read-only, needs no account or API key, and runs on your
+It is unofficial, free for non-commercial use. It is read-only, needs no account or API key, and runs on your
 machine without sending data to any other server.
 </details>
 
@@ -424,6 +424,10 @@ If this saves you clicks, a star helps others find it.
 
 Built and maintained by **Sepehr Radmard** (سپهر رادمرد). Connect on [LinkedIn](https://www.linkedin.com/in/sepehr-radmard) or follow [@sepehr071 on GitHub](https://github.com/sepehr071) for more MCP servers for Iranian websites, all listed in [iran-mcp](https://github.com/sepehr071/iran-mcp). If this saves you time, a star on the repo helps other people find it.
 
-## License
+## مجوز استفاده (License)
 
-[MIT](https://github.com/sepehr071/doctoreto-mcp/blob/main/LICENSE)
+<a href="https://www.linkedin.com/in/sepehr-radmard"><img src="https://raw.githubusercontent.com/sepehr071/iran-mcp/main/assets/license-banner.png" alt="استفادهٔ شخصی و غیرتجاری رایگان است؛ برای استفادهٔ تجاری با سپهر رادمرد تماس بگیرید. Free for personal and non-commercial use; commercial use needs a license." width="100%"></a>
+
+**استفادهٔ شخصی و غیرتجاری رایگان است.** استفاده در شرکت، محصول پولی یا پروژهٔ مشتری به مجوز تجاری نیاز دارد؛ از راه [لینکدین](https://www.linkedin.com/in/sepehr-radmard) یا [گیت&zwnj;هاب](https://github.com/sepehr071) با سپهر رادمرد تماس بگیرید. متن کامل: [PolyForm Noncommercial 1.0.0](https://github.com/sepehr071/doctoreto-mcp/blob/main/LICENSE). نسخه&zwnj;های پیش از 0.5.1 با مجوز MIT منتشر شده&zwnj;اند و همان مجوز را دارند.
+
+Free for personal and non-commercial use under the [PolyForm Noncommercial License 1.0.0](https://github.com/sepehr071/doctoreto-mcp/blob/main/LICENSE). Using it in a company, a paid product or a client project needs a commercial license: contact Sepehr Radmard on [LinkedIn](https://www.linkedin.com/in/sepehr-radmard) or [GitHub](https://github.com/sepehr071). Versions before 0.5.1 were released under MIT and stay under it.
