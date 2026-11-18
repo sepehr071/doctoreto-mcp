@@ -223,25 +223,6 @@ Doctors, centers and offers are identified by a 6-character id (`xqbEWZ`, the la
 
 All 14 tools are annotated `readOnlyHint: true` and return compact structured JSON, so they don't flood the agent's context.
 
-## How it works
-
-```text
-  AI agent  (Claude, Cursor, Copilot, ...)
-      │
-      │  MCP over stdio
-      ▼
-  doctoreto-mcp  (runs on your machine)
-      │
-      │  HTTPS (JSON)
-      ├──────▶  api.doctoreto.com   (doctors, slots, reviews, centers, offers)
-      └──────▶  doctoreto.com/blog   (health magazine)
-```
-
-`doctoreto-mcp` runs locally and calls the same public endpoints the Doctoreto website uses.
-There's no hosted server in between, no API key, and nothing about you is sent anywhere else.
-Requests use a Chrome-like TLS fingerprint and headers, go out at most 2 at a time with a short random pause, and
-retry twice on timeouts, 5xx and 429. Only GET requests are ever made.
-
 ## Good to know
 
 - **Prices are in Toman.** For an office visit `fee` is what you pay at the office and `pay_online_now` what is charged when booking (usually 0). For phone, text and video `fee` is the online price. A missing `fee` means the doctor lists none (null and empty values are left out of results; `false` and `0` are kept).
